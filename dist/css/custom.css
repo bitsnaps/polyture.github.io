@@ -1,0 +1,41 @@
+.custom-input {
+    width:300px;
+    height:44px;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 22px 0px 0px 22px;
+    background-color: rgba(0, 0, 0, 0.07);
+    margin: 0px;
+    padding: 0px;
+    color: rgba(50, 50, 50);
+    display: flex;
+    flex-direction: "column";
+}
+
+.custom-input-inner {
+    width:270px;
+    outline: none;
+    border-width: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.custom-button {
+    outline: none;
+    width:140px;
+    height:44px;
+    border-width: 0px;
+    border-radius: 0px 22px 22px 0px;
+    background-color: rgba(54, 120, 255); /* Green */
+    color: white;
+    margin: 0px;
+    padding: 0px;
+
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.custom-button:hover {
+    background-color: white;
+    color: rgba(50, 50, 50);
+}
