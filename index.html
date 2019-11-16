@@ -59,7 +59,13 @@
                                 <div style="display: flex; justify-content: center;">
                                     <div class="custom-input">
                                         <div style="width:22px"></div>
-                                        <input class="custom-input-inner" type="email" name="email" value="Your email address...">
+                                        <input 
+                                            class="custom-input-inner" 
+                                            type="email" 
+                                            name="email" 
+                                            placeholder="Your email address..."
+                                            onfocus="this.placeholder = ''"
+                                            onfocusout="this.placeholder = 'Your email address...'">
                                     </div>
                                     <input class="custom-button" type="submit" value="Early Access">
                                 </div>
