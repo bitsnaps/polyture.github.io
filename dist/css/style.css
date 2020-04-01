@@ -1669,7 +1669,8 @@ label {
 }
 
 .is-boxed {
-    background: #F6F8FA
+    /* background: #F6F8FA; */
+    background: #F8F8FA;
 }
 
 .body-wrap {
@@ -1683,7 +1684,8 @@ label {
 .boxed-container {
     max-width: 1440px;
     margin: 0 auto;
-    box-shadow: 0 16px 48px #E3E7EB
+    box-shadow: 0 0px 20px #cbd0d6;
+    /* box-shadow: 0 0px 200px #d4d4d4; */
 }
 
 @supports (-ms-ime-align: auto) {
