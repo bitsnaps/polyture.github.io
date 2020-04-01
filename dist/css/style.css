@@ -1,5 +1,6 @@
 html {
     line-height: 1.15;
+    scroll-behavior: smooth;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
@@ -690,7 +691,7 @@ label {
 }
 
 .container-sm {
-    max-width: 848px
+    max-width: 1100px
 }
 
 .container .container-sm {
@@ -1317,7 +1318,7 @@ label {
 
 @media (min-width: 641px) {
     .site-header::before {
-        height: 800px
+        height: 900px
     }
 }
 
