@@ -90,7 +90,7 @@
     background-color: rgba(0, 0, 0, 0.06);
     margin: 0px;
     padding: 0px;
-    color: rgba(50, 50, 50);
+    color: white;
     display: flex;
     flex-direction: "column";
 }
@@ -102,11 +102,11 @@
     outline: none;
     border-width: 0px;
     background-color: rgba(0, 0, 0, 0);
-    color: #363a40;
+    color: white;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #363a40;
+    color: white;
 }
 
 
@@ -120,7 +120,7 @@
     background-color: rgba(0, 0, 0, 0.06);
     margin: 0px;
     padding: 0px;
-    color: rgba(50, 50, 50);
+    color: white;
     display: flex;
     flex-direction: "column";
 }
@@ -132,7 +132,7 @@
     outline: none;
     border-width: 0px;
     background-color: rgba(0, 0, 0, 0);
-    color: #363a40;
+    color: white;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
