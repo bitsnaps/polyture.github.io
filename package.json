@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Polyture/polyture.github.io#readme",
   "dependencies": {
+    "animejs": "^3.2.0",
     "semantic-ui": "^2.4.2",
     "slideout": "^1.0.1"
   }

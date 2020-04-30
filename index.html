@@ -7,13 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Polyture</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css">
 	<link rel="stylesheet" href="dist/css/style.css">
 	<link rel="stylesheet" href="dist/css/custom.css">
 	<link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
 	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="semantic/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+    <script src="dist/js/anime.min.js"></script>
 	<script src="dist/js/main.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -33,7 +34,7 @@
 
 <body class="pusher">
     <!-- gradient background -->
-	<div class="ui fluid container gradient">
+	<div class="ui fluid container" style="height:100%">
 		<!-- max width container -->
 		<div class="ui container">
 			<!-- header -->
@@ -44,13 +45,15 @@
 					<div class="computer only row">
 						<div class="column">
 							<div class="ui secondary menu">
-								<img class="ui small image" src="img/polyture_logo_white.png" alt="logo">
-								<div class="right secondary menu">
-									<a class="active item strong">About</a>
-									<a class="item strong">Docs</a>
-									<a class="item strong">Pricing</a>
-									<a class="item strong">Blog</a>
-									<a class="item strong">Contact</a>
+                                <div class="item">
+                                    <img class="ui small image" src="img/polyture_logo_white.png" alt="logo">
+                                </div>
+								<div class="ui secondary inverted right menu">
+									<a class="active item">About</a>
+									<a class="item">Docs</a>
+									<a class="item">Pricing</a>
+									<a class="item">Blog</a>
+									<a class="item">Contact</a>
 								</div>
 							</div>
 						</div>
@@ -58,16 +61,16 @@
 					<!-- mobile only menu -->
 					<div class="tablet mobile only row">
 						<div class="column">
-							<div class="ui secondary menu">
+							<div class="ui secondary inverted right menu">
 								<img class="ui small image" src="img/polyture_logo_white.png" alt="logo">
 								<a onclick="toggleSidebar()" id="mobile_item" class="right item"><i
-										class="bars icon"></i></a>
+										class="large bars icon"></i></a>
 							</div>
 						</div>
 					</div>
 					<!-- sidebar -->
-					<div class="ui pushable segment">
-						<div class="ui right sidebar vertical menu">
+					<div class="ui pushable segment" style="visibility: hidden;">
+						<div class="ui right inverted sidebar vertical menu">
                             <a class="active item strong">About</a>
                             <a class="item strong">Docs</a>
                             <a class="item strong">Pricing</a>
@@ -75,10 +78,8 @@
                             <a class="item strong">Contact</a>
 						</div>
 					</div>
-				</div>
-
-
-			</div>
+                </div>
+            </div>
 		</div>
 	</div>
 </body>

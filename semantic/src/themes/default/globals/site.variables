@@ -121,7 +121,7 @@
         Page
 --------------------*/
 
-@pageBackground      : #FFFFFF;
+@pageBackground      : url('../../../../img/blurry-background.png')
 @pageOverflowX       : hidden;
 
 @lineHeight          : 1.4285em;

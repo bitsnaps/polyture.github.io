@@ -1,8 +1,32 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url('../../img/blurry-background.png');
+    background-size: cover;
 }
 
-.gradient {
-    background: linear-gradient(207deg, rgba(123,176,244,1) 0%, rgba(201,231,204,1) 100%);
+body.pushable>.pusher {
+    background: url('../../img/blurry-background.png')
 }
+
+.strong {
+    font-weight: 800;
+}
+
+/* data visualization */
+.data-visualization {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 17rem;
+    height: 17rem;
+  }
+  
+  .data-visualization div {
+    /*position: absolute;*/
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #FFF;
+    background-color: #FFF;
+  }
