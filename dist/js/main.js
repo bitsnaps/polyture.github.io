@@ -3,65 +3,38 @@ function toggleSidebar() {
   $('.ui.sidebar').sidebar('toggle');
 }
 
-//data visualization
-const staggerVisualizerEl = document.querySelector('.data-visualization');
-const fragment = document.createDocumentFragment();
-const grid = [17, 17];
-const col = grid[0];
-const row = grid[1];
-const numberOfElements = col * row;
+//landing page title animation
+var textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-for (let i = 0; i < numberOfElements; i++) {
-  fragment.appendChild(document.createElement('div'));
-}
+anime.timeline({
+    loop: false
+  })
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40, 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  })
 
-staggerVisualizerEl.appendChild(fragment);
+var textWrapper2 = document.querySelector('.ml13');
+textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-const staggersAnimation = anime.timeline({
-  targets: '.data-visualization div',
-  easing: 'easeInOutSine',
-  delay: anime.stagger(100),
-  loop: true,
-  autoplay: false
-})
-.add({
-  translateX: [
-    {value: anime.stagger('-.1rem', {grid: grid, from: 'center', axis: 'x'}) },
-    {value: anime.stagger('.1rem', {grid: grid, from: 'center', axis: 'x'}) }
-  ],
-  translateY: [
-    {value: anime.stagger('-.1rem', {grid: grid, from: 'center', axis: 'y'}) },
-    {value: anime.stagger('.1rem', {grid: grid, from: 'center', axis: 'y'}) }
-  ],
-  duration: 2000,
-  scale: .5,
-  delay: anime.stagger(100, {grid: grid, from: 'center'})
-})
-.add({
-  translateX: anime.stagger('.25rem', {grid: grid, from: 'center', axis: 'x'}),
-  translateY: anime.stagger('.25rem', {grid: grid, from: 'center', axis: 'y'}),
-  rotate: 0,
-  scaleX: 2.5,
-  scaleY: .25,
-  delay: anime.stagger(4, {from: 'center'})
-})
-.add({
-  rotate: anime.stagger([90, 0], {grid: grid, from: 'center'}),
-  delay: anime.stagger(50, {grid: grid, from: 'center'})
-})
-.add({
-  translateX: 0,
-  translateY: 0,
-  scale: .5,
-  scaleX: 1,
-  rotate: 180,
-  duration: 1000,
-  delay: anime.stagger(100, {grid: grid, from: 'center'})
-})
-.add({
-  scaleY: 1,
-  scale: 1,
-  delay: anime.stagger(20, {grid: grid, from: 'center'})
-})
-
-staggersAnimation.play();
+anime.timeline({
+    loop: false
+  })
+  .add({
+    delay: 1200
+  })
+  .add({
+    targets: '.ml13 .letter',
+    translateY: [100, 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 300 + 30 * i
+  });
