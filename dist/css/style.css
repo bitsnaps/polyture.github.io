@@ -6,25 +6,25 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow-y: scroll;
-    overflow-x: hidden;
+	overflow-x: hidden;
 
-    -ms-overflow-style: none;
+	-ms-overflow-style: none;
 
-    background-color: #acacac;
+	background-color: #acacac;
 }
 
 main {
-    max-width: 1440px;
-    margin: 0 auto;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .pushable {
-    background-color: '#082131' !important;
+	background-color: '#082131' !important;
 }
 
 video {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -41,44 +41,53 @@ body::-webkit-scrollbar {
 	background-image: url('../../img/blurry-background.png');
 	background-size: cover;
 	width: 100%;
-    height: auto;
+	height: auto;
 }
 
 .section {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    -webkit-box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.42);
+	padding-top: 5%;
+	padding-bottom: 5%;
+	-webkit-box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.42);
 	-moz-box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.42);
 	box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.42);
 }
 
 .section p {
-    padding-top: 2%;
+	padding-top: 2%;
 }
 
 #about {
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
 }
 
 #demo {
-    background-color: #e2e2e2;
+	background-color: #e2e2e2;
 }
 
 #early-access {
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
 }
 
 p {
-    font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 #footer {
-    height: 30%;
+	height: 30%;
     background-image: url('../../img/blurry-background.png');
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#footer p {
+    font-size: 1em;
+    color: white;
+}
+#footer .row {
+    padding-top: 5%;
 }
 
 .ui {
-    font-family: 'Muli' !important;
+	font-family: 'Muli' !important;
 }
 
 .shadow {
