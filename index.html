@@ -132,7 +132,9 @@
 								</div>
 								<!-- interested button -->
 								<div class="row">
-									<button class="ui blue button">Get Early Access</button>
+									<button class="ui blue button" onclick="document.querySelector('#early-access').scrollIntoView({ 
+											behavior: 'smooth' 
+										  });">Get Early Access</button>
 								</div>
 								<!-- mobile spacer -->
 								<br class="mobile tablet only row">
@@ -296,6 +298,7 @@
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 <script src="dist/js/anime.js"></script>
 <script src="dist/js/main.js"></script>
 
