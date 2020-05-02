@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/Polyture/polyture.github.io#readme",
   "dependencies": {
+    "@swup/preload-plugin": "^1.0.3",
+    "@swup/slide-theme": "^1.0.5",
     "animejs": "^3.2.0",
     "semantic-ui": "^2.4.2",
-    "slideout": "^1.0.1"
+    "slideout": "^1.0.1",
+    "swup": "^2.0.9"
   }
 }

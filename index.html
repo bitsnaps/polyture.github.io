@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="dist/css/custom.css">
 	<link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
 
+	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script>
 		ScrollReveal({
@@ -35,7 +36,7 @@
 </head>
 
 <body class="pusher">
-	<main class="shadow">
+	<main class="shadow transition-fade" id="swup">
 		<!-- landing page -->
 		<div id="landing-page" style="margin:0">
 			<video autoplay loop muted src="img/background.mp4" id="landing-video"></video>
@@ -54,7 +55,7 @@
 							<div class="ui secondary inverted menu">
 								<a class="active item">About</a>
 								<a class="item">Docs</a>
-								<a class="item">Pricing</a>
+								<a href="/html/pricing.html" class="item">Pricing</a>
 								<a class="item">Blog</a>
 								<a class="item">Contact</a>
 							</div>
@@ -70,7 +71,7 @@
 									<div class="ui secondary inverted right menu">
 										<a class="active item">About</a>
 										<a class="item">Docs</a>
-										<a class="item">Pricing</a>
+										<a href="/html/pricing.html" class="item">Pricing</a>
 										<a class="item">Blog</a>
 										<a class="item">Contact</a>
 									</div>
@@ -204,9 +205,9 @@
 							</div>
 						</h2>
 						<!-- video wrapper -->
-						<div class="row">
+						<div class="row" style="padding-top: 3%">
 							<div class="ui container">
-								<video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow"></video>
+								<video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow" id="demo-video"></video>
 							</div>
 						</div>
 						<!-- mobile spacer -->
@@ -298,7 +299,6 @@
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 <script src="dist/js/anime.js"></script>
 <script src="dist/js/main.js"></script>
 
