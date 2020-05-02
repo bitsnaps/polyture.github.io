@@ -1,8 +1,3 @@
-//toggle sidebar
-function toggleSidebar() {
-  $('.ui.sidebar').sidebar('toggle');
-}
-
 //landing page title animation
 var textWrapper = document.querySelector('.ml12');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -38,3 +33,6 @@ anime.timeline({
     duration: 1400,
     delay: (el, i) => 300 + 30 * i
   });
+
+  //scroll reveal
+  ScrollReveal().reveal('.ui.medium.image', {delay: 500});

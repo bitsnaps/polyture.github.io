@@ -12,6 +12,12 @@
 	<link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
 
 	<script src="https://unpkg.com/scrollreveal"></script>
+	<script>
+		ScrollReveal({
+			reset: true
+		});
+
+	</script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152613084-1"></script>
@@ -29,22 +35,37 @@
 </head>
 
 <body class="pusher">
-	<main class="box">
+	<main class="shadow">
 		<!-- landing page -->
-		<div class="shadow" id="landing-page" style="margin:0">
-
+		<div id="landing-page" style="margin:0">
+			<video autoplay loop muted src="img/background.mp4" id="landing-video"></video>
 			<!-- max width container -->
 			<div class="ui container">
 				<!-- header -->
 				<div class="ui fluid container" style="padding-top:3%">
 					<!-- menus -->
-					<div class="ui grid">
+					<div class="ui center aligned grid">
+						<!-- mobile tablet only logo -->
+						<div class="mobile tablet only row">
+							<img class="ui small image" src="img/polyture_logo_white.png">
+						</div>
+						<!-- mobile tablet only menu -->
+						<div class="mobile tablet only row">
+							<div class="ui secondary inverted menu">
+								<a class="active item">About</a>
+								<a class="item">Docs</a>
+								<a class="item">Pricing</a>
+								<a class="item">Blog</a>
+								<a class="item">Contact</a>
+							</div>
+						</div>
 						<!-- computer only menu -->
 						<div class="computer only row">
 							<div class="column">
 								<div class="ui secondary menu">
 									<div class="item">
-										<img class="ui small image" src="img/polyture_logo_white.png" alt="logo">
+										<img class="ui small image computer only row" src="img/polyture_logo_white.png"
+											alt="logo">
 									</div>
 									<div class="ui secondary inverted right menu">
 										<a class="active item">About</a>
@@ -56,26 +77,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- mobile only menu -->
-						<div class="tablet mobile only row">
-							<div class="column">
-								<div class="ui secondary inverted right menu">
-									<img class="ui small image" src="img/polyture_logo_white.png" alt="logo">
-									<a onclick="toggleSidebar()" id="mobile_item" class="right item"><i
-											class="large bars icon"></i></a>
-								</div>
-							</div>
-						</div>
-						<!-- sidebar -->
-						<div class="ui pushable segment" style="visibility: hidden;">
-							<div class="ui right inverted sidebar vertical menu">
-								<a class="active item strong">About</a>
-								<a class="item strong">Docs</a>
-								<a class="item strong">Pricing</a>
-								<a class="item strong">Blog</a>
-								<a class="item strong">Contact</a>
-							</div>
-						</div>
 					</div>
 				</div>
 				<!-- title wrapper -->
@@ -83,11 +84,11 @@
 					<!-- center content -->
 					<div class="ui center aligned grid" id="landing-title">
 						<!-- landing page words -->
-						<div class="computer tablet only row">
+						<div class="computer only row">
 							<h1 class="ml12" style="margin:0; padding: 0">enabling intuitive data science</h1>
 							<h1 class="ml13">for anyone</h1>
 						</div>
-						<div class="mobile only row">
+						<div class="mobile tablet only row">
 							<h1 class="ml12" style="margin:0; padding: 0">data science</h1>
 							<h1 class="ml12" style="margin:0; padding: 0">for anyone</h1>
 						</div>
@@ -96,108 +97,157 @@
 			</div>
 		</div>
 
-		<!-- about section -->
-		<div class="section" id="about">
-			<!-- wrapper -->
-			<div class="ui container" style="padding-left: 15%; padding-right: 15%">
-				<!-- no experience needed -->
-				<div class="ui center aligned grid">
+		<!-- content -->
+		<div class="content-wrapper">
+			<!-- what is polyture section -->
+			<div class="section">
+				<!-- wrapper -->
+				<div class="ui container">
 					<!-- mobile spacer -->
 					<br class="mobile tablet only row">
-					<!-- header -->
-					<h2 class="ui header">
-						<img src="img/blue-arrow.png" class="ui small image">
-						<div class="content">
-							No Experience?
-							<div class="sub header">
-								No Problem.
+					<!-- what is polyture-->
+					<div class="ui stackable left middle aligned grid">
+						<!-- image -->
+						<div class="six wide computer tablet only column">
+							<img class="ui medium image" src="img/data-processing.svg">
+						</div>
+						<div class="ten wide column">
+							<!-- header and description -->
+							<div class="ui left aligned grid">
+								<!-- header -->
+								<h2 class="ui huge header">
+									<img src="img/blue-arrow.png" class="ui small image">
+									<div class="content">
+										What is Polyture?
+									</div>
+								</h2>
+								<!-- description -->
+								<div class="row">
+									<div class="ui container">
+										<p>
+											Polyture is an interactive data science platform that reimagines how we
+											answer questions through data.
+										</p>
+									</div>
+								</div>
+								<!-- interested button -->
+								<div class="row">
+									<button class="ui blue button">Get Early Access</button>
+								</div>
+								<!-- mobile spacer -->
+								<br class="mobile tablet only row">
 							</div>
 						</div>
-					</h2>
-					<!-- description -->
-					<div class="row">
-						<div class="ui container">
+					</div>
+				</div>
+			</div>
+			<!-- no experience? section -->
+			<div class="section">
+				<!-- wrapper -->
+				<div class="ui container">
+					<!-- mobile spacer -->
+					<br class="mobile tablet only row">
+					<!-- no experience? -->
+					<div class="ui stackable left middle aligned relaxed grid">
+						<div class="ten wide column">
+							<!-- header and description -->
+							<div class="ui left aligned grid">
+								<!-- header -->
+								<h2 class="ui huge header">
+									<img src="img/blue-arrow.png" class="ui small image">
+									<div class="content">
+										No Experience?
+										<div class="sub header">
+											No Problem.
+										</div>
+									</div>
+								</h2>
+								<!-- description -->
+								<div class="row">
+									<div class="ui container" style="padding-right: 10%">
+										<p>
+											Polyture enables users without programming, statistics, or machine learning
+											background
+											to expertly answer data questions through an intuitive
+											user interface.
+										</p>
+									</div>
+								</div>
+								<!-- mobile spacer -->
+								<br class="mobile tablet only row">
+							</div>
+						</div>
+						<!-- image -->
+						<div class="six wide computer tablet only column">
+							<img class="ui medium image" src="img/hexagon-chart.svg">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- demo section -->
+			<div class="section">
+				<!-- wrapper -->
+				<div class="ui container">
+					<div class="ui center aligned grid">
+						<!-- mobile spacer -->
+						<br class="mobile tablet only row">
+						<!-- header -->
+						<h2 class="ui huge header">
+							<img src="img/blue-arrow.png" class="ui small image">
+							<div class="content">
+								Demo
+								<div class="sub header">
+									v0.6.8-Alpha
+								</div>
+							</div>
+						</h2>
+						<!-- video wrapper -->
+						<div class="row">
+							<div class="ui container">
+								<video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow"></video>
+							</div>
+						</div>
+						<!-- mobile spacer -->
+						<br class="mobile tablet only row">
+					</div>
+				</div>
+			</div>
+			<!-- early access section -->
+			<div class="section" id="early-access">
+				<!-- wrapper -->
+				<div class="ui container">
+					<!-- no experience needed -->
+					<div class="ui center aligned grid">
+						<!-- mobile spacer -->
+						<br class="mobile tablet only row">
+						<!-- header -->
+						<h2 class="ui huge header">
+							<img src="img/blue-arrow.png" class="ui small image">
+							<div class="content">
+								Get Early Access
+							</div>
+						</h2>
+						<!-- description -->
+						<div class="row">
 							<p>
-								Polyture is an interactive data science platform that reimagines how we answer
-								questions through data. It enables users without programming experience or background in
-								statistics and machine learning to expertly answer data questions through an intuitive
-								user
-								interface. olyture is designed to scale up virtually limitlessly and increase the
-								productivity
-								of even the most seasoned data scientists.
+								Sign up to learn more, receive updates, and join the private beta.
 							</p>
 						</div>
-					</div>
-					<!-- mobile spacer -->
-					<br class="mobile tablet only row">
-				</div>
-			</div>
-		</div>
-
-		<!-- demo section -->
-		<div class="section" id="demo">
-			<!-- wrapper -->
-			<div class="ui container" style="padding-left: 7%; padding-right: 7%">
-				<div class="ui center aligned grid">
-					<!-- mobile spacer -->
-					<br class="mobile tablet only row">
-					<!-- header -->
-					<h2 class="ui header">
-						<img src="img/blue-arrow.png" class="ui small image">
-						<div class="content">
-							Demo
-							<div class="sub header">
-								v0.6.8-Alpha
+						<!-- submit email -->
+						<div class="row">
+							<div class="ui container center aligned">
+								<div class="ui large action input">
+									<input type="text" placeholder="Your email address...">
+									<button class="ui blue right labeled icon button">
+										<i class="envelope icon"></i>
+										Submit
+									</button>
+								</div>
 							</div>
 						</div>
-					</h2>
-					<!-- description -->
-					<div class="row" style="padding-top: 3%">
-						<div class="ui container">
-							<video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="box"></video>
-						</div>
+						<!-- mobile spacer -->
+						<br class="mobile tablet only row">
 					</div>
-					<!-- mobile spacer -->
-					<br class="mobile tablet only row">
-				</div>
-			</div>
-		</div>
-
-		<!-- early access section -->
-		<div class="section" id="early-access">
-			<!-- wrapper -->
-			<div class="ui container" style="padding-left: 15%; padding-right: 15%">
-				<!-- no experience needed -->
-				<div class="ui center aligned grid">
-					<!-- mobile spacer -->
-					<br class="mobile tablet only row">
-					<!-- header -->
-					<h2 class="ui header">
-						<img src="img/blue-arrow.png" class="ui small image">
-						<div class="content">
-							Get Early Access
-						</div>
-					</h2>
-					<!-- description -->
-					<div class="row">
-						<p>
-							Sign up to learn more, receive updates, and join the private beta.
-						</p>
-					</div>
-					<!-- submit email -->
-					<div class="row">
-						<div class="ui container center aligned">
-							<div class="ui huge action input">
-								<input type="text" placeholder="Your email address...">
-								<button class="ui teal right labeled icon button">
-									<i class="envelope icon"></i>
-									Submit
-								</button>
-							</div>
-						</div>
-					</div>
-					<!-- mobile spacer -->
-					<br class="mobile tablet only row">
 				</div>
 			</div>
 		</div>
