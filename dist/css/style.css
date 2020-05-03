@@ -11,8 +11,6 @@ body {
 	overflow-x: hidden;
 
 	-ms-overflow-style: none;
-
-	background-image: url('');
 }
 
 main {
@@ -21,10 +19,15 @@ main {
 }
 
 .content-wrapper {
+	background: url('/img/background-image.png');
 	background-color: rgb(255, 255, 255);
 	padding-bottom: 10%;
 	padding-right: 10%;
 	padding-left: 10%;
+}
+
+.background-image {
+	background-image: url('/img/smooth.svg');
 }
 
 @media (min-aspect-ratio: 16/9) {
