@@ -47,5 +47,8 @@ loadTitle();
 // this event runs for every page view after initial load
 swup.on('contentReplaced', loadTitle);
 
-//rellax
-var rellax = new Rellax('.rellax');
+$("#get-access-button").click(function() {
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#early-access").offset().top
+  }, 1000);
+});

@@ -8,9 +8,9 @@
 	<title>Polyture</title>
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
 	<link rel="stylesheet" href="dist/css/style.css">
-	<link rel="stylesheet" href="dist/css/custom.css">
 	<link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="dist/css/bttn.css" rel="stylesheet">
 
 	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 
@@ -126,9 +126,8 @@
 								</div>
 								<!-- interested button -->
 								<div class="row">
-									<button class="ui blue button" onclick="document.querySelector('#early-access').scrollIntoView({ 
-												behavior: 'smooth' 
-											});">Get Early Access</button>
+									<button class="bttn-pill bttn-primary bttn-md" id="get-access-button">Get Early
+										Access</button>
 								</div>
 								<!-- mobile spacer -->
 								<br class="mobile tablet only row">
@@ -185,7 +184,6 @@
 			<div class="section" data-aos="fade-down" data-aos-duration="500">
 				<!-- divider header -->
 				<div class="ui horizontal divider header" style="padding:5%">
-					<i class="chart bar icon"></i>
 					ver. 0.6.8-alpha
 				</div>
 				<!-- wrapper -->
@@ -204,7 +202,7 @@
 				</div>
 			</div>
 			<!-- early access section -->
-			<div class="section" data-aos="fade-down" delay="1000" data-aos-duration="500">
+			<div class="section" id="early-access" data-aos="fade-down" delay="1000" data-aos-duration="500">
 				<!-- wrapper -->
 				<div class="ui container">
 					<!-- mobile spacer -->
@@ -235,15 +233,20 @@
 								</div>
 								<!-- submit email -->
 								<div class="row">
-									<div class="ui container left aligned">
-										<div class="ui large action input">
-											<input type="text" placeholder="Your email address...">
-											<button class="ui blue right labeled icon button">
-												<i class="envelope icon"></i>
-												Submit
-											</button>
+									<form
+										action="https://script.google.com/macros/s/AKfycbwVa2BBkvSzTd_MhvluM6U3XuBORA4NFVVezWmS325EetvBrP8Z/exec"
+										method="GET" onsubmit="window.open('https://www.polyture.com/email/success');">
+										<div style="display: flex; justify-content: center;">
+											<div class="custom-input">
+												<div style="width:40px"></div>
+												<input class="custom-input-inner" type="email" name="email"
+													placeholder="Your email address..." onfocus="this.placeholder = ''"
+													onfocusout="this.placeholder = 'Your email address...'" style="font-family: 'Open Sans';">
+												<div style="width:20px"></div>
+											</div>
+											<input class="submit-button" type="submit" value="SUBMIT">
 										</div>
-									</div>
+									</form>
 								</div>
 								<!-- mobile spacer -->
 								<br class="mobile tablet only row">
@@ -256,7 +259,7 @@
 		</div>
 
 		<!-- footer -->
-		<div class="shadow" id="footer">
+		<div class="shadow-footer" id="footer">
 			<!-- wrapper -->
 			<div class="ui container" style="padding-left: 15%; padding-right: 15%">
 				<div class="ui center aligned grid">
