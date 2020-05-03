@@ -13,7 +13,7 @@ body {
 
 	-ms-overflow-style: none;
 
-	background-color: #dadada;
+	background-color: #f0f0f0;
 }
 
 main {
@@ -25,9 +25,15 @@ main {
 	background-color: rgb(255, 255, 255);
 	padding-left: 12%;
 	padding-right: 12%;
+	padding-bottom: 10%;
 }
 
 /* Pricing Table Structure */
+
+#pricing {
+	padding-top: 3%;
+	padding-bottom: 10%;
+}
 
 .price-table-header {
 	padding-left:3%; 
