@@ -42,6 +42,10 @@ main {
 	background-image: url('/img/landing-content-background.png')
 }
 
+.content-wrapper.pricing {
+	background-image: url('/img/pricing-content-background.png');
+}
+
 /* Pricing Table Structure */
 
 #pricing {
