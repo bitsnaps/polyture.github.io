@@ -3,6 +3,9 @@ var textWrapper = document.querySelector('.ml12');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 function loadTitle() {
+
+  AOS.init();
+
   anime.timeline({
       loop: false
     })
