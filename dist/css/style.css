@@ -145,6 +145,11 @@ main {
 	color: black;
 }
 
+#logos {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  	filter: grayscale(100%) saturate(0) contrast(0);
+}
+
 #footer .row {
 	padding-top: 5%;
 }
