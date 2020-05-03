@@ -36,11 +36,6 @@ function loadTitle() {
     });
 }
 
-//scroll reveal
-ScrollReveal().reveal('.ui.medium.image', {
-  delay: 500
-});
-
 //swup js
 const swup = new Swup();
 

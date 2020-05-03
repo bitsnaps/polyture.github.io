@@ -10,15 +10,7 @@
 	<link rel="stylesheet" href="dist/css/style.css">
 	<link rel="stylesheet" href="dist/css/custom.css">
 	<link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
-
-	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-	<script src="https://unpkg.com/scrollreveal"></script>
-	<script>
-		ScrollReveal({
-			reset: true
-		});
-
-	</script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152613084-1"></script>
@@ -101,20 +93,20 @@
 		<!-- content -->
 		<div class="content-wrapper">
 			<!-- what is polyture section -->
-			<div class="section">
+			<div class="section" data-aos="fade-down-right" data-aos-duration="1000">
 				<!-- wrapper -->
 				<div class="ui container">
 					<!-- mobile spacer -->
 					<br class="mobile tablet only row">
 					<!-- what is polyture-->
-					<div class="ui stackable left middle aligned grid">
+					<div class="ui left middle aligned stackable grid">
 						<!-- image -->
-						<div class="six wide computer tablet only column">
+						<div class="five wide computer tablet only column" style="padding-right: 5%">
 							<img class="ui medium image" src="img/data-processing.svg">
 						</div>
 						<div class="ten wide column">
 							<!-- header and description -->
-							<div class="ui left aligned grid">
+							<div class="ui left aligned grid" style="padding-left: 5%">
 								<!-- header -->
 								<h2 class="ui huge header">
 									<img src="img/blue-arrow.png" class="ui small image">
@@ -145,13 +137,13 @@
 				</div>
 			</div>
 			<!-- no experience? section -->
-			<div class="section">
+			<div class="section" data-aos="fade-down-left" data-aos-duration="1000">
 				<!-- wrapper -->
 				<div class="ui container">
 					<!-- mobile spacer -->
 					<br class="mobile tablet only row">
 					<!-- no experience? -->
-					<div class="ui stackable left middle aligned relaxed grid">
+					<div class="ui left middle aligned stackable grid">
 						<div class="ten wide column">
 							<!-- header and description -->
 							<div class="ui left aligned grid">
@@ -167,7 +159,7 @@
 								</h2>
 								<!-- description -->
 								<div class="row">
-									<div class="ui container" style="padding-right: 10%">
+									<div class="ui container" style="padding-right: 5%">
 										<p>
 											Polyture enables users without programming, statistics, or machine learning
 											background
@@ -181,33 +173,27 @@
 							</div>
 						</div>
 						<!-- image -->
-						<div class="six wide computer tablet only column">
+						<div class="five wide computer tablet only column" style="padding-left: 5%">
 							<img class="ui medium image" src="img/hexagon-chart.svg">
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- demo section -->
-			<div class="section">
+			<div class="section" data-aos="fade-down" data-aos-duration="1000">
 				<!-- divider header -->
-				<div class="ui horizontal divider huge header" style="padding-top:5%">
+				<div class="ui horizontal divider header" style="padding:5%">
 					<i class="chart bar icon"></i>
-					Demo
+					ver. 0.6.8-alpha
 				</div>
 				<!-- wrapper -->
 				<div class="ui container">
 					<div class="ui center aligned grid">
-						<!-- mobile spacer -->
-						<br class="mobile tablet only row">
-						<!-- header -->
-						<div class="ui center aligned container">
-							<br>
-							ver. 0.6.8-alpha
-						</div>
 						<!-- video wrapper -->
 						<div class="row" style="padding-top: 3%">
 							<div class="ui container">
-								<video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow" id="demo-video"></video>
+								<video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow"
+									id="demo-video"></video>
 							</div>
 						</div>
 						<!-- mobile spacer -->
@@ -216,40 +202,51 @@
 				</div>
 			</div>
 			<!-- early access section -->
-			<div class="section" id="early-access">
+			<div class="section" data-aos="fade-down" data-aos-duration="1000">
 				<!-- wrapper -->
 				<div class="ui container">
-					<!-- no experience needed -->
-					<div class="ui center aligned grid">
-						<!-- mobile spacer -->
-						<br class="mobile tablet only row">
-						<!-- header -->
-						<h2 class="ui huge header">
-							<img src="img/blue-arrow.png" class="ui small image">
-							<div class="content">
-								Get Early Access
-							</div>
-						</h2>
-						<!-- description -->
-						<div class="row">
-							<p>
-								Sign up to learn more, receive updates, and join the private beta.
-							</p>
+					<!-- mobile spacer -->
+					<br class="mobile tablet only row">
+					<!-- what is polyture-->
+					<div class="ui left middle aligned stackable grid">
+						<!-- image -->
+						<div class="five wide computer tablet only column" style="padding-right: 5%">
+							<img class="ui medium image" src="img/early-access.svg">
 						</div>
-						<!-- submit email -->
-						<div class="row">
-							<div class="ui container center aligned">
-								<div class="ui large action input">
-									<input type="text" placeholder="Your email address...">
-									<button class="ui blue right labeled icon button">
-										<i class="envelope icon"></i>
-										Submit
-									</button>
+						<div class="ten wide column">
+							<!-- header and description -->
+							<div class="ui left aligned grid" style="padding-left: 5%">
+								<!-- header -->
+								<h2 class="ui huge header">
+									<img src="img/blue-arrow.png" class="ui small image">
+									<div class="content">
+										Get Early Access
+									</div>
+								</h2>
+								<!-- description -->
+								<div class="row">
+									<div class="ui container">
+										<p>
+											Sign up to receive the newest updates and join the private beta.
+										</p>
+									</div>
 								</div>
+								<!-- submit email -->
+								<div class="row">
+									<div class="ui container left aligned">
+										<div class="ui large action input">
+											<input type="text" placeholder="Your email address...">
+											<button class="ui blue right labeled icon button">
+												<i class="envelope icon"></i>
+												Submit
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- mobile spacer -->
+								<br class="mobile tablet only row">
 							</div>
 						</div>
-						<!-- mobile spacer -->
-						<br class="mobile tablet only row">
 					</div>
 				</div>
 			</div>
@@ -293,10 +290,15 @@
 			</div>
 		</div>
 	</main>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 
-<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
 <script src="dist/js/anime.js"></script>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto&display=swap');
 
 /* Page Structure */
 
@@ -13,7 +12,7 @@ body {
 
 	-ms-overflow-style: none;
 
-	background-color: #f0f0f0;
+	background-image: url('');
 }
 
 main {
@@ -23,9 +22,16 @@ main {
 
 .content-wrapper {
 	background-color: rgb(255, 255, 255);
-	padding-left: 12%;
-	padding-right: 12%;
 	padding-bottom: 10%;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+	.content-wrapper {
+		padding-right: 17%;
+		padding-left: 17%;
+	}
 }
 
 /* Pricing Table Structure */
@@ -52,7 +58,7 @@ main {
 /* Section Structure */
 
 .section {
-	padding-top: 5%;
+	padding-top: 15%;
 	padding-bottom: 5%;
 }
 
@@ -61,6 +67,10 @@ main {
 }
 
 /* Specific Styling */ 
+
+#early-access-image {
+	padding-bottom: 5%;
+}
 
 #title-wrapper {
 	padding: 15%;
@@ -131,11 +141,12 @@ p {
 }
 
 .ui {
-	font-family: 'Montserrat' !important;
+	font-family: 'Roboto' !important;
 }
 
-.ui p {
-	font-family: 'Ovo' !important;
+.ui.header {
+	font-weight: 600 !important;
+	font-family: 'Open Sans';
 }
 
 /* Box Shadows */
