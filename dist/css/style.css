@@ -95,18 +95,11 @@ main {
 	}
 }
 
-@media (max-aspect-ratio: 16/9) {
-	#landing-video {
-		width: auto;
-		height: 100%;
-	}
-}
-
 /* Footer */
 
 #footer {
 	height: 30%;
-	background-color: rgb(192, 192, 192);
+	background-color: rgb(233, 233, 233);
 	padding-top: 5%;
 	padding-bottom: 5%;
 }

@@ -42,9 +42,7 @@ ScrollReveal().reveal('.ui.medium.image', {
 });
 
 //swup js
-const swup = new Swup({
-  theme: [new SwupSlideTheme()]
-});
+const swup = new Swup();
 
 loadTitle();
 
