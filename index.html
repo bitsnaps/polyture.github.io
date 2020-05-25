@@ -31,7 +31,7 @@
 <body>
 	<main class="shadow">
 		<!-- landing page -->
-		<div id="landing-page" style="margin:0">
+		<div id="landing-page">
 			<video autoplay loop muted src="img/background.mp4" id="landing-video"></video>
 			<!-- max width container -->
 			<div class="ui container">
@@ -75,16 +75,26 @@
 				</div>
 				<!-- title wrapper -->
 				<div id="title-wrapper">
-					<!-- center content -->
-					<div class="ui center aligned grid" id="landing-title">
-						<!-- landing page words -->
-						<div class="computer only row">
-							<h1 class="ml12" style="margin:0; padding: 0">enabling intuitive data science</h1>
-							<h1 class="ml13">for anyone</h1>
+					<!-- landing page title -->
+					<div class="ui center middle aligned grid">
+						<div class="computer only column" style="width: 27%; padding-right:5%">
+							<div class="ui container">
+								<img class="ui small image" style="float: right" src="img/white-arrow.png">
+							</div>
 						</div>
-						<div class="mobile tablet only row">
-							<h1 class="ml12" style="margin:0; padding: 0">data science</h1>
-							<h1 class="ml12" style="margin:0; padding: 0">for anyone</h1>
+						<div class="column" style="width: 73%">
+							<div class="ui left aligned container">
+								<h1 id="landing-title"> <span style="font-size:1.75em">Big Data</span> <br/> at Your Fingertips</h1>
+							</div>
+						</div>
+					</div>
+					<!-- early access button -->
+					<div class="ui grid" style="padding-top: 2%; padding-bottom: 5%">
+						<div class="computer only column" style="width: 27%; padding-right:3%">
+						</div>
+						<div class="column" style="width: 73%">
+							<h1 id="landing-subtitle" style="padding-bottom: 2%">analyze 1tb+ in under 10 seconds</h1>
+							<button class="cta-button" onclick="scrollToEarlyAccess()">Get Early Access</button>
 						</div>
 					</div>
 				</div>
@@ -122,11 +132,6 @@
 											answer questions through data.
 										</p>
 									</div>
-								</div>
-								<!-- interested button -->
-								<div class="row">
-									<button class="bttn-jelly bttn-primary bttn-md" id="get-access-button">Get Early
-										Access</button>
 								</div>
 								<!-- mobile spacer -->
 								<br class="mobile tablet only row">
@@ -279,9 +284,10 @@
 					<div class="row">
 						<div class="footer-social-links">
 							<a href="#" title="Facebook" target="_blank"><i class="facebook f icon"></i></a>
-							<a href="https://twitter.com/PolytureData" title="Twitter" target="_blank"><i class="twitter icon"></i></a>
+							<a href="https://twitter.com/PolytureData" title="Twitter" target="_blank"><i
+									class="twitter icon"></i></a>
 							<a href="#" title="Medium" target="_blank"><i class="medium m icon"></i></a>
-						  </div>
+						</div>
 					</div>
 					<!-- copyright -->
 					<div class="row">

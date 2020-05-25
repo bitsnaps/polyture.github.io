@@ -35,12 +35,10 @@ anime.timeline({
     delay: (el, i) => 300 + 30 * i
   });
 
-
-$("#get-access-button").click(function () {
-  $([document.documentElement, document.body]).animate({
-    scrollTop: $("#early-access").offset().top
-  }, 1000);
-});
+function scrollToEarlyAccess() {
+  var element = document.querySelector("#early-access");
+  element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init();
