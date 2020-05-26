@@ -400,3 +400,9 @@ body { background-color: #eee; }
 	border-color: rgb(55, 127, 228) !important;
 	transition: all 0.4s ease 0s;
 }
+
+/* Menu */
+
+.ui .menu {
+	border: 0 !important;
+}
