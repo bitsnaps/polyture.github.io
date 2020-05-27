@@ -147,6 +147,7 @@ main {
 
 #pricing-banner {
 	background-image: url('../../img/blurry-background.png');
+	padding-bottom: 3%;
 }
 
 /* Landing Page Video */
@@ -395,6 +396,30 @@ body { background-color: #eee; }
 }
 
 .cta-button:hover {
+	color: #ffffff !important;
+	background: rgb(55, 127, 228);
+	border-color: rgb(55, 127, 228) !important;
+	transition: all 0.4s ease 0s;
+}
+
+.cta-button-nav {
+	color: white !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 10px;
+	border: 4px solid rgba(255, 255, 255, 0.9) !important;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+
+	font-family: 'Open Sans';
+	font-weight: 500;
+
+	margin-left: 3%;
+	white-space: nowrap;
+}
+
+.cta-button-nav:hover {
 	color: #ffffff !important;
 	background: rgb(55, 127, 228);
 	border-color: rgb(55, 127, 228) !important;
