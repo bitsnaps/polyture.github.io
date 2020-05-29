@@ -8,6 +8,7 @@
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/bttn.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -88,17 +89,17 @@
 
         <!-- content -->
         <div class="content-wrapper pricing">
-
             <!-- why polyture section -->
-            <div class="section" data-aos="fade-down-right" data-aos-duration="500">
+            <div class="section" data-aos="fade-down-left" data-aos-duration="500">
                 <!-- wrapper -->
                 <div class="ui container">
                     <!-- mobile spacer -->
                     <br class="mobile tablet only row">
+                    <!-- no experience? -->
                     <div class="ui left middle aligned stackable grid">
                         <div class="column">
                             <!-- header and description -->
-                            <div class="ui left aligned grid" style="padding-left: 5%">
+                            <div class="ui left aligned grid">
                                 <!-- header -->
                                 <h2 class="ui huge header">
                                     <img src="/img/blue-arrow.png" class="ui small image">
@@ -108,10 +109,10 @@
                                 </h2>
                                 <!-- description -->
                                 <div class="row">
-                                    <div class="ui container">
+                                    <div class="ui container" style="padding-right: 5%">
                                         <p>
-                                            Polyture is an interactive data science platform that reimagines how we
-                                            answer questions through data.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                                         </p>
                                     </div>
                                 </div>
@@ -123,6 +124,62 @@
                 </div>
             </div>
 
+            <!-- sign up form -->
+            <div class="section" id="sign-up-form" data-aos="fade-down" data-aos-duration="500">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <!-- contact us by email -->
+                    <div class="ui left aligned stackable grid">
+                        <div class="five wide column" style="margin-right: 5%" data-aos="fade-down-right"
+                            data-aos-duration="500">
+                            <!-- header and description -->
+                            <div class="ui left aligned grid" style="padding-left: 5%">
+                                <!-- description -->
+                                <div class="row">
+                                    <div class="ui container">
+                                        <p>
+                                            Sign up to join others in the early access of Polyture.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- image -->
+                                <div class="computer tablet only row" style="padding-top:23%">
+                                    <img class="ui medium image" src="../img/sign-up.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="eight wide column" data-aos="fade-down-left" data-aos-duration="500">
+                            <div class="ui secondary segment">
+                                <!-- form -->
+                                <form class="ui form">
+                                    <!-- name -->
+                                    <div class="field">
+                                        <label>Name</label>
+                                        <div class="two fields">
+                                            <div class="field">
+                                                <input type="text" placeholder="First Name">
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- email -->
+                                    <div class="field">
+                                        <label>E-mail</label>
+                                        <div class="field">
+                                            <input type="text" placeholder="example@example.com">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="ui container" style="padding-top: 5%">
+                                    <button class="bttn-simple bttn-primary bttn-md">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- footer -->
