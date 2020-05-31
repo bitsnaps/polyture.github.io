@@ -199,15 +199,27 @@ main {
 #footer {
     height: 30%;
     width: 100%;
-    background-color: rgb(65, 65, 65);
+    background-color: rgb(48, 48, 48);
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
 #logos {
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(80%);
     /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%) saturate(0) contrast(0);
+    filter: grayscale(80%) saturate(0) contrast(0);
+}
+
+#copyright {
+    color: white;
+    font-size: 0.7em;
+    font-family: 'Roboto Condensed';
+    letter-spacing: 0.3em;
+    padding-top: 2% !important;
+    padding-bottom: 0% !important;
+    -webkit-filter: grayscale(80%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(80%) saturate(0) contrast(0);
 }
 
 #footer .row {
