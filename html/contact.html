@@ -8,6 +8,7 @@
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/bttn.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -34,55 +35,54 @@
                 <!-- header -->
                 <div class="ui fluid container" style="padding-top:3%">
                     <!-- menus -->
-					<div class="ui center aligned grid">
-						<!-- mobile tablet only logo -->
-						<div class="mobile tablet only row">
-							<img class="ui small image" src="/img/polyture_logo_white.png">
-						</div>
-						<!-- menu -->
-						<div class="row">
-							<div class="ui middle aligned grid">
-								<div class="computer only left aligned three wide column">
-									<div class="item">
-										<img class="ui image computer only row" src="/img/polyture_logo_white.png"
-											alt="logo">
-									</div>
-								</div>
-								<div class="mobile tablet only two wide column">
-									<!-- spacer -->
-								</div>
-								<div class="right aligned thirteen wide column">
-									<div class="ui secondary inverted pointing right menu" style="float: right">
+                    <div class="ui center aligned grid">
+                        <!-- mobile tablet only logo -->
+                        <div class="mobile tablet only row">
+                            <img class="ui small image" src="/img/polyture_logo_white.png">
+                        </div>
+                        <!-- menu -->
+                        <div class="row">
+                            <div class="ui middle aligned grid">
+                                <div class="computer only left aligned three wide column">
+                                    <div class="item">
+                                        <img class="ui image computer only row" src="/img/polyture_logo_white.png" alt="logo">
+                                    </div>
+                                </div>
+                                <div class="mobile tablet only two wide column">
+                                    <!-- spacer -->
+                                </div>
+                                <div class="right aligned thirteen wide column">
+                                    <div class="ui secondary inverted pointing right menu" style="float: right">
                                         <a href="/index.html" class="item">About</a>
-										<a href="/html/docs.html" class="item">Docs</a>
-										<a href="/html/pricing.html" class="item">Pricing</a>
-										<a href="/html/blog.html" class="item">Blog</a>
-										<a class="active item">Contact</a>
+                                        <a href="/html/docs.html" class="item">Docs</a>
+                                        <a href="/html/pricing.html" class="item">Pricing</a>
+                                        <a href="/html/blog.html" class="item">Blog</a>
+                                        <a class="active item">Contact</a>
                                         <a href="/html/sign-up.html" class="cta-button-nav">Sign Up</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-				<!-- banner -->
-				<div class="banner" data-aos="fade-up" data-aos-duration="500">
-					<!-- pricing header -->
-					<div class="ui center middle aligned grid">
-						<div class="computer only two wide column">
-							<img class="ui image" src="/img/white-arrow.png">
-						</div>
-						<div class="fourteen wide column">
-							<h1 class="landing-title">Contact</h1>
-						</div>
-					</div>
-					<div class="ui center middle aligned grid">
-						<div class="two wide column"></div>
-						<div class="fourteen wide column">
-							<h1 class="landing-subtitle">Reach out to us</h1>
-						</div>
-					</div>
-				</div>
+                <!-- banner -->
+                <div class="banner" data-aos="fade-up" data-aos-duration="500">
+                    <!-- pricing header -->
+                    <div class="ui center middle aligned grid">
+                        <div class="computer only two wide column">
+                            <img class="ui image" src="/img/white-arrow.png">
+                        </div>
+                        <div class="fourteen wide column">
+                            <h1 class="landing-title">Contact</h1>
+                        </div>
+                    </div>
+                    <div class="ui center middle aligned grid">
+                        <div class="two wide column"></div>
+                        <div class="fourteen wide column">
+                            <h1 class="landing-subtitle">Reach out to us</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -101,62 +101,35 @@
                         </div>
                     </h2>
                     <!-- contact us by email -->
-                    <div class="ui left aligned stackable grid">
-                        <div class="five wide column" style="margin-right: 5%" data-aos="fade-down-right"
-                            data-aos-duration="500">
-                            <!-- header and description -->
-                            <div class="ui left aligned grid" style="padding-left: 5%">
-                                <!-- description -->
-                                <div class="row">
-                                    <div class="ui container">
-                                        <p>
-                                            Let us know what you need, and we'll get back to you as soon as we can.
-                                        </p>
+                    <div id="contact-container">
+                        <div class="ui left aligned stackable grid">
+                            <div class="seven wide column" style="margin-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
+                                <!-- header and description -->
+                                <div class="ui left aligned grid" style="padding-left: 5%">
+                                    <!-- description -->
+                                    <div class="row">
+                                        <div class="ui container">
+                                            <p>
+                                                Let us know what you need, and we'll get back to you as soon as we can.
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- image -->
-                                <div class="computer tablet only row" style="padding-top:23%">
-                                    <img class="ui medium image" src="../img/contact-us.svg">
+                                    <!-- image -->
+                                    <div class="computer tablet only row" style="padding-top:10%">
+                                        <img class="ui medium image" src="../img/contact-us.svg">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="ten wide column" data-aos="fade-down-left" data-aos-duration="500">
-                            <div class="ui secondary segment">
-                                <!-- form -->
-                                <form class="ui form">
-                                    <!-- name -->
-                                    <div class="field">
-                                        <label>Name</label>
-                                        <div class="two fields">
-                                            <div class="field">
-                                                <input type="text" placeholder="First Name">
-                                            </div>
-                                            <div class="field">
-                                                <input type="text" placeholder="Last Name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- email -->
-                                    <div class="field">
-                                        <label>E-mail</label>
-                                        <div class="field">
-                                            <input type="text" placeholder="example@example.com">
-                                        </div>
-                                    </div>
-                                    <!-- subject -->
-                                    <div class="field">
-                                        <label>Subject</label>
-                                        <div class="field">
-                                            <input type="text" placeholder="Tell us what you need">
-                                        </div>
-                                    </div>
-                                    <!-- message -->
-                                    <div class="field">
-                                        <label>Message</label>
-                                        <div class="field">
-                                            <textarea rows="4"
-                                                placeholder="Tell us more specifically what you need, or what you need help with. We'll get back to you as soon as we can."></textarea>
-                                        </div>
+                            <div class="eight wide column" data-aos="fade-down-left" data-aos-duration="500">
+                                <form class="form">
+                                    <p type="Name:"><input class="form-input" placeholder="What is your name?"></input>
+                                    </p>
+                                    <p type="Email:"><input class="form-input" placeholder="Where can we find you?"></input>
+                                    </p>
+                                    <p type="Message:"><input class="form-input" placeholder="What would you like to tell us?"></input>
+                                    </p>
+                                    <div class="button-container">
+                                        <button class="bttn-primary bttn-simple bttn-md">Send Message</button>
                                     </div>
                                 </form>
                             </div>
@@ -187,8 +160,7 @@
                                 <div class="row">
                                     <div class="ui container" style="padding-right: 5%">
                                         <p>
-                                            <a href="https://twitter.com/PolytureData">Follow us on Twitter </a>to learn
-                                            more and keep up with the latest news and updates.
+                                            <a href="https://twitter.com/PolytureData">Follow us on Twitter </a>to learn more and keep up with the latest news and updates.
                                         </p>
                                     </div>
                                 </div>
@@ -206,8 +178,7 @@
 
             <!-- embed twitter feed -->
             <div data-aos="fade-up" data-aos-duration="500">
-                <a style="padding-top:5%" class="twitter-timeline"
-                    href="https://twitter.com/PolytureData?ref_src=twsrc%5Etfw">Tweets by PolytureData</a>
+                <a style="padding-top:5%" class="twitter-timeline" href="https://twitter.com/PolytureData?ref_src=twsrc%5Etfw">Tweets by PolytureData</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
