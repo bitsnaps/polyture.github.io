@@ -1,0 +1,28 @@
+{
+  "name": "polyture",
+  "version": "1.0.0",
+  "description": "A landing page template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polyture/polyture.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Polyture/polyture.github.io/issues"
+  },
+  "homepage": "https://github.com/Polyture/polyture.github.io#readme",
+  "dependencies": {
+    "@swup/preload-plugin": "^1.0.3",
+    "@swup/slide-theme": "^1.0.5",
+    "animejs": "^3.2.0",
+    "rellax": "^1.12.1",
+    "semantic-ui": "^2.4.2",
+    "slideout": "^1.0.1",
+    "swup": "^2.0.9"
+  }
+}
