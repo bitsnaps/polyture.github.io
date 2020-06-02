@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Raleway:wght@800&family=Roboto+Condensed:wght@400&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* 6FABFF */
 
@@ -260,7 +261,8 @@ main {
 
 p {
     font-size: 1.5em;
-    font-family: 'Roboto Condensed';
+    font-family: 'Montserrat';
+    color: rgb(90, 90, 90);
     letter-spacing: 0.02em;
 }
 
@@ -464,6 +466,7 @@ body {
     display: inline-block;
     transition: all 0.4s ease 0s;
     font-family: 'Open Sans';
+    letter-spacing: 0.05em;
     font-weight: 500;
 }
 
