@@ -346,10 +346,8 @@ body::-webkit-scrollbar {
     border-style: solid;
     border-width: 0px;
     border-radius: 25px 0px 0px 25px;
-    background-color: rgb(0, 0, 0, 0.1);
-    margin: 0px;
-    padding: 0px;
-    color: rgba(50, 50, 50);
+    background-color: rgb(221, 221, 221);
+    color: rgb(32, 32, 32);
     display: flex;
     flex-direction: "column";
 }
@@ -359,12 +357,12 @@ body::-webkit-scrollbar {
     outline: none;
     border-width: 0px;
     background-color: rgba(0, 0, 0, 0);
-    color: #363a40;
+    color: rgb(32, 32, 32);
 }
 
-::placeholder {
+.custom-input-inner::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #363a40;
+    color: rgb(32, 32, 32);
 }
 
 .submit-button {
@@ -375,13 +373,11 @@ body::-webkit-scrollbar {
     border-radius: 0px 25px 25px 0px;
     /* background-color: rgba(54, 120, 255); */
     /* background-color: #47b554; */
-    background-color: #1d89ff;
+    background-color: #6FABFF;
     color: white;
-    margin: 0px;
-    padding: 0px;
     font-size: 16px;
     font-family: 'Open Sans';
-    letter-spacing: -0.5px;
+    letter-spacing: 0.1em;
     font-weight: bold;
     -webkit-transition-duration: 0.2s;
     /* Safari */
@@ -389,10 +385,9 @@ body::-webkit-scrollbar {
 }
 
 .submit-button:hover {
-    background-color: #363a40;
+    background-color: rgb(41, 64, 95);
     color: white;
     cursor: pointer;
-    /* color: rgba(50, 50, 50); */
 }
 
 
