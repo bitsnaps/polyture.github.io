@@ -93,6 +93,14 @@ main {
 
 /* Specific Styling */
 
+.pricing-header {
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Raleway';
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 .button-container {
     padding-top: 5%;
     padding-bottom: 1%;
