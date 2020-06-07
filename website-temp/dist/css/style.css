@@ -121,18 +121,24 @@ main {
     }
 }
 
+#download-links {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+}
+
 #use-cases {
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 5%;
 }
 
-#submit-button {
-    background-color: #6FABFF;
-}
-
 #early-access-image {
     padding-bottom: 5%;
+}
+
+#early-access .submit-button {
+    border-radius: 0px 25px 25px 0px;
 }
 
 #title-wrapper {
@@ -372,7 +378,7 @@ body::-webkit-scrollbar {
     width: 150px;
     height: 50px;
     border-width: 0px;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 25px 25px 25px 25px;
     /* background-color: rgba(54, 120, 255); */
     /* background-color: #47b554; */
     background-color: #6FABFF;
@@ -390,73 +396,6 @@ body::-webkit-scrollbar {
     background-color: rgb(41, 64, 95);
     color: white;
     cursor: pointer;
-}
-
-
-/* Social Media Links */
-
-body {
-    background-color: #eee;
-}
-
-.footer-social-links {
-    font-size: 14px;
-    text-align: center;
-}
-
-.footer-social-links a {
-    width: 30px;
-    height: 30px;
-    line-height: 30px !important;
-    position: relative;
-    margin: 0 5px;
-    text-align: center;
-    display: inline-block;
-    color: #111;
-    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-}
-
-.footer-social-links a i,
-.footer-social-links a span {
-    position: relative;
-    top: 2px;
-    left: 1px;
-}
-
-.footer-social-links a:before {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid #111;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-}
-
-.footer-social-links a:hover {
-    color: #fff;
-}
-
-.footer-social-links a:hover:before {
-    background: #111;
 }
 
 
@@ -564,7 +503,6 @@ body {
 }
 
 .form-container .submit-button {
-    border-radius: 25px 25px 25px 25px;
     width: 80%;
     text-transform: uppercase;
     display: inline-block;
@@ -574,4 +512,14 @@ body {
     background-color: rgb(41, 64, 95);
     color: white;
     cursor: pointer;
+}
+
+
+/* Download Links */
+
+#download-links .submit-button {
+    text-transform: uppercase;
+    padding: 5%;
+    width: 100%;
+    text-align: center;
 }

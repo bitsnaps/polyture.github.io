@@ -8,9 +8,11 @@
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="../dist/css/style.css">
-    <link rel="stylesheet" href="../dist/css/bttn.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../dist/css/bttn.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152613084-1"></script>
@@ -27,7 +29,7 @@
 </head>
 
 <body>
-    <main class="shadow">
+    <main class="shadow transition-fade" id="swup">
         <!-- landing page -->
         <div id="pricing-banner" style="margin:0">
             <!-- max width container -->
@@ -55,9 +57,9 @@
                                     <div class="ui secondary inverted pointing right menu" style="float: right">
                                         <a href="../index.html" class="item">About</a>
                                         <a href="./pricing.html" class="item">Pricing</a>
-                                        <a href="./downloads.html" class="item">Downloads</a>
+                                        <a class="active item">Downloads</a>
                                         <a href="./contact.html" class="item">Contact</a>
-                                        <a class="cta-button-nav">Sign Up</a>
+                                        <a href="./sign-up.html" class="cta-button-nav">Sign Up</a>
                                     </div>
                                 </div>
                             </div>
@@ -72,13 +74,13 @@
                             <img class="ui image" src="../img/white-arrow.png">
                         </div>
                         <div class="fourteen wide column">
-                            <h1 class="landing-title">Sign Up</h1>
+                            <h1 class="landing-title">downloads</h1>
                         </div>
                     </div>
                     <div class="ui center middle aligned grid">
                         <div class="two wide column"></div>
                         <div class="fourteen wide column">
-                            <h1 class="landing-subtitle">Get early access to Polyture</h1>
+                            <h1 class="landing-subtitle">Get Polyture</h1>
                         </div>
                     </div>
                 </div>
@@ -87,29 +89,32 @@
 
         <!-- content -->
         <div class="content-wrapper pricing">
-            <!-- why polyture section -->
-            <div class="section" data-aos="fade-down-left" data-aos-duration="500">
+            <!-- get polyture -->
+            <div class="section" data-aos="fade-down-right" data-aos-duration="500">
                 <!-- wrapper -->
                 <div class="ui container">
                     <!-- mobile spacer -->
                     <br class="mobile tablet only row">
-                    <!-- no experience? -->
                     <div class="ui left middle aligned stackable grid">
-                        <div class="column">
+                        <!-- image -->
+                        <div class="five wide computer tablet only column" style="padding-right: 5%">
+                            <img class="ui medium image" src="../img/downloads.svg">
+                        </div>
+                        <div class="eleven wide column">
                             <!-- header and description -->
-                            <div class="ui left aligned grid">
+                            <div class="ui left aligned grid" style="padding-left: 5%">
                                 <!-- header -->
                                 <h2 class="ui huge header">
                                     <img src="../img/blue-arrow.png" class="ui small image">
                                     <div class="content">
-                                        Why Polyture?
+                                        Get Polyture
                                     </div>
                                 </h2>
                                 <!-- description -->
                                 <div class="row">
-                                    <div class="ui container" style="padding-right: 5%">
+                                    <div class="ui container">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                         </p>
                                     </div>
                                 </div>
@@ -120,74 +125,75 @@
                     </div>
                 </div>
             </div>
-
-            <!-- sign up form -->
-            <div class="section" id="sign-up-form" data-aos="fade-down" data-aos-duration="500">
+            <!-- download links -->
+            <div id="download-links" data-aos="fade-up" data-aos-duration="500">
                 <!-- wrapper -->
                 <div class="ui container">
-                    <!-- contact us by email -->
-                    <div class="ui left aligned equal width stackable grid">
-                        <div class="column" style="margin-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
-                            <!-- header and description -->
-                            <div class="ui left aligned grid" style="padding-left: 5%">
-                                <!-- description -->
-                                <div class="row">
-                                    <div class="ui container">
-                                        <p>
-                                            Sign up to join others in the early access of Polyture.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- image -->
-                                <div class="computer tablet only row" style="padding-top:23%">
-                                    <img class="ui medium image" src="../img/sign-up.svg">
-                                </div>
+                    <!-- mobile spacer -->
+                    <br class="mobile tablet only row">
+                    <div class="ui left middle aligned stackable equal width grid">
+                        <div class="column">
+                            <button class="submit-button"><i class="windows large icon"></i>Windows</button>
+                        </div>
+                        <div class="column">
+                            <button class="submit-button"><i class="apple large icon"></i>MacOS</button>
+                        </div>
+                        <div class="column">
+                            <button class="submit-button"><i class="linux large icon"></i>Linux</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- screenshot section -->
+            <div class="section" data-aos="fade-down" data-aos-duration="500">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <div class="ui center aligned grid">
+                        <!-- video wrapper -->
+                        <div class="row" style="padding-top: 3%">
+                            <div class="ui container">
+                                <img class="ui image shadow" src="../img/application-screenshot.png">
                             </div>
                         </div>
-                        <div class="column" data-aos="fade-down-left" data-aos-duration="500">
-                            <!-- form -->
-                            <div class="form-container">
-                                <div class="ui form">
-                                    <div class="two fields">
-                                        <div class="field">
-                                            <label>First Name:</label>
-                                            <input type="text" placeholder="First Name">
-                                        </div>
-                                        <div class="field">
-                                            <label>Last Name:</label>
-                                            <input type="text" placeholder="Last Name">
-                                        </div>
+                        <!-- mobile spacer -->
+                        <br class="mobile tablet only row">
+                    </div>
+                </div>
+            </div>
+            <!-- manual section -->
+            <div class="section" data-aos="fade-down-left" data-aos-duration="500">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <!-- mobile spacer -->
+                    <br class="mobile tablet only row">
+                    <!-- unsure? -->
+                    <div class="ui left middle aligned stackable grid">
+                        <div class="eleven wide column">
+                            <!-- header and description -->
+                            <div class="ui left aligned grid">
+                                <!-- header -->
+                                <h2 class="ui huge header">
+                                    <img src="../img/blue-arrow.png" class="ui small image">
+                                    <div class="content">
+                                        User Manual
                                     </div>
-                                    <div class="one field">
-                                        <div class="field">
-                                            <label>Organization:</label>
-                                            <input type="password" placeholder="Organization">
-                                        </div>
-                                    </div>
-                                    <div class="one field">
-                                        <div class="field">
-                                            <label>Email Address:</label>
-                                            <input type="text" placeholder="Email Address">
-                                        </div>
-                                    </div>
-                                    <div class="one field">
-                                        <div class="field">
-                                            <label>Password:</label>
-                                            <input type="password" placeholder="Password">
-                                        </div>
-                                    </div>
-                                    <div class="one field">
-                                        <div class="field">
-                                            <label>Confirm Password:</label>
-                                            <input type="password" placeholder="Confirm Password">
-                                        </div>
+                                </h2>
+                                <!-- description -->
+                                <div class="row">
+                                    <div class="ui container" style="padding-right: 5%">
+                                        <p>
+                                            Not sure how to use Polyture? Download the user manual to easily learn the basics.
+                                        </p>
+                                        <button class="submit-button"><i class="download icon"></i>Download</button>
                                     </div>
                                 </div>
-                                <!-- submit button -->
-                                <div class="form-button-container">
-                                    <button class="submit-button">Sign Up</button>
-                                </div>
+                                <!-- mobile spacer -->
+                                <br class="mobile tablet only row">
                             </div>
+                        </div>
+                        <!-- image -->
+                        <div class="five wide computer tablet only column" style="padding-left: 5%">
+                            <img class="ui medium image" src="../img/software-engineer.svg">
                         </div>
                     </div>
                 </div>
@@ -202,14 +208,15 @@
                     <!-- mobile spacer -->
                     <br class="mobile tablet only row">
                     <!-- logo -->
-                    <div class="three wide column" style="text-align: center">
-                        <img class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.png">
+                    <div class="three wide column">
+                        <img class="ui medium image" src="../img/polyture_logo_white.png">
                     </div>
                     <!-- links -->
                     <div class="ten wide column">
                         <div class="footer-links">
                             <a href="../index.html">About</a>
                             <a href="./pricing.html">Pricing</a>
+                            <a href="./downloads.html">Downloads</a>
                             <a href="./contact.html">Contact</a>
                             <a href="./sign-up.html">Sign Up</a>
                         </div>
