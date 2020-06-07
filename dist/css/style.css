@@ -121,18 +121,24 @@ main {
     }
 }
 
+#download-links {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+}
+
 #use-cases {
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 5%;
 }
 
-#submit-button {
-    background-color: #6FABFF;
-}
-
 #early-access-image {
     padding-bottom: 5%;
+}
+
+#early-access .submit-button {
+    border-radius: 0px 25px 25px 0px;
 }
 
 #title-wrapper {
@@ -372,7 +378,7 @@ body::-webkit-scrollbar {
     width: 150px;
     height: 50px;
     border-width: 0px;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 25px 25px 25px 25px;
     /* background-color: rgba(54, 120, 255); */
     /* background-color: #47b554; */
     background-color: #6FABFF;
@@ -497,7 +503,6 @@ body::-webkit-scrollbar {
 }
 
 .form-container .submit-button {
-    border-radius: 25px 25px 25px 25px;
     width: 80%;
     text-transform: uppercase;
     display: inline-block;
@@ -507,4 +512,14 @@ body::-webkit-scrollbar {
     background-color: rgb(41, 64, 95);
     color: white;
     cursor: pointer;
+}
+
+
+/* Download Links */
+
+#download-links .submit-button {
+    text-transform: uppercase;
+    padding: 5%;
+    width: 100%;
+    text-align: center;
 }
