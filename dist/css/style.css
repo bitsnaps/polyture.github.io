@@ -123,13 +123,10 @@ main {
 
 #download-links {
     padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 5%;
 }
 
 #use-cases {
     padding-left: 15%;
-    padding-right: 15%;
     padding-top: 5%;
 }
 
@@ -519,7 +516,12 @@ body::-webkit-scrollbar {
 
 #download-links .submit-button {
     text-transform: uppercase;
-    padding: 5%;
-    width: 100%;
     text-align: center;
+    width: 80%;
+    vertical-align: inherit;
+}
+
+#download-links i {
+    font-size: 1.2em;
+    vertical-align: middle;
 }
