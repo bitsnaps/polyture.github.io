@@ -517,7 +517,7 @@ body::-webkit-scrollbar {
 
 #download-links .submit-button {
     text-align: center;
-    width: 80%;
+    width: 300px;
     vertical-align: inherit;
 }
 
@@ -527,5 +527,5 @@ body::-webkit-scrollbar {
 }
 
 #user-manual .submit-button {
-    width: 30%;
+    width: 200px;
 }
