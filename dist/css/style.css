@@ -49,7 +49,7 @@ main {
     background-size: cover;
 }
 
-.content-wrapper.pricing {
+.content-wrapper .pricing {
     background-image: url('/img/pricing-content-background.png');
 }
 
@@ -67,6 +67,13 @@ main {
 .price-table-header {
     padding-left: 3%;
     padding-right: 3%;
+    background-color: rgb(236, 236, 236);
+}
+
+.attribute-container {
+    padding: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .plan-attributes {
@@ -76,6 +83,17 @@ main {
 .plan-attributes.greyed {
     color: rgb(138, 138, 138);
     text-decoration: line-through;
+}
+
+.pricing-box {
+    border-radius: 15px !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
+
+.pricing-box:hover {
+    transform: translate(0, -10px);
+    transition: 0.2s;
 }
 
 
@@ -218,6 +236,7 @@ main {
 
 .use-cases-container:hover {
     background-color: #f0f8ff;
+    transform: translate(0, -10px);
     transition: 0.2s;
 }
 
