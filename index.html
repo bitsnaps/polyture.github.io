@@ -31,7 +31,7 @@
     <main class="shadow">
         <!-- landing page -->
         <div id="landing-page">
-            <video autoplay loop muted src="img/background2.mp4" id="landing-video"></video>
+            <video autoplay loop muted src="img/background3.mp4" id="landing-video"></video>
             <!-- max width container -->
             <div class="ui container">
                 <!-- header -->
@@ -88,7 +88,7 @@
                         </div>
                         <div class="column" style="width: 73%">
                             <h1 class="landing-subtitle" style="padding-bottom: 2%">analyze 1tb+ in under 10 seconds</h1>
-                            <button class="cta-button" onclick="scrollToEarlyAccess()">Get Early Access</button>
+                            <button class="submit-button shadow" onclick="scrollToEarlyAccess()">Get Early Access</button>
                         </div>
                     </div>
                 </div>
@@ -97,58 +97,56 @@
         <!-- content -->
         <div class="content-wrapper landing">
             <!-- what is polyture section -->
-            <div class="section" data-aos="fade-down-right" data-aos-duration="500">
-                <!-- wrapper -->
-                <div class="ui container">
-                    <!-- mobile spacer -->
-                    <br class="mobile tablet only row">
-                    <div class="ui left middle aligned stackable grid">
-                        <!-- image -->
-                        <div class="five wide computer tablet only column" style="padding-right: 5%">
-                            <img class="ui medium image" src="img/data-processing.svg">
+            <div class="section" style="padding-top: 10">
+                <div class="ui left middle aligned stackable grid">
+                    <!-- image -->
+                    <div class="ten wide computer tablet only column" style="padding-right: 5%" data-aos="fade-up-right" data-aos-duration="500">
+                        <div class="ui container">
+                            <video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow" id="demo-video"></video>
                         </div>
-                        <div class="ten wide column">
-                            <!-- header and description -->
-                            <div class="ui left aligned grid" style="padding-left: 5%">
-                                <!-- header -->
-                                <h2 class="ui huge header">
-                                    <img src="img/blue-arrow.png" class="ui small image">
-                                    <div class="content">
-                                        What is Polyture?
-                                    </div>
-                                </h2>
-                                <!-- description -->
-                                <div class="row">
-                                    <div class="ui container">
-                                        <p>
-                                            Polyture is an interactive data science platform that reimagines how we answer questions through data.
-                                        </p>
-                                    </div>
+                    </div>
+                    <div class="six wide column" style="padding-left: 5%" data-aos="fade-up-left" data-aos-duration="500">
+                        <!-- header and description -->
+                        <div class="ui left aligned grid">
+                            <!-- header -->
+                            <h2 class="ui huge header">
+                                <img src="img/blue-arrow.png" class="ui small image">
+                                <div class="content">
+                                    What is Polyture?
                                 </div>
-                                <!-- mobile spacer -->
-                                <br class="mobile tablet only row">
+                            </h2>
+                            <!-- description -->
+                            <div class="row">
+                                <div class="ui container">
+                                    <p>
+                                        Polyture is an interactive data science platform that reimagines how we answer questions through data.
+                                    </p>
+                                </div>
                             </div>
+                            <!-- mobile spacer -->
+                            <br class="mobile tablet only row">
                         </div>
                     </div>
                 </div>
             </div>
             <!-- use case section -->
-            <div id="use-cases" data-aos="fade-up" data-aos-duration="500">
+            <div class="section greyed">
                 <!-- wrapper -->
                 <div class="ui container">
-                    <!-- mobile spacer -->
-                    <br class="mobile tablet only row">
-                    <div class="ui left aligned grid">
-                        <!-- row 1 -->
-                        <div class="row" style="padding-top: 8%">
-                            <div class="ui middle left aligned grid">
-                                <div class="four wide computer tablet only column">
-                                    <img class="ui small image" src="img/happy-feeling.svg">
-                                </div>
-                                <div class="twelve wide column">
-                                    <div class="use-cases-section">
+                    <div class="ui middle aligned equal width stackable very relaxed grid">
+                        <!-- column 1 -->
+                        <div class="column" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500">
+                            <div class="use-cases-container">
+                                <div class="ui center aligned grid">
+                                    <div class="row">
+                                        <!-- image -->
+                                        <div class="image-container">
+                                            <img class="ui small image" src="img/happy-feeling.svg">
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <!-- header -->
-                                        <h2 class="ui header">Big Data, Demystified</h2>
+                                        <h2 class="ui header">Big Data, <br> Demystified</h2>
                                         <p>
                                             Polyture is designed to help non-technical users run the most advanced data science techniques and functions.
                                         </p>
@@ -156,31 +154,37 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- row 2 -->
-                        <div class="row" style="padding-top: 8%">
-                            <div class="ui middle left aligned grid">
-                                <div class="four wide computer tablet only column">
-                                    <img class="ui small image" src="img/robot.svg">
-                                </div>
-                                <div class="twelve wide column">
-                                    <div class="use-cases-section">
+                        <!-- column 2 -->
+                        <div class="column" data-aos="fade-left" data-aos-delay="100" data-aos-duration="500">
+                            <div class="use-cases-container">
+                                <div class="ui center aligned grid">
+                                    <div class="row">
+                                        <!-- image -->
+                                        <div class="image-container">
+                                            <img class="ui small image" src="img/robot.svg">
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <!-- header -->
-                                        <h2 class="ui header">Machine Learning Co-Pilot</h2>
+                                        <h2 class="ui header">Machine Learning <br> Co-Pilot</h2>
                                         <p>
-                                            Easily incoporate and run machine learning models from your data sets in order to create predictions and extract deeper analysis.
+                                            Easily run machine learning models from your data sets in order to create predictions and extract deeper analysis.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- row 3 -->
-                        <div class="row" style="padding-top: 8%">
-                            <div class="ui middle left aligned grid">
-                                <div class="four wide computer tablet only column">
-                                    <img class="ui small image" src="img/data-charts.svg">
-                                </div>
-                                <div class="twelve wide column">
-                                    <div class="use-cases-section">
+                        <!-- column 3 -->
+                        <div class="column" data-aos="fade-left" data-aos-delay="150" data-aos-duration="500">
+                            <div class="use-cases-container">
+                                <div class="ui center aligned grid">
+                                    <div class="row">
+                                        <!-- image -->
+                                        <div class="image-container">
+                                            <img class="ui small image" src="img/data-charts.svg">
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <!-- header -->
                                         <h2 class="ui header">Self-Service Data Analytics</h2>
                                         <p>
@@ -193,72 +197,10 @@
                     </div>
                 </div>
             </div>
-            <!-- no experience? section -->
-            <div class="section" data-aos="fade-down-left" data-aos-duration="500">
-                <!-- wrapper -->
-                <div class="ui container">
-                    <!-- mobile spacer -->
-                    <br class="mobile tablet only row">
-                    <!-- no experience? -->
-                    <div class="ui left middle aligned stackable grid">
-                        <div class="ten wide column">
-                            <!-- header and description -->
-                            <div class="ui left aligned grid">
-                                <!-- header -->
-                                <h2 class="ui huge header">
-                                    <img src="img/blue-arrow.png" class="ui small image">
-                                    <div class="content">
-                                        No Experience?
-                                        <div class="sub header">
-                                            No Problem.
-                                        </div>
-                                    </div>
-                                </h2>
-                                <!-- description -->
-                                <div class="row">
-                                    <div class="ui container" style="padding-right: 5%">
-                                        <p>
-                                            Polyture enables users without programming, statistics, or machine learning background to expertly answer data questions through an intuitive user interface.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- mobile spacer -->
-                                <br class="mobile tablet only row">
-                            </div>
-                        </div>
-                        <!-- image -->
-                        <div class="five wide computer tablet only column" style="padding-left: 5%">
-                            <img class="ui medium image" src="img/hexagon-chart.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- demo section -->
-            <div class="section" data-aos="fade-down" data-aos-duration="500">
-                <!-- divider header -->
-                <div class="ui horizontal divider header" style="padding:5%">
-                    ver. 0.6.8-alpha
-                </div>
-                <!-- wrapper -->
-                <div class="ui container">
-                    <div class="ui center aligned grid">
-                        <!-- video wrapper -->
-                        <div class="row" style="padding-top: 3%">
-                            <div class="ui container">
-                                <video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow" id="demo-video"></video>
-                            </div>
-                        </div>
-                        <!-- mobile spacer -->
-                        <br class="mobile tablet only row">
-                    </div>
-                </div>
-            </div>
             <!-- early access section -->
             <div class="section" id="early-access" data-aos="fade-down" delay="1000" data-aos-duration="500">
                 <!-- wrapper -->
                 <div class="ui container">
-                    <!-- mobile spacer -->
-                    <br class="mobile tablet only row">
                     <!-- what is polyture-->
                     <div class="ui left center aligned stackable grid">
                         <div class="ten wide column">
@@ -279,7 +221,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="ui divider" style="margin-right: 15%; margin-left: 15%"></div>
+                                <div class="ui divider" style="margin-right: 35%; margin-left: 35%"></div>
                                 <!-- submit email -->
                                 <div class="row">
                                     <form action="https://script.google.com/macros/s/AKfycbwVa2BBkvSzTd_MhvluM6U3XuBORA4NFVVezWmS325EetvBrP8Z/exec" method="GET" onsubmit="window.open('https://www.polyture.com/email/success');">
