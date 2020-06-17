@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@800&family=Roboto+Condensed:wght@400&family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700;900&display=swap');
 
 /* 6FABFF */
 
@@ -22,10 +22,7 @@ main {
 }
 
 .content-wrapper {
-    background-color: rgb(255, 255, 255);
-    padding-bottom: 10%;
-    padding-right: 10%;
-    padding-left: 10%;
+    background-color: white;
 }
 
 .background-image {
@@ -33,22 +30,30 @@ main {
 }
 
 @media (min-aspect-ratio: 16/9) {
-    .content-wrapper {
-        padding-right: 17%;
-        padding-left: 17%;
+    .section {
+        padding-right: 16%;
+        padding-left: 16%;
+    }
+    .section.wide {
+        padding-right: 13%;
+        padding-left: 13%;
+    }
+    .section.greyed {
+        padding-right: 0%;
+        padding-left: 0%;
     }
 }
 
 
 /* Page Background Images */
 
-.content-wrapper.landing {
-    background-image: url('/img/landing-content-background.png');
+.content-wrapper .landing {
+    background-image: url('/img/pricing-content-background.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.content-wrapper.pricing {
+.content-wrapper .pricing {
     background-image: url('/img/pricing-content-background.png');
 }
 
@@ -66,6 +71,13 @@ main {
 .price-table-header {
     padding-left: 3%;
     padding-right: 3%;
+    background-color: rgb(236, 236, 236);
+}
+
+.attribute-container {
+    padding: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .plan-attributes {
@@ -77,12 +89,35 @@ main {
     text-decoration: line-through;
 }
 
+.pricing-box {
+    border-radius: 15px !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+    width: 330px;
+}
+
+.pricing-box:hover {
+    transform: translate(0, -10px);
+    transition: 0.2s;
+}
+
 
 /* Section Structure */
 
 .section {
-    padding-top: 13%;
-    padding-bottom: 5%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    padding-right: 13%;
+    padding-left: 13%;
+}
+
+.section.greyed {
+    background-color: rgb(236, 236, 236);
+}
+
+.section.gradient {
+    background: rgb(252, 254, 225);
+    background: linear-gradient(13deg, rgba(252, 254, 225, 1) 0%, rgba(132, 185, 250, 1) 50%, rgba(252, 254, 225, 1) 100%);
 }
 
 .section p {
@@ -123,14 +158,6 @@ main {
 
 #download-links {
     padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 5%;
-}
-
-#use-cases {
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 5%;
 }
 
 #early-access-image {
@@ -147,6 +174,17 @@ main {
     padding-left: 6%;
 }
 
+#title-wrapper .submit-button {
+    width: 220px;
+    background-color: white;
+    color: #6FABFF;
+}
+
+#title-wrapper .submit-button:hover {
+    background-color: rgb(41, 64, 95);
+    color: white;
+}
+
 .landing-title {
     color: white;
     font-size: 3.75em;
@@ -154,6 +192,7 @@ main {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-shadow: 1px 1px 4px #000000;
 }
 
 .landing-subtitle {
@@ -162,7 +201,8 @@ main {
     font-family: 'Roboto Condensed';
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
+    text-shadow: 1px 1px 4px #000000;
 }
 
 .banner {
@@ -187,9 +227,36 @@ main {
     padding-top: 0%;
 }
 
-#pricing-banner {
-    background-image: url('../../img/blurry-background3.png');
+.blurry-background {
+    background-image: url('../../img/blurry-background4.png');
+    background-size: cover;
     padding-bottom: 3%;
+}
+
+
+/* Use Cases */
+
+.use-cases-container {
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+    padding: 15%;
+    height: 430px;
+    width: 360px;
+}
+
+.use-cases-container:hover {
+    background-color: #f0f8ff;
+    transform: translate(0, -10px);
+    transition: 0.2s;
+}
+
+.use-cases-container {
+    text-align: center;
+}
+
+.use-cases-container img {
+    height: 120px !important;
 }
 
 
@@ -276,13 +343,14 @@ main {
 
 p {
     font-size: 1.5em;
-    font-family: 'Lato';
+    font-family: 'Muli';
     color: rgb(90, 90, 90);
     letter-spacing: 0.02em;
 }
 
 .ui.header.content {
     font-size: 4em !important;
+    color: black;
 }
 
 .ui {
@@ -291,8 +359,8 @@ p {
 }
 
 .ui.header {
+    font-family: 'Muli' !important;
     font-weight: 700 !important;
-    font-family: 'Raleway' !important;
     color: rgb(77, 77, 77);
 }
 
@@ -354,8 +422,8 @@ body::-webkit-scrollbar {
     border-style: solid;
     border-width: 0px;
     border-radius: 25px 0px 0px 25px;
-    background-color: rgb(221, 221, 221);
-    color: rgb(32, 32, 32);
+    background: rgba(0, 0, 0, 0.08) !important;
+    color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: "column";
 }
@@ -370,7 +438,7 @@ body::-webkit-scrollbar {
 
 .custom-input-inner::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgb(32, 32, 32);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .submit-button {
@@ -386,6 +454,7 @@ body::-webkit-scrollbar {
     font-size: 16px;
     font-family: 'Open Sans';
     letter-spacing: 0.1em;
+    text-transform: uppercase;
     font-weight: bold;
     -webkit-transition-duration: 0.2s;
     /* Safari */
@@ -518,8 +587,16 @@ body::-webkit-scrollbar {
 /* Download Links */
 
 #download-links .submit-button {
-    text-transform: uppercase;
-    padding: 5%;
-    width: 100%;
     text-align: center;
+    width: 300px;
+    vertical-align: inherit;
+}
+
+#download-links i {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+#user-manual .submit-button {
+    width: 200px;
 }
