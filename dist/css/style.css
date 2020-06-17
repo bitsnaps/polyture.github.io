@@ -31,6 +31,10 @@ main {
 
 @media (min-aspect-ratio: 16/9) {
     .section {
+        padding-right: 16%;
+        padding-left: 16%;
+    }
+    .section.wide {
         padding-right: 13%;
         padding-left: 13%;
     }
@@ -89,6 +93,7 @@ main {
     border-radius: 15px !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     background-color: rgb(255, 255, 255);
+    width: 330px;
 }
 
 .pricing-box:hover {
@@ -108,6 +113,11 @@ main {
 
 .section.greyed {
     background-color: rgb(236, 236, 236);
+}
+
+.section.gradient {
+    background: rgb(252, 254, 225);
+    background: linear-gradient(13deg, rgba(252, 254, 225, 1) 0%, rgba(132, 185, 250, 1) 50%, rgba(252, 254, 225, 1) 100%);
 }
 
 .section p {
@@ -217,8 +227,9 @@ main {
     padding-top: 0%;
 }
 
-#pricing-banner {
-    background-image: url('../../img/blurry-background3.png');
+.blurry-background {
+    background-image: url('../../img/blurry-background4.png');
+    background-size: cover;
     padding-bottom: 3%;
 }
 
