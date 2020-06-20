@@ -1,0 +1,15 @@
+Pricing.html
+- fill out the pricing tables
+
+Contact.html
+- add functionality to forms
+- make tweets so that the table isn't empty
+
+Sign-up.html
+- add functionality to forms
+
+Downloads.html
+- system requirements
+- installation instructions for mac and linux
+- build, version, and date updated 
+- upload/make user manual

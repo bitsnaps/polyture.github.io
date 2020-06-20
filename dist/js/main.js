@@ -1,57 +1,40 @@
-//landing page title animation
-var textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-
-anime.timeline({
-        loop: false
-    })
-    .add({
-        targets: '.ml12 .letter',
-        translateX: [40, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutExpo",
-        duration: 1200,
-        delay: (el, i) => 500 + 30 * i
-    })
-
-var textWrapper2 = document.querySelector('.ml13');
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({
-        loop: false
-    })
-    .add({
-        delay: 1200
-    })
-    .add({
-        targets: '.ml13 .letter',
-        translateY: [100, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutExpo",
-        duration: 1400,
-        delay: (el, i) => 300 + 30 * i
-    });
-
+//scroll to early access
 function scrollToEarlyAccess() {
     var element = document.querySelector("#early-access");
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+//reload animate on scroll
 document.addEventListener("DOMContentLoaded", () => {
     AOS.init();
 });
 
-$(window, document, undefined).ready(function() {
+//download menu selector
+var download_version = 'windows';
+$("a.downloads.item").click(function() {
+    $('a.downloads.item').removeClass('active');
+    $(this).addClass('active');
+    download_version = $(this).attr('id');
 
-    $('input').blur(function() {
-        var $this = $(this);
-        if ($this.val())
-            $this.addClass('used');
-        else
-            $this.removeClass('used');
-    });
+    hideAllTabs();
+    $('#download-links .row.' + download_version).addClass('active');
+    $('#download-links .row.' + download_version).removeClass('hidden');
+})
 
-});
+function hideAllTabs() {
+    if ($('#download-links .row.windows').hasClass('active')) {
+        $('#download-links .row.windows').removeClass('active');
+        $('#download-links .row.windows').addClass('hidden');
+    }
+    if ($('#download-links .row.mac').hasClass('active')) {
+        $('#download-links .row.mac').removeClass('active');
+        $('#download-links .row.mac').addClass('hidden');
+    }
+    if ($('#download-links .row.linux').hasClass('active')) {
+        $('#download-links .row.linux').removeClass('active');
+        $('#download-links .row.linux').addClass('hidden');
+    }
+}
+
+//modal
+MicroModal.init();
