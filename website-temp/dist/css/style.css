@@ -156,10 +156,6 @@ main {
     }
 }
 
-#download-links {
-    padding-left: 15%;
-}
-
 #early-access-image {
     padding-bottom: 5%;
 }
@@ -342,7 +338,7 @@ main {
 /* Font Styles */
 
 p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: 'Muli';
     color: rgb(90, 90, 90);
     letter-spacing: 0.02em;
@@ -584,19 +580,47 @@ body::-webkit-scrollbar {
 }
 
 
-/* Download Links */
+/* Downloads */
+
+#user-manual a {
+    cursor: pointer;
+}
+
+#download-links a {
+    cursor: pointer;
+}
+
+#download-links .ui.menu a {
+    color: #5a89ca !important;
+}
+
+#download-links .row {
+    padding-top: 5%;
+}
 
 #download-links .submit-button {
-    text-align: center;
-    width: 300px;
-    vertical-align: inherit;
-}
-
-#download-links i {
-    font-size: 1.2em;
-    vertical-align: middle;
-}
-
-#user-manual .submit-button {
     width: 200px;
+    margin-top: 3%;
+}
+
+#download-links .row.active {
+    display: visible;
+}
+
+#download-links .row.active p.meta {
+    line-height: 1.5em;
+    font-size: 1em;
+    color: grey;
+}
+
+#download-links .row.active p.modal-links {
+    line-height: 2em;
+}
+
+#download-links .row.active .ui.header {
+    font-size: 1.4em !important;
+}
+
+#download-links .row.hidden {
+    display: none;
 }
