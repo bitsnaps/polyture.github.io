@@ -16,8 +16,8 @@
 
 .modal__container {
     background-color: #fff;
-    padding: 2%;
-    width: 500px;
+    padding: 3.5%;
+    width: 600px;
     border-radius: 15px;
     overflow-y: auto;
     box-sizing: border-box;
