@@ -89,13 +89,11 @@
         </div>
 
         <!-- content -->
-        <div class="content-wrapper pricing">
+        <div class="content-wrapper">
             <!-- get polyture -->
             <div class="section" data-aos="fade-down-right" data-aos-duration="500">
                 <!-- wrapper -->
                 <div class="ui container">
-                    <!-- mobile spacer -->
-                    <br class="mobile tablet only row">
                     <div class="ui left aligned stackable very relaxed grid">
                         <!-- download description -->
                         <div class="ten wide column" style="padding-right:10%">
@@ -148,7 +146,7 @@
                                             Read the user manual to learn about navigating through Polyture and using it to its full potential.
                                         </p>
                                         <p>
-                                            <a>User Manual</a>
+                                            <button class="submit-button"><i class="download icon"></i> User Manual</button>
                                         </p>
                                     </div>
                                 </div>
@@ -159,7 +157,7 @@
             </div>
             <!-- download links -->
             <div class="section" id="download-links">
-                <div class="ui left aligned grid">
+                <div class="ui left aligned middle aligned grid">
                     <!-- image -->
                     <div class="five wide computer tablet only column" data-aos="fade-up-right" data-aos-duration="500" style="padding-right:5%">
                         <img class="ui medium image" src="../img/download.svg">
@@ -189,7 +187,7 @@
                                     <p>
                                         Big data analysis, machine learning capabilities, and much more.
                                     </p>
-                                    <button class="submit-button"><i class="windows icon"></i> Download</button>
+                                    <button class="submit-button" onclick="window.open(DownloadLink_windows)"><i class="windows icon"></i> Download</button>
                                 </div>
                                 <div class="seven wide column">
                                     <p class="modal-links">
@@ -198,7 +196,7 @@
                                         <a href="./contact.html">Report an Issue</a>
                                     </p>
                                     <p class="meta">
-                                        Version: 1.2.3 <br> Build: 10.2.3 <br> Last Updated: 6-19-20
+                                        Version: <span id="PolytureVersion_windows"></span> <br> Last Updated: <span id="UploadDate_windows"></span>
                                     </p>
                                 </div>
                             </div>
@@ -211,7 +209,7 @@
                                     <p>
                                         Big data analysis, machine learning capabilities, and much more.
                                     </p>
-                                    <button class="submit-button"><i class="apple icon"></i> Download</button>
+                                    <button class="submit-button" onclick="window.open(DownloadLink_mac)"><i class="apple icon"></i> Download</button>
                                 </div>
                                 <div class="seven wide column">
                                     <p class="modal-links">
@@ -220,7 +218,7 @@
                                         <a href="./contact.html">Report an Issue</a>
                                     </p>
                                     <p class="meta">
-                                        Version: 1.2.3 <br> Build: 10.2.3 <br> Last Updated: 6-19-20
+                                        Version: <span id="PolytureVersion_mac"></span> <br> Last Updated: <span id="UploadDate_mac"></span>
                                     </p>
                                 </div>
                             </div>
@@ -233,16 +231,16 @@
                                     <p>
                                         Big data analysis, machine learning capabilities, and much more.
                                     </p>
-                                    <button class="submit-button"><i class="linux icon"></i> Download</button>
+                                    <button class="submit-button greyed">Coming Soon</button>
                                 </div>
                                 <div class="seven wide column">
                                     <p class="modal-links">
-                                        <a data-micromodal-trigger="installation-linux">Installation Instructions</a> <br>
-                                        <a data-micromodal-trigger="requirements-linux">System Requirements</a> <br>
-                                        <a href="./contact.html">Report an Issue</a>
+                                        <a class="greyed">Installation Instructions</a> <br>
+                                        <a class="greyed">System Requirements</a> <br>
+                                        <a class="greyed">Report an Issue</a>
                                     </p>
                                     <p class="meta">
-                                        Version: 1.2.3 <br> Build: 10.2.3 <br> Last Updated: 6-19-20
+                                        Version: - <br> Last Updated: -
                                     </p>
                                 </div>
                             </div>
@@ -312,7 +310,7 @@
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
                     <h2 class="ui header" id="modal-1-title">
-                        <i class="download icon"></i>Installation Instructions
+                        Installation Instructions
                     </h2>
                 </header>
                 <main class="modal__content" id="modal-1-content">
@@ -336,7 +334,7 @@
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
                     <h2 class="ui header" id="modal-1-title">
-                        <i class="cogs icon"></i>System Requirements
+                        System Requirements
                     </h2>
                 </header>
                 <main class="modal__content" id="modal-1-content">
@@ -363,7 +361,7 @@
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
                     <h2 class="ui header" id="modal-1-title">
-                        <i class="download icon"></i>Installation Instructions
+                        Installation Instructions
                     </h2>
                 </header>
                 <main class="modal__content" id="modal-1-content">
@@ -387,63 +385,12 @@
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
                     <h2 class="ui header" id="modal-1-title">
-                        <i class="cogs icon"></i>System Requirements
+                        System Requirements
                     </h2>
                 </header>
                 <main class="modal__content" id="modal-1-content">
                     <p>
                         - macOS 10.13 or newer
-                    </p>
-                    <p>
-                        - 2 GB RAM minimum, 8 GB RAM recommended
-                    </p>
-                    <p>
-                        - ___ MB storage space
-                    </p>
-                    <p>
-                        - 1024x768 screen resolution minimum
-                    </p>
-                </main>
-            </div>
-        </div>
-    </div>
-
-    <!-- installation instructions modal - linux -->
-    <div class="modal micromodal-slide" id="installation-linux" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="ui header" id="modal-1-title">
-                        <i class="download icon"></i>Installation Instructions
-                    </h2>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        1. Download and run <code>Setup.tar.gz</code>.
-                    </p>
-                    <p>
-                        2. Continue through the installation wizard.
-                    </p>
-                    <p>
-                        3. Run Polyture by inputting your domain and password.
-                    </p>
-                </main>
-            </div>
-        </div>
-    </div>
-
-    <!-- system requirements modal - linux -->
-    <div class="modal micromodal-slide" id="requirements-linux" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="ui header" id="modal-1-title">
-                        <i class="cogs icon"></i>System Requirements
-                    </h2>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        - GNOME or KDE desktop
                     </p>
                     <p>
                         - 2 GB RAM minimum, 8 GB RAM recommended
@@ -471,7 +418,7 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-<script src="../dist/js/anime.js"></script>
+<script src="../dist/js/yaml.js"></script>
 <script src="../dist/js/main.js"></script>
 
 </html>

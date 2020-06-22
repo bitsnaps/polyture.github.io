@@ -586,8 +586,22 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+#user-manual .submit-button {
+    width: 220px;
+}
+
+#download-links {
+    padding-top: 5%;
+    padding-bottom: 12%;
+}
+
 #download-links a {
     cursor: pointer;
+}
+
+#download-links a.greyed {
+    color: rgb(160, 160, 160);
+    cursor: default;
 }
 
 #download-links .ui.menu a {
@@ -601,6 +615,12 @@ body::-webkit-scrollbar {
 #download-links .submit-button {
     width: 200px;
     margin-top: 3%;
+}
+
+#download-links .submit-button.greyed {
+    background-color: rgb(160, 160, 160);
+    color: white;
+    cursor: default;
 }
 
 #download-links .row.active {
