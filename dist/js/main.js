@@ -51,7 +51,6 @@ $.each(yamlFile_windows, function(key, value) {
 });
 var PolytureVersion_windows = yamlData_windows[0];
 var DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[2];
-console.log(DownloadLink_windows);
 var UploadDate_windows = yamlData_windows[4].substring(0, 10);
 
 //update windows download text
@@ -65,7 +64,7 @@ $.each(yamlFile_mac, function(key, value) {
     yamlData_mac.push(value);
 });
 var PolytureVersion_mac = yamlData_mac[0];
-var DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[2];
+var DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
 var UploadDate_mac = yamlData_mac[4].substring(0, 10);
 
 //update mac download text
