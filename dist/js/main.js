@@ -50,7 +50,7 @@ $.each(yamlFile_windows, function(key, value) {
     yamlData_windows.push(value);
 });
 var PolytureVersion_windows = yamlData_windows[0];
-var DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[2];
+var DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
 var UploadDate_windows = yamlData_windows[4].substring(0, 10);
 
 //update windows download text
