@@ -197,6 +197,9 @@ main {
 #title-wrapper .submit-button:hover {
     background-color: rgb(41, 64, 95);
     color: white;
+    -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .landing-title {
@@ -206,7 +209,7 @@ main {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    text-shadow: 1px 1px 4px #000000;
+    /*text-shadow: 1px 1px 4px #000000;*/
 }
 
 .landing-subtitle {
@@ -216,7 +219,7 @@ main {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    text-shadow: 1px 1px 4px #000000;
+    /*text-shadow: 1px 1px 4px #000000;*/
 }
 
 .banner {
