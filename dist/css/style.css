@@ -29,26 +29,11 @@ main {
     background-image: url('/img/smooth.svg');
 }
 
-@media (min-aspect-ratio: 16/9) {
-    .section {
-        padding-right: 16%;
-        padding-left: 16%;
-    }
-    .section.wide {
-        padding-right: 13%;
-        padding-left: 13%;
-    }
-    .section.greyed {
-        padding-right: 0%;
-        padding-left: 0%;
-    }
-}
-
 
 /* Page Background Images */
 
 .content-wrapper .landing {
-    background-image: url('/img/pricing-content-background.png');
+    background-image: url('/img/Untitled_Artwork.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -112,7 +97,7 @@ main {
 }
 
 .section.greyed {
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(241, 241, 241);
 }
 
 .section.gradient {
@@ -122,6 +107,39 @@ main {
 
 .section p {
     padding-top: 2%;
+}
+
+
+/* Layered Paint */
+
+.layered.container {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.layered.top {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.layered.bottom {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
+
+.layered.bottom.right {
+    position: absolute;
+    top: -100px;
+    left: 100px;
+}
+
+.layered.bottom.below {
+    position: absolute;
+    top: 0px;
+    left: -100px;
 }
 
 
@@ -312,7 +330,7 @@ main {
 
 .footer-links a {
     color: white;
-    font-size: 1.3em;
+    font-size: 1em;
     letter-spacing: 0.1em;
     padding: 2%;
     font-family: 'Open Sans';
@@ -643,4 +661,36 @@ body::-webkit-scrollbar {
 
 #download-links .row.hidden {
     display: none;
+}
+
+
+/* Mobile CSS */
+
+@media screen and (max-width: 991px) {
+    .section {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .layered.bottom {
+        display: none !important;
+    }
+    .use-cases-container {
+        margin-left: 6.5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section {
+        padding-top: 15%;
+        padding-bottom: 15%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+.spacer {
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
