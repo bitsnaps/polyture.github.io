@@ -193,6 +193,10 @@ main {
     border-radius: 0px 25px 25px 0px;
 }
 
+#early-access {
+    padding-bottom: 10%;
+}
+
 #title-wrapper {
     padding-top: 13%;
     padding-bottom: 11%;
@@ -271,6 +275,10 @@ main {
 
 
 /* Use Cases */
+
+#use-cases {
+    padding-top: 0%;
+}
 
 .use-cases-container {
     border-radius: 15px;
