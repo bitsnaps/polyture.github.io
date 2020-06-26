@@ -100,7 +100,7 @@
             <div class="section wide" style="padding-top: 10">
                 <div class="ui left middle aligned stackable grid">
                     <!-- image -->
-                    <div class="ten wide column" style="padding-right: 5%" data-aos="fade-up-right" data-aos-duration="500">
+                    <div class="ten wide column" style="padding-right: 5%">
                         <div class="layered container">
                             <img class="ui image layered bottom" src="img/paint1.png">
                             <video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow layered top" id="demo-video"></video>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="mobile tablet only column spacer"><br>
                     </div>
-                    <div class="six wide column" style="padding-left: 5%" data-aos="fade-up-left" data-aos-duration="500">
+                    <div class="six wide column" style="padding-left: 5%">
                         <!-- header and description -->
                         <div class="ui left aligned grid">
                             <!-- header -->
@@ -132,8 +132,85 @@
                     </div>
                 </div>
             </div>
+            <!-- server info -->
+            <div class="section greyed" id="server-info">
+                <div class="ui center aligned grid">
+                    <!-- title -->
+                    <div class="row">
+                        <div class="ui header">
+                            <h1>Use Polyture's scalable server <span style="font-weight: 400;">or</span> <br> deploy in your own self-hosted environment</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>
+                            Polyture is compatible with any of these web server providers.
+                        </p>
+                    </div>
+                    <!-- logos -->
+                    <div class="computer only row logos">
+                        <div class="ui equal width middle aligned grid">
+                            <!-- docker -->
+                            <div class="column">
+                                <img class="ui small image" src="/img/server logos/docker.png">
+                            </div>
+                            <!-- kubernetes -->
+                            <div class="column">
+                                <img class="ui small image" src="/img/server logos/kubernetes.png">
+                            </div>
+                            <!-- aws -->
+                            <div class="column">
+                                <img class="ui small image" src="/img/server logos/aws.png">
+                            </div>
+                            <!-- google cloud -->
+                            <div class="column">
+                                <img class="ui small image" src="/img/server logos/googlecloud.png">
+                            </div>
+                            <!-- azure -->
+                            <div class="column">
+                                <img class="ui small image" src="/img/server logos/azure.png">
+                            </div>
+                            <!-- digital ocean -->
+                            <div class="column">
+                                <img class="ui small image" src="/img/server logos/digitalocean.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile tablet only row logos">
+                        <div class="ui equal width middle aligned grid">
+                            <div class="row">
+                                <!-- docker -->
+                                <div class="column">
+                                    <img class="ui small image" src="/img/server logos/docker.png">
+                                </div>
+                                <!-- kubernetes -->
+                                <div class="column">
+                                    <img class="ui small image" src="/img/server logos/kubernetes.png">
+                                </div>
+                                <!-- aws -->
+                                <div class="column">
+                                    <img class="ui small image" src="/img/server logos/aws.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- google cloud -->
+                                <div class="column">
+                                    <img class="ui small image" src="/img/server logos/googlecloud.png">
+                                </div>
+                                <!-- azure -->
+                                <div class="column">
+                                    <img class="ui small image" src="/img/server logos/azure.png">
+                                </div>
+                                <!-- digital ocean -->
+                                <div class="column">
+                                    <img class="ui small image" src="/img/server logos/digitalocean.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- use case section -->
-            <div class="section greyed">
+            <div class="section greyed" id="use-cases">
                 <!-- wrapper -->
                 <div class="ui container">
                     <div class="ui middle aligned equal width stackable very relaxed grid">
@@ -144,7 +221,7 @@
                                     <div class="row">
                                         <!-- image -->
                                         <div class="image-container">
-                                            <img class="ui small image" src="img/happy-feeling.svg">
+                                            <img class="ui small image" src="../img/happy-feeling.svg">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -164,7 +241,7 @@
                                     <div class="row">
                                         <!-- image -->
                                         <div class="image-container">
-                                            <img class="ui small image" src="img/robot.svg">
+                                            <img class="ui small image" src="../img/robot.svg">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -184,7 +261,7 @@
                                     <div class="row">
                                         <!-- image -->
                                         <div class="image-container">
-                                            <img class="ui small image" src="img/data-charts.svg">
+                                            <img class="ui small image" src="../img/data-charts.svg">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -201,7 +278,7 @@
                 </div>
             </div>
             <!-- data warehouse -->
-            <div class="section">
+            <div class="section" id="data-warehouse">
                 <div class="ui very relaxed stackable middle aligned grid">
                     <div class="ten wide column" style="padding-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
                         <div class="layered container">
@@ -234,7 +311,7 @@
                 </div>
             </div>
             <!-- data flow -->
-            <div class="section">
+            <div class="section" id="data-flow">
                 <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
                     <div class="ten wide mobile tablet only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
                         <img class="ui shadow image" src="img/data_flow.png">
@@ -270,7 +347,7 @@
                 </div>
             </div>
             <!-- automl -->
-            <div class="section">
+            <div class="section" id="automl">
                 <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
                     <div class="ten wide column" style="padding-right: 5%">
                         <div class="layered container">
@@ -311,6 +388,9 @@
                         <div class="ten wide column">
                             <!-- header and description -->
                             <div class="ui center aligned grid">
+                                <div class="row">
+                                    <img class="ui medium image" src="img/early-access.svg">
+                                </div>
                                 <!-- header -->
                                 <h2 class="ui huge header" style="padding-right: 5%">
                                     <img src="img/blue-arrow.png" class="ui small image">

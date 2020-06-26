@@ -109,6 +109,21 @@ main {
     padding-top: 2%;
 }
 
+#data-warehouse {
+    padding-top: 12%;
+    padding-bottom: 6%;
+}
+
+#data-flow {
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+#automl {
+    padding-top: 6%;
+    padding-bottom: 8%;
+}
+
 
 /* Layered Paint */
 
@@ -174,12 +189,12 @@ main {
     }
 }
 
-#early-access-image {
-    padding-bottom: 5%;
-}
-
 #early-access .submit-button {
     border-radius: 0px 25px 25px 0px;
+}
+
+#early-access {
+    padding-bottom: 10%;
 }
 
 #title-wrapper {
@@ -260,6 +275,10 @@ main {
 
 
 /* Use Cases */
+
+#use-cases {
+    padding-top: 0%;
+}
 
 .use-cases-container {
     border-radius: 15px;
@@ -606,6 +625,32 @@ body::-webkit-scrollbar {
     background-color: rgb(41, 64, 95);
     color: white;
     cursor: pointer;
+}
+
+
+/* Server info */
+
+#server-info {
+    text-align: center;
+}
+
+#server-info h1 {
+    font-size: 1.7em;
+    font-family: 'Muli';
+    font-weight: 700;
+    color: black;
+}
+
+#server-info .row {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#server-info .logos {
+    padding-top: 5%;
+    filter: grayscale(100%);
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 
