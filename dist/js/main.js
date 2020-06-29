@@ -36,6 +36,12 @@ function hideAllTabs() {
     }
 }
 
+//sidebar toggle
+function toggleSidebar() {
+    $('.sidebar').toggleClass('collapsed');
+    $('#sidebar-toggle i').toggleClass('hidden');
+    $('#overlay').toggleClass('shown');
+}
 
 //modal
 MicroModal.init();

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
     <link rel="stylesheet" href="dist/css/style.css">
@@ -28,68 +28,87 @@
 </head>
 
 <body>
+    <!-- sidebar -->
+    <div class="collapsed sidebar">
+        <div class="ui center aligned grid">
+            <!-- logo -->
+            <div class="row">
+                <img class="ui medium image" src="img/polyture_logo_white2.png">
+            </div>
+            <!-- links -->
+            <div class="row">
+                <div class="ui secondary inverted pointing vertical menu">
+                    <a class="active item">About</a>
+                    <a href="./html/pricing.html" class="item">Pricing</a>
+                    <a href="./html/downloads.html" class="item">Downloads</a>
+                    <a href="./html/contact.html" class="item">Contact</a>
+                    <a href="./html/sign-up.html" class="item">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" onclick="toggleSidebar()"></div>
     <main class="shadow">
-        <!-- landing page -->
-        <div id="landing-page">
-            <video autoplay loop muted src="img/background3.mp4" id="landing-video"></video>
-            <!-- max width container -->
-            <div class="ui container">
-                <!-- header -->
-                <div class="ui fluid container" style="padding-top:3%">
-                    <!-- menus -->
-                    <div class="ui center aligned grid">
-                        <!-- mobile tablet only logo -->
-                        <div class="mobile tablet only row">
-                            <img class="ui small image" src="./img/polyture_logo_white.png">
+        <video autoplay loop muted src="img/background3.mp4" id="landing-video"></video>
+        <!-- header -->
+        <div class="ui fluid container page-header" style="padding-top:3%">
+            <!-- menus -->
+            <div class="ui grid">
+                <!-- computer tablet only menu -->
+                <div class="computer tablet only row">
+                    <div class="ui middle aligned grid" style="width: 100%">
+                        <div class="three wide column">
+                            <img class="logo" src="img/polyture_logo_white.png">
                         </div>
-                        <!-- menu -->
-                        <div class="row">
-                            <div class="ui middle aligned grid">
-                                <div class="computer only left aligned three wide column">
-                                    <div class="item">
-                                        <img class="ui image computer only row" src="./img/polyture_logo_white.png" alt="logo">
-                                    </div>
-                                </div>
-                                <div class="mobile tablet only three wide column">
-
-                                </div>
-                                <div class="right aligned thirteen wide column">
-                                    <div class="ui secondary inverted pointing right menu" style="float: right">
-                                        <a class="active item">About</a>
-                                        <a href="./html/pricing.html" class="item">Pricing</a>
-                                        <a href="./html/downloads.html" class="item">Downloads</a>
-                                        <a href="./html/contact.html" class="item">Contact</a>
-                                        <a href="./html/sign-up.html" class="cta-button-nav">Sign Up</a>
-                                    </div>
-                                </div>
+                        <div class="thirteen wide column">
+                            <div class="ui secondary inverted pointing right menu" style="float:right">
+                                <a class="active item">About</a>
+                                <a href="./html/pricing.html" class="item">Pricing</a>
+                                <a href="./html/downloads.html" class="item">Downloads</a>
+                                <a href="./html/contact.html" class="item">Contact</a>
+                                <a href="./html/sign-up.html" class="cta-button-nav">Sign Up</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- title wrapper -->
-                <div id="title-wrapper">
-                    <!-- landing page title -->
-                    <div class="ui center middle aligned grid">
-                        <div class="computer only four wide column" style="padding-right:5%">
-                            <div class="ui container" data-aos="fade-up" data-aos-duration="500">
-                                <img class="ui small image" style="float: right" src="img/white-arrow.png">
-                            </div>
+                <!-- mobile only menu -->
+                <div class="mobile only row">
+                    <div class="ui middle aligned grid" style="width:100%">
+                        <div class="three wide column">
+                            <img class="logo" src="img/polyture_logo_white.png">
                         </div>
-                        <div class="column" style="width: 73%" data-aos="fade-up" data-aos-duration="500">
-                            <div class="ui left aligned container">
-                                <h1 class="landing-title"> <span style="font-size:1.75em">Big Data</span> <br /> at Your Fingertips
-                                </h1>
+                        <div class="right floated column">
+                            <div id="sidebar-toggle" onclick="toggleSidebar()">
+                                <i class="bars icon"></i>
+                                <i class="close icon hidden"></i>
                             </div>
                         </div>
                     </div>
-                    <!-- early access button -->
-                    <div class="ui grid" style="padding-bottom: 5%" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                        <div class="computer only four wide column" style="padding-right:3%">
+                </div>
+            </div>
+            <!-- title wrapper -->
+            <div id="title-wrapper">
+                <!-- landing page title -->
+                <div class="ui center middle aligned grid">
+                    <div class="computer only four wide column" style="padding-right:5%">
+                        <div class="ui container" data-aos="fade-up" data-aos-duration="500">
+                            <img class="ui small image" style="float: right" src="img/white-arrow.png">
                         </div>
-                        <div class="column" style="width: 73%">
-                            <h1 class="landing-subtitle" style="padding-bottom: 2%">analyze 1tb+ in under 10 seconds</h1>
-                            <button class="submit-button" onclick="scrollToEarlyAccess()">Get Early Access</button>
+                    </div>
+                    <div class="column" style="width: 73%" data-aos="fade-up" data-aos-duration="500">
+                        <div class="ui left aligned container">
+                            <h1 class="landing-title"> <span>Big Data</span> <br /> at Your Fingertips
+                            </h1>
                         </div>
+                    </div>
+                </div>
+                <!-- early access button -->
+                <div class="ui grid" style="padding-bottom: 5%" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <div class="computer only four wide column" style="padding-right:3%">
+                    </div>
+                    <div class="column" style="width: 73%">
+                        <h1 class="landing-subtitle" style="padding-bottom: 2%">analyze 1tb+ in under 10 seconds</h1>
+                        <button class="submit-button" onclick="scrollToEarlyAccess()">Get Early Access</button>
                     </div>
                 </div>
             </div>
@@ -427,57 +446,56 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- footer -->
-        <div class="shadow-footer" id="footer">
-            <!-- wrapper -->
-            <div class="ui container">
-                <div class="ui middle aligned center aligned stackable grid" style="padding-bottom: 5%">
-                    <!-- mobile spacer -->
-                    <br class="mobile tablet only row">
-                    <!-- logo -->
-                    <div class="three wide column" style="text-align: center">
-                        <img class="ui medium image" style="display: inline-block" src="./img/polyture_logo_white.png">
-                    </div>
-                    <!-- links -->
-                    <div class="ten wide column">
-                        <div class="footer-links">
-                            <a href="./index.html">About</a>
-                            <a href="../html/pricing.html">Pricing</a>
-                            <a href="../html/downloads.html">Downloads</a>
-                            <a href="../html/contact.html">Contact</a>
-                            <a href="../html/sign-up.html">Sign Up</a>
+            <!-- footer -->
+            <div class="shadow-footer" id="footer">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <div class="ui middle aligned center aligned stackable grid" style="padding-bottom: 5%">
+                        <!-- mobile spacer -->
+                        <br class="mobile tablet only row">
+                        <!-- logo -->
+                        <div class="three wide column" style="text-align: center">
+                            <img class="ui medium image" style="display: inline-block" src="./img/polyture_logo_white.png">
                         </div>
-                    </div>
-                    <!-- social media -->
-                    <div class="three wide column">
-                        <div class="icon-container">
-                            <a href="https://twitter.com/polyturedata"><i class="twitter icon"></i></a>
-                            <a><i class="medium m icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- divider -->
-                <div class="ui divider"></div>
-                <div class="ui center aligned grid">
-                    <!-- logos -->
-                    <div class="row" id="logos">
-                        <div class="ui grid">
-                            <div class="eight wide column">
-                                <img class="ui small image" src="./img/UC_Berkeley.png">
+                        <!-- links -->
+                        <div class="ten wide column">
+                            <div class="footer-links">
+                                <a href="./index.html">About</a>
+                                <a href="../html/pricing.html">Pricing</a>
+                                <a href="../html/downloads.html">Downloads</a>
+                                <a href="../html/contact.html">Contact</a>
+                                <a href="../html/sign-up.html">Sign Up</a>
                             </div>
-                            <div class="eight wide column">
-                                <img class="ui small image" src="./img/Skydeck.png">
+                        </div>
+                        <!-- social media -->
+                        <div class="three wide column">
+                            <div class="icon-container">
+                                <a href="https://twitter.com/polyturedata"><i class="twitter icon"></i></a>
+                                <a><i class="medium m icon"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- copyright -->
-                    <div class="row" id="copyright">
-                        <p>© 2020 Polyture</p>
+                    <!-- divider -->
+                    <div class="ui divider"></div>
+                    <div class="ui center aligned grid">
+                        <!-- logos -->
+                        <div class="row" id="logos">
+                            <div class="ui grid">
+                                <div class="eight wide column">
+                                    <img class="ui small image" src="./img/UC_Berkeley.png">
+                                </div>
+                                <div class="eight wide column">
+                                    <img class="ui small image" src="./img/Skydeck.png">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- copyright -->
+                        <div class="row" id="copyright">
+                            <p>© 2020 Polyture</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <!-- animate on scroll-->
