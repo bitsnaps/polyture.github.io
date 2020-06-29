@@ -467,7 +467,7 @@ p {
 .ui.header {
     font-family: 'Muli' !important;
     font-weight: 700 !important;
-    color: rgb(77, 77, 77);
+    color: rgb(44, 44, 44);
 }
 
 .ui.menu a {
@@ -687,6 +687,37 @@ body::-webkit-scrollbar {
 }
 
 
+/* Why Polyture */
+
+#why-polyture i {
+    color: #7ba8e7;
+}
+
+#why-polyture h1 {
+    font-size: 1.7em;
+    font-weight: 400;
+    color: black;
+}
+
+#why-polyture .ui.divider {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+#why-polyture span {
+    font-weight: 800;
+}
+
+#why-polyture .description .row {
+    padding: 5%;
+}
+
+#why-polyture .description .column {
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+
 /* Server info */
 
 #server-info {
@@ -695,8 +726,7 @@ body::-webkit-scrollbar {
 
 #server-info h1 {
     font-size: 1.7em;
-    font-family: 'Muli';
-    font-weight: 700;
+    font-weight: 400;
     color: black;
 }
 
@@ -707,9 +737,12 @@ body::-webkit-scrollbar {
 
 #server-info .logos {
     padding-top: 5%;
-    filter: grayscale(100%);
     padding-right: 5%;
     padding-left: 5%;
+}
+
+#server-info span {
+    font-weight: 800;
 }
 
 
