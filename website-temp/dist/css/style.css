@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@800&family=Roboto+Condensed:wght@400&family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
 
 /* 6FABFF */
 
@@ -244,6 +245,10 @@ main {
     margin: auto;
 }
 
+#media-relations .row {
+    padding-top: 5%;
+}
+
 #sign-up-form {
     padding-left: 4%;
     padding-right: 4%;
@@ -337,6 +342,26 @@ main {
     background-image: url('../../img/blurry-background4.png');
     background-size: cover;
     padding-bottom: 3%;
+}
+
+
+/* Locations */
+
+#locations {
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+#locations h3 {
+    font-size: 1.7em;
+}
+
+#brea-map {
+    height: 200px;
+}
+
+#berkeley-map {
+    height: 200px;
 }
 
 
@@ -457,11 +482,6 @@ p {
 .ui.header.content {
     font-size: 4em !important;
     color: black;
-}
-
-.ui {
-    font-family: 'Roboto' !important;
-    color: rgb(77, 77, 77);
 }
 
 .ui.header {
@@ -689,6 +709,11 @@ body::-webkit-scrollbar {
 
 /* Why Polyture */
 
+#why-polyture {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
 #why-polyture i {
     color: #7ba8e7;
 }
@@ -713,8 +738,8 @@ body::-webkit-scrollbar {
 }
 
 #why-polyture .description .column {
-    padding-right: 3%;
-    padding-left: 3%;
+    padding-right: 4%;
+    padding-left: 4%;
 }
 
 
@@ -753,7 +778,7 @@ body::-webkit-scrollbar {
 }
 
 #user-manual .submit-button {
-    width: 220px;
+    width: 200px;
 }
 
 #download-links {
