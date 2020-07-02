@@ -9,8 +9,6 @@
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="../dist/css/style.css">
     <link rel="stylesheet" href="../dist/css/bttn.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -41,6 +39,7 @@
                 <div class="ui secondary inverted pointing vertical menu">
                     <a href="../index.html" class="item">About</a>
                     <a href="./downloads.html" class="item">Downloads</a>
+                    <a href="./company.html" class="item">Company</a>
                     <a href="./contact.html" class="active item">Contact</a>
                     <a href="./sign-up.html" class="item">Sign Up</a>
                 </div>
@@ -65,6 +64,7 @@
                                 <div class="ui secondary inverted pointing right menu" style="float:right">
                                     <a href="../index.html" class="item">About</a>
                                     <a href="./downloads.html" class="item">Downloads</a>
+                                    <a href="./company.html" class="item">Company</a>
                                     <a href="./contact.html" class="active item">Contact</a>
                                     <a href="./sign-up.html" class="cta-button-nav">Sign Up</a>
                                 </div>
@@ -118,25 +118,19 @@
                         <div class="ui left aligned middle aligned stackable grid">
                             <div class="seven wide column" id="media-relations" style="margin-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
                                 <!-- header and description -->
-                                <div class="ui left aligned grid" style="padding-left: 5%">
+                                <div class="ui left aligned grid">
                                     <!-- description -->
                                     <div class="row">
-                                        <h2 style="font-weight: 400;">
-                                            We’d love to hear from you. Let us know how we can be of help
+                                        <h2 class="ui huge header">
+                                            Contact Us
                                         </h2>
+                                        <p>
+                                            We’d love to hear from you. Let us know how we can be of help
+                                        </p>
                                     </div>
                                     <!-- image -->
                                     <div class="center aligned row">
                                         <img class="ui medium image" src="../img/contact-us.svg">
-                                    </div>
-                                    <!-- email links -->
-                                    <div class="row">
-                                        <h1 class="ui header" style="font-size: 1.4em">Media Relations</h1>
-                                    </div>
-                                    <div class="row" style="padding-top: 0">
-                                        <p>
-                                            Jared Zhao <br> jared.zhao@polyture.com
-                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -183,11 +177,11 @@
                     </div>
                 </h2>
                 <!-- maps -->
-                <div class="ui center aligned equal width grid">
+                <div class="ui center aligned equal width grid" style="padding-top: 6%">
                     <!-- brea -->
                     <div class="column">
                         <div class="row">
-                            <div id="brea-map"></div>
+                            <div class="map" id="brea-map"></div>
                         </div>
                         <div class="row">
                             <h3 class="ui header">Brea, CA</h3>
@@ -200,7 +194,7 @@
                     <!-- berkeley -->
                     <div class="column">
                         <div class="row">
-                            <div id="berkeley-map"></div>
+                            <div class="map" id="berkeley-map"></div>
                         </div>
                         <div class="row">
                             <h3 class="ui header">Berkeley, CA</h3>
@@ -221,15 +215,12 @@
                         <div class="ten wide column">
                             <!-- header and description -->
                             <div class="ui left aligned grid">
-                                <!-- header -->
-                                <h2 class="ui huge header">
-                                    <img src="../img/blue-arrow.png" class="ui small image">
-                                    <div class="content">
-                                        Connect
-                                    </div>
-                                </h2>
                                 <!-- description -->
                                 <div class="row">
+                                    <!-- header -->
+                                    <h2 class="ui huge header">
+                                        Connect
+                                    </h2>
                                     <div class="ui container" style="padding-right: 5%">
                                         <p>
                                             Follow our Twitter <a href="https://twitter.com/PolytureData">@PolytureData</a> to learn more and be the first to hear about our latest news and updates.
@@ -268,6 +259,7 @@
                         <div class="footer-links">
                             <a href="../index.html">About</a>
                             <a href="./downloads.html">Downloads</a>
+                            <a href="./company.html">Company</a>
                             <a href="./contact.html">Contact</a>
                             <a href="./sign-up.html">Sign Up</a>
                         </div>
@@ -311,9 +303,6 @@
 </body>
 
 <script>
-    //contact page map init 
-    var brea_map = L.map('brea-map').setView([33.5, 117.5], 13);
-    var berkeley_map = L.map('berkeley-map').setView([51.505, -0.09], 13);
 </script>
 
 
@@ -321,6 +310,7 @@
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDftEDZY2NSuk8v0D5lz9ZsKJ55gFypgrg&callback=initMap"></script>
 <script src="../dist/js/anime.js"></script>
 <script src="../dist/js/main.js"></script>
 

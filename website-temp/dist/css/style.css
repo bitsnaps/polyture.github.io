@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@800&family=Roboto+Condensed:wght@400&family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
 /* 6FABFF */
 
@@ -313,7 +313,7 @@ main {
     font-family: 'Roboto Condensed';
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -356,12 +356,18 @@ main {
     font-size: 1.7em;
 }
 
-#brea-map {
-    height: 200px;
+#locations .column {
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
-#berkeley-map {
-    height: 200px;
+#locations img {
+    padding: 5%;
+}
+
+.map {
+    height: 250px;
+    margin: 5%
 }
 
 
@@ -474,7 +480,7 @@ main {
 
 p {
     font-size: 1.3em;
-    font-family: 'Muli';
+    font-family: 'Open Sans';
     color: rgb(90, 90, 90);
     letter-spacing: 0.02em;
 }
@@ -485,9 +491,9 @@ p {
 }
 
 .ui.header {
-    font-family: 'Muli' !important;
+    font-family: 'PT serif' !important;
     font-weight: 700 !important;
-    color: rgb(44, 44, 44);
+    color: rgb(70, 70, 70);
 }
 
 .ui.menu a {
@@ -712,6 +718,7 @@ body::-webkit-scrollbar {
 #why-polyture {
     padding-left: 0%;
     padding-right: 0%;
+    padding-bottom: 10%;
 }
 
 #why-polyture i {
@@ -721,12 +728,16 @@ body::-webkit-scrollbar {
 #why-polyture h1 {
     font-size: 1.7em;
     font-weight: 400;
-    color: black;
 }
 
 #why-polyture .ui.divider {
-    margin-right: 25%;
-    margin-left: 25%;
+    margin-right: 35%;
+    margin-left: 35%;
+}
+
+#why-polyture p {
+    padding-top: 5%;
+    padding-left: 7%;
 }
 
 #why-polyture span {
@@ -734,12 +745,13 @@ body::-webkit-scrollbar {
 }
 
 #why-polyture .description .row {
-    padding: 5%;
+    padding-top: 15%;
+    padding-right: 5%;
 }
 
 #why-polyture .description .column {
     padding-right: 4%;
-    padding-left: 4%;
+    padding-left: 7%;
 }
 
 
@@ -751,8 +763,7 @@ body::-webkit-scrollbar {
 
 #server-info h1 {
     font-size: 1.7em;
-    font-weight: 400;
-    color: black;
+    font-weight: 400 !important;
 }
 
 #server-info .row {
@@ -828,7 +839,7 @@ body::-webkit-scrollbar {
     line-height: 2em;
 }
 
-#download-links .row.active .ui.header {
+#download-links .row.active .subtitle {
     font-size: 1.4em !important;
 }
 

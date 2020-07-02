@@ -36,6 +36,42 @@ function hideAllTabs() {
     }
 }
 
+var brea_map;
+var berkeley_map;
+
+function initMap() {
+
+    //contact page map init 
+    brea_map = new google.maps.Map(document.getElementById('brea-map'), {
+        center: { lat: 33.908, lng: -117.858 },
+        zoom: 10,
+        styles: [{
+            "featureType": "all",
+            "stylers": [
+                { "color": "#C0C0C0" }
+            ]
+        }, {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+                { "color": "#CCFFFF" }
+            ]
+        }, {
+            "featureType": "landscape",
+            "elementType": "labels",
+            "stylers": [
+                { "visibility": "off" }
+            ]
+        }]
+    });
+    //contact page map init 
+    berkeley_map = new google.maps.Map(document.getElementById('berkeley-map'), {
+        center: { lat: 37.870, lng: -122.268 },
+        zoom: 10
+    });
+}
+
+
 //sidebar toggle
 function toggleSidebar() {
     $('.sidebar').toggleClass('collapsed');
