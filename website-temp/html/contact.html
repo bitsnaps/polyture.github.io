@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../dist/css/style.css">
     <link rel="stylesheet" href="../dist/css/bttn.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -58,7 +59,9 @@
                     <div class="computer tablet only row">
                         <div class="ui middle aligned grid" style="width: 100%">
                             <div class="three wide column">
-                                <img class="logo" src="../img/polyture_logo_white.png">
+                                <a href="../index.html">
+                                    <img class="logo" src="../img/polyture_logo_white.png">
+                                </a>
                             </div>
                             <div class="thirteen wide column">
                                 <div class="ui secondary inverted pointing right menu" style="float:right">
@@ -75,7 +78,9 @@
                     <div class="mobile only row">
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
-                                <img class="logo" src="../img/polyture_logo_white.png">
+                                <a href="../index.html">
+                                    <img class="logo" src="../img/polyture_logo_white.png">
+                                </a>
                             </div>
                             <div class="right floated column">
                                 <div id="sidebar-toggle" onclick="toggleSidebar()">
@@ -177,11 +182,11 @@
                     </div>
                 </h2>
                 <!-- maps -->
-                <div class="ui center aligned equal width grid" style="padding-top: 6%">
+                <div class="ui center aligned equal width stackable grid" style="padding-top: 6%">
                     <!-- brea -->
                     <div class="column">
                         <div class="row">
-                            <div class="map" id="brea-map"></div>
+                            <div class="map shadow" id="brea-map"></div>
                         </div>
                         <div class="row">
                             <h3 class="ui header">Brea, CA</h3>
@@ -194,7 +199,7 @@
                     <!-- berkeley -->
                     <div class="column">
                         <div class="row">
-                            <div class="map" id="berkeley-map"></div>
+                            <div class="map shadow" id="berkeley-map"></div>
                         </div>
                         <div class="row">
                             <h3 class="ui header">Berkeley, CA</h3>
@@ -248,11 +253,11 @@
             <!-- wrapper -->
             <div class="ui container">
                 <div class="ui middle aligned center aligned stackable grid" style="padding-bottom: 5%">
-                    <!-- mobile spacer -->
-                    <br class="mobile tablet only row">
                     <!-- logo -->
                     <div class="three wide column" style="text-align: center">
-                        <img class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.png">
+                        <a href="../index.html">
+                            <img class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.png">
+                        </a>
                     </div>
                     <!-- links -->
                     <div class="ten wide column">
@@ -302,16 +307,16 @@
     </script>
 </body>
 
-<script>
-</script>
-
-
-
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtNFlXlo5UFrZGczP2xtOMk4TN_bmJmLo&callback=initMap"></script>
 <script src="../dist/js/anime.js"></script>
 <script src="../dist/js/main.js"></script>
+
+<!-- leaflet -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+<script>
+    initMap();
+</script>
 
 </html>

@@ -39,8 +39,8 @@
             <div class="row">
                 <div class="ui secondary inverted pointing vertical menu">
                     <a class="active item">About</a>
-                    <a href="./html/downloads.html" class="item">Downloads</a>
                     <a href="./html/company.html" class="item">Company</a>
+                    <a href="./html/downloads.html" class="item">Downloads</a>
                     <a href="./html/contact.html" class="item">Contact</a>
                     <a href="./html/sign-up.html" class="item">Sign Up</a>
                 </div>
@@ -58,13 +58,15 @@
                 <div class="computer tablet only row">
                     <div class="ui middle aligned grid" style="width: 100%">
                         <div class="three wide column">
-                            <img class="logo" src="img/polyture_logo_white.png">
+                            <a href="index.html">
+                                <img class="logo" src="img/polyture_logo_white.png">
+                            </a>
                         </div>
                         <div class="thirteen wide column">
                             <div class="ui secondary inverted pointing right menu" style="float:right">
                                 <a class="active item">About</a>
-                                <a href="./html/downloads.html" class="item">Downloads</a>
                                 <a href="./html/company.html" class="item">Company</a>
+                                <a href="./html/downloads.html" class="item">Downloads</a>
                                 <a href="./html/contact.html" class="item">Contact</a>
                                 <a href="./html/sign-up.html" class="cta-button-nav">Sign Up</a>
                             </div>
@@ -75,7 +77,9 @@
                 <div class="mobile only row">
                     <div class="ui middle aligned grid" style="width:100%">
                         <div class="three wide column">
-                            <img class="logo" src="img/polyture_logo_white.png">
+                            <a href="index.html">
+                                <img class="logo" src="img/polyture_logo_white.png">
+                            </a>
                         </div>
                         <div class="right floated column">
                             <div id="sidebar-toggle" onclick="toggleSidebar()">
@@ -298,74 +302,30 @@
                     </div>
                 </div>
             </div>
-            <!-- why polyture -->
-            <div class="section greyed" id="why-polyture" style="display:none">
-                <!-- wrapper -->
-                <div class="ui container">
-                    <div class="ui center aligned grid">
-                        <!-- title -->
-                        <div class="row" style="padding-bottom: 3%;">
-                            <div class="ui header">
-                                <h1 class="ui header"><span>Why use Polyture Platform?</span></h1>
-                            </div>
+            <!-- code-extensible -->
+            <div class="section" id="code-extensible">
+                <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
+                    <div class="ten wide mobile tablet only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <img class="ui shadow image" src="img/data_flow.png">
+                    </div>
+                    <div class="mobile tablet only column spacer"><br>
+                    </div>
+                    <div class="six wide column" style="padding-right:5%">
+                        <!-- header -->
+                        <h2 class="ui huge header">
+                            Code-extensible
+                        </h2>
+                        <!-- description -->
+                        <div class="row">
+                            <p>
+                                Enable depth of analysis for data scientists, while simplifying and automating for everyone else.
+                            </p>
                         </div>
-                        <div class="ui divider"></div>
-                        <div class="row" style="padding-top: 3%;">
-                            <!-- bullet points -->
-                            <div class="ui equal width middle aligned grid description">
-                                <div class="column">
-                                    <div class="row">
-                                        <h2 class="ui header">
-                                            <i class="hand point up icon"></i>
-                                            <div class="content">
-                                                Interactive & Intuitive
-                                            </div>
-                                        </h2>
-                                        <p>Polyture enables visibility into your dataset. All too often, data scientists work in blindness. Instead, Polyture enables human-interpretable depth-of-understanding at each step of the way</p>
-                                    </div>
-                                    <div class="row">
-                                        <h2 class="ui header">
-                                            <i class="chart line icon"></i>
-                                            <div class="content">
-                                                Interpretable
-                                            </div>
-                                        </h2>
-                                        <p>Polyture intelligently provides feedback and guidance while you focus on the more important domain-specific questions. Polyture enables clarity in your mental model.</p>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="row">
-                                        <img class="ui large image" src="img/visual-data.svg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ui equal width middle aligned grid description">
-                                <div class="column">
-                                    <div class="row">
-                                        <img class="ui large image" src="img/house.svg">
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="row">
-                                        <h2 class="ui header">
-                                            <i class="rocket icon"></i>
-                                            <div class="content">
-                                                Massive Scale
-                                            </div>
-                                        </h2>
-                                        <p>Polyture is a distributed data platform that runs at Cloud-Scale. Transparently scale out from your laptop to a cluster of thousands of machines in the cloud or in your institutional data center.</p>
-                                    </div>
-                                    <div class="row">
-                                        <h2 class="ui header">
-                                            <i class="lock icon"></i>
-                                            <div class="content">
-                                                Secure
-                                            </div>
-                                        </h2>
-                                        <p>Deploy Polyture in your own environment, subject to the specific security needs of your organization. You own the full Polyture stack.</p>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="ten wide computer only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <div class="layered container">
+                            <img class="ui image layered bottom right" src="img/paint1.png">
+                            <img class="ui shadow image layered top" src="img/code-extensible.png">
                         </div>
                     </div>
                 </div>
@@ -378,7 +338,7 @@
                         <!-- title -->
                         <div class="row" style="padding-bottom: 3%;">
                             <div class="ui header">
-                                <h1 class="ui header"><span>Why use Polyture Platform?</span></h1>
+                                <h1 class="ui centered header"><span>Why use Polyture Platform?</span></h1>
                             </div>
                         </div>
                         <div class="ui divider"></div>
@@ -393,7 +353,7 @@
                                                 Interactive & Intuitive
                                             </div>
                                         </h2>
-                                        <p>Polyture enables visibility into your dataset. All too often, data scientists work in blindness. Instead, Polyture enables human-interpretable depth-of-understanding at each step of the way</p>
+                                        <p>Polyture enables visibility into your dataset. All too often, data scientists work in blindness. Instead, Polyture enables human-interpretable depth-of-understanding at each step of the way.</p>
                                     </div>
                                     <div class="row">
                                         <h2 class="ui header">
@@ -404,6 +364,20 @@
                                         </h2>
                                         <p>Polyture intelligently provides feedback and guidance while you focus on the more important domain-specific questions. Polyture enables clarity in your mental model.</p>
                                     </div>
+                                </div>
+                                <div class="computer tablet only column">
+                                    <div class="row">
+                                        <img class="ui large image" src="img/visual-data.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui equal width middle aligned grid description">
+                                <div class="computer tablet only column">
+                                    <div class="row">
+                                        <img class="ui large image" src="img/house.svg">
+                                    </div>
+                                </div>
+                                <div class="column">
                                     <div class="row">
                                         <h2 class="ui header">
                                             <i class="rocket icon"></i>
@@ -421,11 +395,6 @@
                                             </div>
                                         </h2>
                                         <p>Deploy Polyture in your own environment, subject to the specific security needs of your organization. You own the full Polyture stack.</p>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="row">
-                                        <img class="ui large image" src="img/house.svg">
                                     </div>
                                 </div>
                             </div>
@@ -485,14 +454,16 @@
                         <br class="mobile tablet only row">
                         <!-- logo -->
                         <div class="three wide column" style="text-align: center">
-                            <img class="ui medium image" style="display: inline-block" src="./img/polyture_logo_white.png">
+                            <a href="index.html">
+                                <img class="ui medium image" style="display: inline-block" src="./img/polyture_logo_white.png">
+                            </a>
                         </div>
                         <!-- links -->
                         <div class="ten wide column">
                             <div class="footer-links">
                                 <a href="./index.html">About</a>
-                                <a href="./html/downloads.html">Downloads</a>
                                 <a href="./html/company.html">Company</a>
+                                <a href="./html/downloads.html">Downloads</a>
                                 <a href="./html/contact.html">Contact</a>
                                 <a href="./html/sign-up.html">Sign Up</a>
                             </div>

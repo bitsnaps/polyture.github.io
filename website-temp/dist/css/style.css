@@ -5,6 +5,9 @@
 /* 6FABFF */
 
 
+/* C0D9FF */
+
+
 /* Page Structure */
 
 body {
@@ -85,11 +88,6 @@ main {
     background-color: rgb(241, 241, 241);
 }
 
-.section.gradient {
-    background: rgb(252, 254, 225);
-    background: linear-gradient(13deg, rgba(252, 254, 225, 1) 0%, rgba(132, 185, 250, 1) 50%, rgba(252, 254, 225, 1) 100%);
-}
-
 .section p {
     padding-top: 2%;
 }
@@ -105,6 +103,11 @@ main {
 }
 
 #automl {
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+#code-extensible {
     padding-top: 6%;
     padding-bottom: 8%;
 }
@@ -366,8 +369,53 @@ main {
 }
 
 .map {
-    height: 250px;
+    height: 275px;
     margin: 5%
+}
+
+
+/* Company Page */
+
+#company-page {
+    height: 1400px;
+    background-image: url('../../img/flowers7.png');
+    background-size: cover;
+}
+
+#company-page .section.image {
+    background: rgb(225, 232, 242);
+    background: linear-gradient(0deg, rgba(225, 232, 242, 1) 0%, rgba(132, 185, 250, 1) 100%);
+}
+
+#company-page .content-wrapper {
+    background-color: none;
+}
+
+#company-page .poem {
+    padding-top: 8%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+.poem .card {
+    border-radius: 15px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5%;
+    width: 500px;
+    height: auto;
+}
+
+#company-page .poem p {
+    font-size: 1.75em;
+    font-family: 'PT serif';
+    color: white;
+}
+
+#company-page .poem h1 {
+    font-size: 4em;
+    letter-spacing: 0.05em;
+    color: white;
 }
 
 
@@ -925,6 +973,21 @@ body::-webkit-scrollbar {
     }
     .banner .landing-subtitle {
         padding-left: 0;
+    }
+    .poem {
+        margin-top: 10%;
+    }
+    #company-page {
+        height: 1000px;
+    }
+    .poem .card {
+        width: 90%;
+    }
+    #download-links {
+        width: 100%;
+    }
+    #download-links .menu a {
+        font-size: 1em;
     }
 }
 
