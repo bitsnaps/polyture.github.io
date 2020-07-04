@@ -2,10 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
-/* 6FABFF */
-
-
-/* C0D9FF */
+/*  polyture logo blue 6FABFF 
+    submit button blue 77aaf1
+    light silvery blue C0D9FF */
 
 
 /* Page Structure */
@@ -85,7 +84,7 @@ main {
 }
 
 .section.greyed {
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(247, 247, 250);
 }
 
 .section p {
@@ -377,9 +376,11 @@ main {
 /* Company Page */
 
 #company-page {
-    height: 1400px;
-    background-image: url('../../img/flowers7.png');
-    background-size: cover;
+    height: 830px;
+}
+
+#company-page .menu a {
+    color: rgb(90, 90, 90) !important;
 }
 
 #company-page .section.image {
@@ -394,28 +395,42 @@ main {
 #company-page .poem {
     padding-top: 8%;
     padding-bottom: 10%;
-    text-align: center;
+    text-align: left;
 }
 
-.poem .card {
-    border-radius: 15px;
-    background-color: white;
-    margin: 0 auto;
-    padding: 5%;
-    width: 500px;
-    height: auto;
+#company-page .cta-button-nav {
+    border-color: rgb(90, 90, 90) !important;
+    border: 4px solid rgba(90, 90, 90) !important;
+}
+
+#company-page .cta-button-nav:hover {
+    background-color: #C0D9FF;
+    border-color: #C0D9FF !important;
+}
+
+#company-page .poem {
+    padding-right: 3%;
+    padding-left: 17%;
 }
 
 #company-page .poem p {
     font-size: 1.75em;
     font-family: 'PT serif';
-    color: white;
+    color: rgb(90, 90, 90);
+}
+
+#company-page .poem p span {
+    font-size: 1.75em;
 }
 
 #company-page .poem h1 {
     font-size: 4em;
     letter-spacing: 0.05em;
-    color: white;
+    color: rgb(90, 90, 90);
+}
+
+#company-page #flower {
+    z-index: -1;
 }
 
 
@@ -629,7 +644,7 @@ body::-webkit-scrollbar {
     border-radius: 25px 25px 25px 25px;
     /* background-color: rgba(54, 120, 255); */
     /* background-color: #47b554; */
-    background-color: #6FABFF;
+    background-color: #77aaf1;
     color: white;
     font-size: 16px;
     font-family: 'Open Sans';
@@ -770,7 +785,7 @@ body::-webkit-scrollbar {
 }
 
 #why-polyture i {
-    color: #7ba8e7;
+    color: #77aaf1;
 }
 
 #why-polyture h1 {
@@ -922,6 +937,17 @@ body::-webkit-scrollbar {
     .landing-subtitle {
         padding-left: 5%;
     }
+    #company-page {
+        height: 650px
+    }
+    #company-page .poem {
+        margin-top: 10%;
+        padding-left: 10%;
+        padding-right: 2%;
+    }
+    #company-page .poem p {
+        font-size: 1.1em;
+    }
 }
 
 
@@ -974,14 +1000,20 @@ body::-webkit-scrollbar {
     .banner .landing-subtitle {
         padding-left: 0;
     }
-    .poem {
-        margin-top: 10%;
-    }
     #company-page {
-        height: 1000px;
+        height: 600px
     }
-    .poem .card {
-        width: 90%;
+    #company-page .poem {
+        margin-top: 10%;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    #company-page .poem p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    #company-page #sidebar-toggle i {
+        color: rgb(90, 90, 90);
     }
     #download-links {
         width: 100%;
