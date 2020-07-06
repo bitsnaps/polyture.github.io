@@ -51,7 +51,7 @@ MicroModal.init();
 //get yaml data
 
 //windows
-var yamlFile_windows = YAML.load('https://cors-anywhere.herokuapp.com/https://polyture-releases.sfo2.digitaloceanspaces.com/latest.yml');
+var yamlFile_windows = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest.yml');
 var yamlData_windows = new Array();
 $.each(yamlFile_windows, function(key, value) {
     yamlData_windows.push(value);
@@ -65,7 +65,7 @@ $("#PolytureVersion_windows").text(PolytureVersion_windows);
 $("#UploadDate_windows").text(UploadDate_windows);
 
 //mac
-var yamlFile_mac = YAML.load('https://cors-anywhere.herokuapp.com/https://polyture-releases.sfo2.digitaloceanspaces.com/latest-mac.yml');
+var yamlFile_mac = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest-mac.yml');
 var yamlData_mac = new Array();
 $.each(yamlFile_mac, function(key, value) {
     yamlData_mac.push(value);
