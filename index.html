@@ -1,186 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polyture</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
     <link rel="stylesheet" href="dist/css/style.css">
-    <link rel="stylesheet" href="dist/css/custom.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="dist/css/bttn.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f5a895d86f.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152613084-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-152613084-1');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-152613084-1');
     </script>
 
 </head>
-<body class="is-boxed has-animations">
-    <div class="body-wrap boxed-container">
-        <header class="site-header">
-            <div style="min-height:10px"></div>
-            <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <img draggable="false" src="img/polyture_logo_white.png" width="200">
-                        </h1>
-                    </div>
-                    <ul class="header-links list-reset m-0">
-                    </ul>
-                    <a href='#earlyaccess' class="early-access-button">
-                        <h3 class="hero-title h2-mobile mt-0 is-revealing" style='font-size: 16px; color: inherit; font-family: Arial; letter-spacing: -0.5px;'>GET EARLY ACCESS</h3>
-                    </a>
+
+<body>
+    <!-- sidebar -->
+    <div class="collapsed sidebar">
+        <div class="ui center aligned grid">
+            <!-- logo -->
+            <div class="row">
+                <img class="ui medium image" src="img/polyture_logo_white2.png">
+            </div>
+            <!-- links -->
+            <div class="row">
+                <div class="ui secondary inverted pointing vertical menu">
+                    <a class="active item">About</a>
+                    <a href="./html/company.html" class="item">Company</a>
+                    <a href="./html/downloads.html" class="item">Downloads</a>
+                    <a href="./html/contact.html" class="item">Contact</a>
+                    <a href="./html/sign-up.html" class="item">Sign Up</a>
                 </div>
             </div>
-        </header>
-
-        <main>
-            <section class="hero text-light text-center" style="padding-top: 0px">
-                <div class="container-sm">
-                    <div class="hero-inner">
-                        <div style="min-height:30px"></div>
-                        <h1 class="hero-title h2-mobile mt-0 is-revealing" style='color: white;'>Incubating</h1>
-                        <p style="padding-top: 15px; font-weight: normal; color: white; letter-spacing: -0.1px; font-size: 20px; word-spacing: 2px;">
-                            To see the world in a grain of sand,
-                            </br>
-                            And heaven in a wild flower,
-                            </br>
-                            Hold infinity in the palm of your hand,
-                            </br>
-                            And the universe in a browser.
-                            </br>
-                            </br>
-                            &mdash; @robrhinehart
-                        </p>
-                        <div style="min-height:40px"></div>
-                        <!-- <div style="box-shadow:0 16px 32px #888888; position: relative; padding-bottom: 56.25%; height: 0;">
-                            <div style="height:100%; width:100%">
-                                <iframe 
-                                    style="	position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                                    src="https://www.youtube.com/embed/lJJZ9Zy3IKQ?&autoplay=1&controls=0&loop=1&mute=1&showinfo=1&vq=hd720" 
-                                    frameborder="0">
-                                </iframe>
-                            </div>
-
-                            <video width="100%" autoplay muted loop>
-                                <source src="img/demo.m4v" type="video/mp4">
-                              Your browser does not support the video tag.
-                            </video>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-            <section style='width: 100%; display: flex; flex-direction: row;'>
-                <div class="container-sm">
-                    <div style='width: 100%'></div>
-                    <div style="box-shadow:0 16px 32px #888888; position: relative; padding-bottom: 56.25%; height: 0;">
-                        <!-- <div style="height:100%; width:100%">
-                            <iframe 
-                                style="	position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                                src="https://www.youtube.com/embed/lJJZ9Zy3IKQ?&rel=1&fs=0&autoplay=1&loop=1&mute=1&showinfo=0&modestbranding=1" 
-                                frameborder="0">
-                            </iframe>
-                        </div> -->
-    
-                        <video style='width: 100%; max-width: 100%; background-color: white;' autoplay muted loop>
-                            <source src="img/v0.6.8-alpha.2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div style='width: 100%'></div>
-                </div>
-            </section>
-            <!-- <section class="clients section" style="margin-left: auto; margin-right: auto; width: 1000px; border-top: 1px solid rgba(220, 220, 220, 1); border-bottom: 1px solid rgba(220, 220, 220, 1);">
-                <div class="container" style="width: 700px">
-                    <div class="clients-inner section-inner has-top-divider">
-                        <div class="container-sm">
-                            <ul class="list-reset mb-0">
-                                <li>
-                                    <img draggable="false" src="img/UC_Berkeley.svg" style="height: 50px; -webkit-filter: grayscale(100%) contrast(0%) saturate(0%); filter: grayscale(100%) contrast(0%) saturate(0%);"/>
-                                </li>
-                                <li>
-                                    <img draggable="false" src="img/Skydeck.png" style="height: 50px; -webkit-filter: grayscale(100%) contrast(0%) saturate(0%); filter: grayscale(100%) contrast(0%) saturate(0%);"/>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
-            <section id='earlyaccess'>
-                <div class="container-sm">
-                    <div style="min-height:100px"></div>
-                    <div class="hero-inner">
-                        <h1 class="hero-title h2-mobile mt-0 is-revealing" style="font-family: Arial; color: #6f7a8c; letter-spacing: -1.5px; text-align: center; margin-bottom: 0px;">GET EARLY ACCESS</h1>
-                        <p class="hero-title mt-0 is-revealing" style="font-family: Arial; color: #6f7a8c; letter-spacing: 1px; text-align: center; font-weight: normal">Sign up to learn more and join the private beta.</p>
-                        <div style="min-height:45px"></div>
-                        <div style='width: 100%; display: flex; flex-direction: row;'>
-                            <div style='width: 100%'></div>
-                            <div style="height: 2px; min-width: 200px; background-color: lightgray; right: 0px;"></div>
-                            <div style='width: 100%'></div>
-                        </div>
-                        <div style="min-height:15px"></div>
-                    </div>
-                    <div style="height:100px">
-                        <div style="height:20px"></div>
-                        <form
-                            action="https://script.google.com/macros/s/AKfycbwVa2BBkvSzTd_MhvluM6U3XuBORA4NFVVezWmS325EetvBrP8Z/exec"
-                            method="GET"
-                            onsubmit="window.open('https://www.polyture.com/email/success');">
-                            <div style="display: flex; justify-content: center;">
-                                <div class="custom-input">
-                                    <div style="width:40px"></div>
-                                    <input 
-                                        class="custom-input-inner" 
-                                        type="email" 
-                                        name="email" 
-                                        placeholder="Your email address..."
-                                        onfocus="this.placeholder = ''"
-                                        onfocusout="this.placeholder = 'Your email address...'">
-                                    <div style="width:20px"></div>
-                                </div>
-                                <input class="custom-button" type="submit" value="SUBMIT">
-                            </div>
-                        </form>
-                    </div>
-                    <div style="min-height:100px"></div>
-                </div>
-            </section>
-            <section class="clients section" style="background-color: #f5f8fc; min-height: 200px; box-shadow: 0px -5px 25px #DDD;">
-                <div style="min-height:30px"></div>
-                <div class="container">
-                    <div class="clients-inner section-inner">
-                        <div class="container-sm">
-                            <ul class="list-reset mb-0">
-                                <li>
-                                    <div style='width: 80px'></div>
-                                </li>
-                                <li>
-                                    <img draggable="false" src="img/UC_Berkeley.svg" style="max-height: 50px;  -webkit-filter: grayscale(100%) contrast(0%) saturate(0%); filter: grayscale(100%) contrast(0%) saturate(0%);"/>
-                                </li>
-                                <li>
-                                    <img draggable="false" src="img/Skydeck.png" style="max-height: 50px; -webkit-filter: grayscale(100%) contrast(0%) saturate(0%); filter: grayscale(100%) contrast(0%) saturate(0%);"/>
-                                </li>
-                                <li>
-                                    <div style='width: 80px'></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div style="min-height:100px">
-                    <p class="hero-title mt-0 is-revealing" style="font-family: Arial; color: #6f7a8c; letter-spacing: 1px; text-align: center; font-weight: normal; font-size: 14px">Copyright © 2020 Polyture</p>
-                </div>
-            </section>
-        </main>
+        </div>
     </div>
-    <script src="dist/js/main.min.js"></script>
+    <div id="overlay" onclick="toggleSidebar()"></div>
+    <main class="shadow">
+        <video autoplay loop muted src="img/background5.mp4" id="landing-video"></video>
+        <!-- landing-page -->
+        <div class="ui fluid container page-header" style="padding-top:3%">
+            <!-- menus -->
+            <div class="ui grid">
+                <!-- computer tablet only menu -->
+                <div class="computer tablet only row">
+                    <div class="ui middle aligned grid" style="width: 100%">
+                        <div class="three wide column">
+                            <a href="index.html">
+                                <img class="logo" src="img/polyture_logo_white.png">
+                            </a>
+                        </div>
+                        <div class="thirteen wide column">
+                            <div class="ui secondary inverted pointing right menu" style="float:right">
+                                <a class="active item">About</a>
+                                <a href="./html/company.html" class="item">Company</a>
+                                <a href="./html/downloads.html" class="item">Downloads</a>
+                                <a href="./html/contact.html" class="item">Contact</a>
+                                <a href="./html/sign-up.html" class="cta-button-nav">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile only menu -->
+                <div class="mobile only row">
+                    <div class="ui middle aligned grid" style="width:100%">
+                        <div class="three wide column">
+                            <a href="index.html">
+                                <img class="logo" src="img/polyture_logo_white.png">
+                            </a>
+                        </div>
+                        <div class="right floated column">
+                            <div id="sidebar-toggle" onclick="toggleSidebar()">
+                                <i class="bars icon"></i>
+                                <i class="close icon hidden"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- title wrapper -->
+            <div id="title-wrapper">
+                <!-- landing page title -->
+                <div class="ui center middle aligned grid">
+                    <div class="computer only four wide column" style="padding-right:5%">
+                        <div class="ui container" data-aos="fade-up" data-aos-duration="500">
+                            <img class="ui small image" style="float: right" src="img/white-arrow.png">
+                        </div>
+                    </div>
+                    <div class="column" style="width: 73%" data-aos="fade-up" data-aos-duration="500">
+                        <div class="ui left aligned container">
+                            <h1 class="landing-title"> <span>Big Data</span> <br /> at Your Fingertips
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- early access button -->
+                <div class="ui grid" style="padding-bottom: 5%" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <div class="computer only four wide column" style="padding-right:3%">
+                    </div>
+                    <div class="column" style="width: 73%">
+                        <h1 class="landing-subtitle" style="padding-bottom: 2%">Enabling anyone to be a data scientist</h1>
+                        <button class="submit-button" onclick="scrollToEarlyAccess()">Get Early Access</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content -->
+        <div class="content-wrapper landing">
+            <!-- data advantage -->
+            <div class="section wide" style="padding-top: 10">
+                <div class="ui left middle aligned stackable grid">
+                    <!-- image -->
+                    <div class="ten wide column" style="padding-right: 5%">
+                        <div class="layered container">
+                            <img class="ui image layered bottom" src="img/paint3.png">
+                            <video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow layered top" id="demo-video"></video>
+                        </div>
+                    </div>
+                    <div class="mobile tablet only column spacer"><br>
+                    </div>
+                    <div class="six wide column" style="padding-left: 5%;">
+                        <!-- header -->
+                        <h2 class="ui huge header">
+                            The Data Advantage
+                        </h2>
+                        <!-- description -->
+                        <div class="row">
+                            <div class="ui container">
+                                <p>
+                                    Have confidence in your decisions by leveraging your data. Analyze and deploy your most valuable resource faster than ever before.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- server info -->
+            <div class="section greyed" id="server-info">
+                <div class="ui center aligned grid">
+                    <!-- title -->
+                    <div class="row">
+                        <div class="ui header">
+                            <h1 class="ui header">Use <span>Polyture's scalable server</span> or <br> deploy in your own <span>self-hosted environment</span></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>
+                            Get started on Polyture Cloud or manage and deploy your custom instance.
+                        </p>
+                    </div>
+                    <!-- logos -->
+                    <div class="computer only row logos">
+                        <div class="ui equal width middle aligned grid">
+                            <!-- docker -->
+                            <div class="column">
+                                <img class="ui small image" src="img/server logos/docker.png">
+                            </div>
+                            <!-- kubernetes -->
+                            <div class="column">
+                                <img class="ui small image" src="img/server logos/kubernetes.png">
+                            </div>
+                            <!-- aws -->
+                            <div class="column">
+                                <img class="ui small image" src="img/server logos/aws.png">
+                            </div>
+                            <!-- google cloud -->
+                            <div class="column">
+                                <img class="ui small image" src="img/server logos/googlecloud.png">
+                            </div>
+                            <!-- azure -->
+                            <div class="column">
+                                <img class="ui small image" src="img/server logos/azure.png">
+                            </div>
+                            <!-- digital ocean -->
+                            <div class="column">
+                                <img class="ui small image" src="img/server logos/digitalocean.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile tablet only row logos">
+                        <div class="ui equal width middle aligned grid">
+                            <div class="row">
+                                <!-- docker -->
+                                <div class="column">
+                                    <img class="ui small image" src="img/server logos/docker.png">
+                                </div>
+                                <!-- kubernetes -->
+                                <div class="column">
+                                    <img class="ui small image" src="img/server logos/kubernetes.png">
+                                </div>
+                                <!-- aws -->
+                                <div class="column">
+                                    <img class="ui small image" src="img/server logos/aws.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- google cloud -->
+                                <div class="column">
+                                    <img class="ui small image" src="img/server logos/googlecloud.png">
+                                </div>
+                                <!-- azure -->
+                                <div class="column">
+                                    <img class="ui small image" src="img/server logos/azure.png">
+                                </div>
+                                <!-- digital ocean -->
+                                <div class="column">
+                                    <img class="ui small image" src="img/server logos/digitalocean.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- data warehouse -->
+            <div class="section" id="data-warehouse">
+                <div class="ui very relaxed stackable middle aligned grid">
+                    <div class="ten wide column" style="padding-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
+                        <div class="layered container">
+                            <img class="ui image layered bottom" src="img/paint2.png">
+                            <img class="ui shadow image layered top" src="img/data_warehouse.png">
+                        </div>
+                    </div>
+                    <div class="mobile tablet only column spacer"><br>
+                    </div>
+                    <div class="six wide column" style="padding-left:5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <!-- header -->
+                        <h2 class="ui huge header">
+                            Data Warehouse
+                        </h2>
+                        <!-- description -->
+                        <div class="row">
+                            <p>
+                                The toughest questions are answered with unified data. Import and manage all of your data in a central warehouse.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- functional analysis -->
+            <div class="section" id="data-flow">
+                <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
+                    <div class="ten wide mobile tablet only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <img class="ui shadow image" src="img/data_flow.png">
+                    </div>
+                    <div class="mobile tablet only column spacer"><br>
+                    </div>
+                    <div class="six wide column" style="padding-right:5%">
+                        <!-- header -->
+                        <h2 class="ui huge header">
+                            Functional Analysis
+                        </h2>
+                        <!-- description -->
+                        <div class="row">
+                            <p>
+                                Enable depth of analysis for data scientists, while simplifying and automating for everyone else.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ten wide computer only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <div class="layered container">
+                            <img class="ui image layered bottom right" src="img/paint3.png">
+                            <img class="ui shadow image layered top" src="img/data_flow.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- automl co-pilot -->
+            <div class="section" id="automl">
+                <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
+                    <div class="ten wide column" style="padding-right: 5%">
+                        <div class="layered container">
+                            <img class="ui image layered bottom" src="img/paint4.png">
+                            <img class="ui shadow image layered top" src="img/automl.png">
+                        </div>
+                    </div>
+                    <div class="mobile tablet only column spacer">
+                    </div>
+                    <div class="six wide column" style="padding-left:5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <!-- header -->
+                        <h2 class="ui huge header">
+                            AutoML Co-Pilot
+                        </h2>
+                        <!-- description -->
+                        <div class="row">
+                            <p>
+                                Leverage state-of-the-art feature engineering and machine learning to power accurate and explainable predictions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- code-extensible -->
+            <div class="section" id="code-extensible">
+                <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
+                    <div class="ten wide mobile tablet only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <img class="ui shadow image" src="img/data_flow.png">
+                    </div>
+                    <div class="mobile tablet only column spacer"><br>
+                    </div>
+                    <div class="six wide column" style="padding-right:5%">
+                        <!-- header -->
+                        <h2 class="ui huge header">
+                            Code-extensible
+                        </h2>
+                        <!-- description -->
+                        <div class="row">
+                            <p>
+                                Extend with custom code that is automatically scaled up to a distributed cluster. Polyture makes no compromises when your work demands flexibility.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ten wide computer only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
+                        <div class="layered container">
+                            <img class="ui image layered bottom right" src="img/paint1.png">
+                            <img class="ui shadow image layered top" src="img/code-extensible.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- why polyture -->
+            <div class="section greyed" id="why-polyture">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <div class="ui center aligned grid">
+                        <!-- title -->
+                        <div class="row" style="padding-bottom: 3%;">
+                            <div class="ui header">
+                                <h1 class="ui centered header"><span>Why use Polyture Platform?</span></h1>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="row" style="padding-top: 3%;">
+                            <!-- bullet points -->
+                            <div class="ui equal width middle aligned grid description">
+                                <div class="column">
+                                    <div class="row">
+                                        <h2 class="ui header">
+                                            <i class="hand point up icon"></i>
+                                            <div class="content">
+                                                Interactive & Intuitive
+                                            </div>
+                                        </h2>
+                                        <p>Polyture enables visibility into your dataset. All too often, data scientists work in blindness. Instead, Polyture enables human-interpretable depth-of-understanding at each step of the way.</p>
+                                    </div>
+                                    <div class="row">
+                                        <h2 class="ui header">
+                                            <i class="chart line icon"></i>
+                                            <div class="content">
+                                                Interpretable
+                                            </div>
+                                        </h2>
+                                        <p>Polyture intelligently provides feedback and guidance while you focus on the more important domain-specific questions. Polyture enables clarity in your mental model.</p>
+                                    </div>
+                                </div>
+                                <div class="computer tablet only column">
+                                    <div class="row">
+                                        <img class="ui large image" src="img/visual-data.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui equal width middle aligned grid description">
+                                <div class="computer tablet only column">
+                                    <div class="row">
+                                        <img class="ui large image" src="img/house.svg">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="row">
+                                        <h2 class="ui header">
+                                            <i class="rocket icon"></i>
+                                            <div class="content">
+                                                Massive Scale
+                                            </div>
+                                        </h2>
+                                        <p>Polyture is a distributed data platform that runs at Cloud-Scale. Transparently scale out from your laptop to a cluster of thousands of machines in the cloud or in your institutional data center.</p>
+                                    </div>
+                                    <div class="row">
+                                        <h2 class="ui header">
+                                            <i class="lock icon"></i>
+                                            <div class="content">
+                                                Secure
+                                            </div>
+                                        </h2>
+                                        <p>Deploy Polyture in your own environment, subject to the specific security needs of your organization. You own the full Polyture stack.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- early access section -->
+            <div class="section" id="early-access">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <!-- what is polyture-->
+                    <div class="ui left center aligned stackable grid">
+                        <div class="ten wide column">
+                            <!-- header and description -->
+                            <div class="ui center aligned grid">
+                                <div class="row">
+                                    <img class="ui medium image" src="img/early-access.svg">
+                                </div>
+                                <!-- header -->
+                                <h2 class="ui huge header">
+                                    Hear From Us
+                                </h2>
+                                <!-- description -->
+                                <div class="row">
+                                    <div class="ui container">
+                                        <p>
+                                            Sign up to receive updates and join the private beta.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ui divider" style="margin-right: 35%; margin-left: 35%"></div>
+                                <!-- submit email -->
+                                <div class="row">
+                                    <form action="https://script.google.com/macros/s/AKfycbwVa2BBkvSzTd_MhvluM6U3XuBORA4NFVVezWmS325EetvBrP8Z/exec" method="GET" onsubmit="window.open('https://www.polyture.com/email/success');">
+                                        <div style="display: flex; justify-content: center;">
+                                            <div class="custom-input">
+                                                <div style="width:40px"></div>
+                                                <input class="custom-input-inner" type="email" name="email" placeholder="Your email address..." onfocus="this.placeholder = ''" onfocusout="this.placeholder = 'Your email address...'" style="font-family: 'Open Sans';">
+                                                <div style="width:20px"></div>
+                                            </div>
+                                            <input class="submit-button" type="submit" value="SUBMIT">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="shadow-footer" id="footer">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <div class="ui middle aligned center aligned stackable grid" style="padding-bottom: 5%">
+                        <!-- mobile spacer -->
+                        <br class="mobile tablet only row">
+                        <!-- logo -->
+                        <div class="three wide column" style="text-align: center">
+                            <a href="index.html">
+                                <img class="ui medium image" style="display: inline-block" src="./img/polyture_logo_white.png">
+                            </a>
+                        </div>
+                        <!-- links -->
+                        <div class="ten wide column">
+                            <div class="footer-links">
+                                <a href="./index.html">About</a>
+                                <a href="./html/company.html">Company</a>
+                                <a href="./html/downloads.html">Downloads</a>
+                                <a href="./html/contact.html">Contact</a>
+                                <a href="./html/sign-up.html">Sign Up</a>
+                            </div>
+                        </div>
+                        <!-- social media -->
+                        <div class="three wide column">
+                            <div class="icon-container">
+                                <a href="https://twitter.com/polyturedata"><i class="twitter icon"></i></a>
+                                <a><i class="medium m icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- divider -->
+                    <div class="ui divider"></div>
+                    <div class="ui center aligned grid">
+                        <!-- logos -->
+                        <div class="row" id="logos">
+                            <div class="ui grid">
+                                <div class="eight wide column">
+                                    <img class="ui small image" src="./img/UC_Berkeley.png">
+                                </div>
+                                <div class="eight wide column">
+                                    <img class="ui small image" src="./img/Skydeck.png">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- copyright -->
+                        <div class="row" id="copyright">
+                            <p>© 2020 Polyture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- animate on scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+<script src="dist/js/anime.js"></script>
+<script src="dist/js/main.js"></script>
+
 </html>
