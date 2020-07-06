@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
 /*  polyture logo blue 6FABFF 
-    submit button blue 77aaf1
-    light silvery blue C0D9FF */
+    submit button blue 95caff
+    light silvery blue C0D9FF*/
 
 
 /* Page Structure */
@@ -222,7 +222,7 @@ main {
 .page-header {
     padding-top: 3%;
     padding-right: 5%;
-    padding-left: 5%;
+    padding-left: 7%;
 }
 
 .page-header .logo {
@@ -363,13 +363,8 @@ main {
     padding-left: 5%;
 }
 
-#locations img {
-    padding: 5%;
-}
-
 .map {
-    height: 275px;
-    margin: 5%
+    margin-bottom: 10%
 }
 
 
@@ -431,6 +426,10 @@ main {
 
 #company-page #flower {
     z-index: -1;
+}
+
+#company-page i {
+    color: rgb(90, 90, 90);
 }
 
 
@@ -644,7 +643,7 @@ body::-webkit-scrollbar {
     border-radius: 25px 25px 25px 25px;
     /* background-color: rgba(54, 120, 255); */
     /* background-color: #47b554; */
-    background-color: #77aaf1;
+    background-color: #95caff;
     color: white;
     font-size: 16px;
     font-family: 'Open Sans';
@@ -852,7 +851,7 @@ body::-webkit-scrollbar {
 }
 
 #user-manual .submit-button {
-    width: 200px;
+    width: 220px;
 }
 
 #download-links {
@@ -882,7 +881,7 @@ body::-webkit-scrollbar {
     margin-top: 3%;
 }
 
-#download-links .submit-button.greyed {
+.submit-button.greyed {
     background-color: rgb(160, 160, 160);
     color: white;
     cursor: default;
