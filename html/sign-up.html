@@ -8,21 +8,9 @@
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="../dist/css/style.css">
-    <link rel="stylesheet" href="../dist/css/bttn.css">
+    <link rel="stylesheet" href="../dist/css/modal.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152613084-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-152613084-1');
-    </script>
 
 </head>
 
@@ -147,34 +135,34 @@
                         </div>
                         <div class="column" data-aos="fade-down-left" data-aos-duration="500">
                             <!-- form -->
-                            <form class="form-container" action="mailto:contact@polyture.com?subject=Closed Beta Request" method="post" enctype="text/plain">
+                            <form class="form-container" id="signup-form" method="GET" onsubmit="submitSignup()">
                                 <div class="ui form">
                                     <div class="two fields">
                                         <div class="field">
                                             <label>First Name:</label>
-                                            <input type="text" name="First Name" placeholder="First Name">
+                                            <input type="text" name="First Name" id="signup-firstname" placeholder="First Name">
                                         </div>
                                         <div class="field">
                                             <label>Last Name:</label>
-                                            <input type="text" name="Last Name" placeholder="Last Name">
+                                            <input type="text" name="Last Name" id="signup-lastname" placeholder="Last Name">
                                         </div>
                                     </div>
                                     <div class="one field">
                                         <div class="field">
                                             <label>Organization:</label>
-                                            <input type="text" name="Organization" placeholder="Organization">
+                                            <input type="text" name="Organization" id="signup-organization" placeholder="Organization (Optional)">
                                         </div>
                                     </div>
                                     <div class="one field">
                                         <div class="field">
                                             <label>Email Address:</label>
-                                            <input type="text" name="Email Address" placeholder="Email Address">
+                                            <input type="email" name="Email" id="signup-email" placeholder="Email Address">
                                         </div>
                                     </div>
                                 </div>
                                 <!-- submit button -->
                                 <div class="form-button-container">
-                                    <button class="submit-button">Join Waitlist</button>
+                                    <button class="submit-button" type="submit">Join Waitlist</button>
                                 </div>
                             </form>
                         </div>
@@ -235,6 +223,37 @@
         </div>
     </main>
 
+    <!-- sign up form success modal -->
+    <div class="modal micromodal-slide" id="signup-success" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="ui header" id="modal-1-title">
+                        Request Successfully Submitted
+                    </h2>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <p>
+                        Thanks for signing up. We'll send you updates whenever we can.
+                    </p>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- sign up form failed modal -->
+    <div class="modal micromodal-slide" id="signup-failure" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <p>
+                        Please fill out all fields or enter a valid email address.
+                    </p>
+                </header>
+            </div>
+        </div>
+    </div>
+
     <!-- animate on scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -246,6 +265,8 @@
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script src="../dist/js/anime.js"></script>
 <script src="../dist/js/main.js"></script>
 

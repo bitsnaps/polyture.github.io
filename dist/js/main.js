@@ -36,6 +36,77 @@ function hideAllTabs() {
     }
 }
 
+//email send
+
+function validEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        return (true)
+    }
+    return (false)
+}
+
+function validateContactForm() {
+    return (
+        validEmail($('#contact-email').val()) &&
+        $('#contact-firstname').val() != '' &&
+        $('#contact-lastname').val() != '' &&
+        $('#contact-message').val() != '')
+}
+
+function clearContactForm() {
+    $('#contact-email').val('');
+    $('#contact-firstname').val('');
+    $('#contact-lastname').val('');
+    $('#contact-message').val('');
+}
+
+function sendEmail_contact() {
+    var firstName = $('#contact-firstname').val();
+    var lastName = $('#contact-lastname').val();
+    var email = $('#contact-email').val();
+    var message = $('#contact-message').val()
+    if (validateContactForm()) {
+        Email.send({
+            SecureToken: '403fe504-0a70-4d73-b461-58e9a7c786bf',
+            To: 'contact@polyture.com',
+            From: "justin@cloud.polyture.com ",
+            Subject: "Contact Form Submission - " + firstName + " " + lastName + " - " + email,
+            Body: message
+        }).then(
+            MicroModal.show('contact-success'),
+            clearContactForm()
+        );
+    } else {
+        MicroModal.show('contact-failure')
+    }
+}
+
+function validateSignupForm() {
+    return (
+        validEmail($('#signup-email').val()) &&
+        $('#signup-firstname').val() != '' &&
+        $('#signup-lastname').val() != '')
+}
+
+//submit sign up form 
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
+const form = document.forms['signup-form'];
+
+form.addEventListener('submit', e => {
+    if (validateSignupForm()) {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(MicroModal.show('signup-success'))
+            .catch(error => console.error('Error!', error.message))
+
+        //clear form 
+        $('#signup-email').val('');
+        $('#signup-firstname').val('');
+        $('#signup-lastname').val('');
+        $('#signup-organization').val('');
+    }
+})
 
 //sidebar toggle
 function toggleSidebar() {
