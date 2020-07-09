@@ -90,30 +90,33 @@ function validateSignupForm() {
 
 //submit sign up form 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
-const form = document.forms['signup-form'];
+function initForm() {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
+    const form = document.forms['signup-form'];
 
-form.addEventListener('submit', e => {
-    if (validateSignupForm()) {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(MicroModal.show('signup-success'))
-            .catch(error => console.error('Error!', error.message))
+    form.addEventListener('submit', e => {
+        if (validateSignupForm()) {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(MicroModal.show('signup-success'))
+                .catch(error => console.error('Error!', error.message))
 
-        //clear form 
-        $('#signup-email').val('');
-        $('#signup-firstname').val('');
-        $('#signup-lastname').val('');
-        $('#signup-organization').val('');
+            //clear form 
+            $('#signup-email').val('');
+            $('#signup-firstname').val('');
+            $('#signup-lastname').val('');
+            $('#signup-organization').val('');
+        }
+    })
+
+    //sidebar toggle
+    function toggleSidebar() {
+        $('.sidebar').toggleClass('collapsed');
+        $('#sidebar-toggle i').toggleClass('hidden');
+        $('#overlay').toggleClass('shown');
     }
-})
-
-//sidebar toggle
-function toggleSidebar() {
-    $('.sidebar').toggleClass('collapsed');
-    $('#sidebar-toggle i').toggleClass('hidden');
-    $('#overlay').toggleClass('shown');
 }
+
 
 //modal
 MicroModal.init();
