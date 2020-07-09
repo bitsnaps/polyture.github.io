@@ -91,6 +91,10 @@ main {
     padding-top: 2%;
 }
 
+#data-advantage {
+    padding-top: 10%;
+}
+
 #data-warehouse {
     padding-top: 12%;
     padding-bottom: 6%;
@@ -109,6 +113,33 @@ main {
 #code-extensible {
     padding-top: 6%;
     padding-bottom: 8%;
+}
+
+@media screen and (max-width: 600px) {
+    #data-advantage {
+        padding-top: 20%;
+        text-align: center;
+    }
+    #data-warehouse {
+        padding-top: 20%;
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    #data-flow {
+        padding-top: 20%;
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    #automl {
+        padding-top: 20%;
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    #code-extensible {
+        padding-top: 20%;
+        padding-bottom: 20%;
+        text-align: center;
+    }
 }
 
 
@@ -219,6 +250,10 @@ main {
 
 /* Specific Styling */
 
+.spacer {
+    height: 20px;
+}
+
 .page-header {
     padding-top: 3%;
     padding-right: 5%;
@@ -233,7 +268,6 @@ main {
 .pricing-header {
     font-size: 2em;
     font-weight: 700;
-    font-family: 'Raleway';
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -263,6 +297,12 @@ main {
     }
 }
 
+.border {
+    border-style: solid;
+    border-color: greenyellow;
+    border-width: 3px;
+}
+
 #early-access {
     padding-bottom: 10%;
 }
@@ -274,7 +314,14 @@ main {
 #title-wrapper {
     padding-top: 13%;
     padding-bottom: 11%;
-    padding-left: 6%;
+    padding-left: 0%;
+    width: 90%;
+    margin: 0 auto;
+    margin-right: 10%;
+}
+
+#title-wrapper img {
+    height: 130px;
 }
 
 #title-wrapper .submit-button {
@@ -307,6 +354,8 @@ main {
 
 .landing-title span {
     font-size: 1.75em;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .landing-subtitle {
@@ -432,6 +481,27 @@ main {
     color: rgb(90, 90, 90);
 }
 
+@media screen and (max-width: 600px) {
+    #company-page .poem {
+        margin-top: 10%;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    #company-page .poem p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    #company-page #sidebar-toggle i {
+        color: rgb(90, 90, 90);
+    }
+    #download-links {
+        width: 100%;
+    }
+    #download-links .menu a {
+        font-size: 1em;
+    }
+}
+
 
 /* Use Cases */
 
@@ -483,7 +553,7 @@ main {
     width: 100%;
     background-color: rgb(48, 48, 48);
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
 
 #logos {
@@ -494,11 +564,7 @@ main {
 
 #copyright {
     color: white;
-    font-size: 0.7em;
-    font-family: 'Roboto Condensed';
-    letter-spacing: 0.3em;
-    padding-top: 2% !important;
-    padding-bottom: 0% !important;
+    font-family: 'PT Serif';
     -webkit-filter: grayscale(80%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(80%) saturate(0) contrast(0);
@@ -511,6 +577,7 @@ main {
 .icon-container i {
     color: white;
     font-size: 1.5em;
+    float: right;
 }
 
 .footer-links a {
@@ -537,11 +604,42 @@ main {
     transition: 0.2s;
 }
 
+#footer br {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #footer {
+        padding-top: 15%;
+        padding-bottom: 8%;
+    }
+    #footer #logos {
+        padding-top: 10%;
+    }
+    #footer #footer img {
+        height: 40px;
+        width: auto;
+    }
+    #footer br {
+        display: block;
+    }
+    .footer-links a {
+        letter-spacing: 0.1em;
+        line-height: 2.5em;
+        padding: 2%;
+        font-family: 'Open Sans';
+        text-transform: uppercase;
+    }
+    #footer .icon-container i {
+        float: none;
+    }
+}
+
 
 /* Font Styles */
 
 p {
-    font-size: 1.3em;
+    font-size: 18px;
     font-family: 'Open Sans';
     color: rgb(90, 90, 90);
     letter-spacing: 0.02em;
@@ -789,6 +887,7 @@ body::-webkit-scrollbar {
 
 #why-polyture i {
     color: #77aaf1;
+    font-size: 1.3em;
 }
 
 #why-polyture h1 {
@@ -802,8 +901,8 @@ body::-webkit-scrollbar {
 }
 
 #why-polyture p {
-    padding-top: 5%;
-    padding-left: 7%;
+    padding-top: 1%;
+    padding-left: 10.5%;
 }
 
 #why-polyture span {
@@ -818,6 +917,43 @@ body::-webkit-scrollbar {
 #why-polyture .description .column {
     padding-right: 4%;
     padding-left: 7%;
+}
+
+#why-polyture .description {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    #why-polyture {
+        padding-bottom: 20%;
+    }
+    #why-polyture h1 {
+        font-size: 25px;
+        padding-top: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    #why-polyture h2 {
+        font-size: 20px;
+        padding-top: 5%;
+        margin: 0;
+        padding-right: 5%;
+    }
+    #why-polyture i {
+        font-size: 1.2em;
+    }
+    #why-polyture .mobile {
+        text-align: center;
+    }
+    #why-polyture .description.mobile .row {
+        padding-left: 14%;
+        padding-right: 14%;
+    }
+    #why-polyture p {
+        padding-top: 7%;
+        padding-left: 0;
+    }
 }
 
 
@@ -845,6 +981,29 @@ body::-webkit-scrollbar {
 
 #server-info span {
     font-weight: 800;
+}
+
+#server-info .ui.header {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 600px) {
+    #server-info {
+        padding: 11%;
+    }
+    #server-info .row {
+        padding-top: 7%;
+        padding-bottom: 7%;
+    }
+    #server-info .ui.header {
+        font-size: 25px;
+        padding-top: 5%;
+        margin: 0;
+    }
+    #server-info .logos {
+        padding-bottom: 15%;
+    }
 }
 
 
@@ -958,8 +1117,8 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 600px) {
     .section {
-        padding-top: 15%;
-        padding-bottom: 15%;
+        padding-top: 20%;
+        padding-bottom: 20%;
         padding-right: 7%;
         padding-left: 7%;
     }
@@ -972,12 +1131,10 @@ body::-webkit-scrollbar {
         margin: 0 0;
         overflow-x: hidden;
     }
-    .use-cases-container {
-        padding: 10%;
-        height: 430px;
-        width: 290px;
-        margin-left: 0
+    p {
+        font-size: 1.2em;
     }
+    /* Landing Page */
     .ui.menu a {
         font-size: 0.7em;
     }
@@ -985,14 +1142,27 @@ body::-webkit-scrollbar {
         line-height: 0em;
     }
     .landing-title {
-        font-size: 2.5em;
+        font-size: 2.3em;
     }
     .landing-title span {
-        font-size: 2em;
+        font-size: 1.7em;
     }
     .landing-subtitle {
-        padding-left: 5%;
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+    .page-header {
+        padding-right: 0%;
+        padding-left: 9%;
+        margin-top: 2%;
+    }
+    .page-header .logo {
+        height: 30px;
+        width: auto;
+    }
+    #title-wrapper {
+        margin: 0 auto;
+        padding-top: 25%;
+        padding-bottom: 25%;
     }
     .banner {
         padding-right: 10%;
@@ -1003,30 +1173,9 @@ body::-webkit-scrollbar {
     .banner .landing-subtitle {
         padding-left: 0;
     }
-    #company-page {
-        height: 600px
+    #early-access {
+        padding: 10%;
+        padding-bottom: 25%;
+        padding-top: 20%;
     }
-    #company-page .poem {
-        margin-top: 10%;
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-    #company-page .poem p {
-        font-size: 1.1em;
-        text-align: center;
-    }
-    #company-page #sidebar-toggle i {
-        color: rgb(90, 90, 90);
-    }
-    #download-links {
-        width: 100%;
-    }
-    #download-links .menu a {
-        font-size: 1em;
-    }
-}
-
-.spacer {
-    padding-top: 10%;
-    padding-bottom: 10%;
 }
