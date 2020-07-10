@@ -391,7 +391,7 @@ main {
 }
 
 .blurry-background {
-    background-image: url('../../img/blurry-background4.png');
+    background-image: url('../../img/blurry-background.webp');
     background-size: cover;
     padding-bottom: 3%;
 }
