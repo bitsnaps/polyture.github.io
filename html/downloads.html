@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="../dist/css/modal.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="../dist/css/bttn.css" rel="stylesheet">
-
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-
 </head>
 
 <body>
@@ -24,7 +20,7 @@
         <div class="ui center aligned grid">
             <!-- logo -->
             <div class="row">
-                <img class="ui medium image" src="../img/polyture_logo_white2.png">
+                <img alt="logo" class="ui medium image" src="../img/polyture_logo_white2.webp">
             </div>
             <!-- links -->
             <div class="row">
@@ -43,7 +39,7 @@
         <!-- landing page -->
         <div class="blurry-background">
             <!-- header -->
-            <div class="ui fluid container page-header" style="padding-top:3%">
+            <div class="ui fluid container page-header">
                 <!-- menus -->
                 <div class="ui grid">
                     <!-- computer tablet only menu -->
@@ -51,7 +47,7 @@
                         <div class="ui middle aligned grid" style="width: 100%">
                             <div class="three wide column">
                                 <a href="../index.html">
-                                    <img class="logo" src="../img/polyture_logo_white.png">
+                                    <img alt="logo" class="logo" src="../img/polyture_logo_white.webp">
                                 </a>
                             </div>
                             <div class="thirteen wide column">
@@ -70,7 +66,7 @@
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
                                 <a href="../index.html">
-                                    <img class="logo" src="../img/polyture_logo_white.png">
+                                    <img alt="logo" class="logo" src="../img/polyture_logo_white.webp">
                                 </a>
                             </div>
                             <div class="right floated column">
@@ -87,7 +83,7 @@
                     <!-- computer -->
                     <div class="ui computer tablet only center middle aligned grid">
                         <div class="two wide column">
-                            <img class="ui medium image" src="../img/white-arrow.png">
+                            <img alt="polyture arrow" class="ui medium image" src="../img/white-arrow.webp">
                         </div>
                         <div class="fourteen wide column">
                             <h1 class="landing-title">Downloads</h1>
@@ -125,8 +121,8 @@
                                 <!-- image wrapper -->
                                 <div class="row" style="padding-top: 6%">
                                     <div class="layered container">
-                                        <img class="ui image layered bottom below" src="../img/paint1.png">
-                                        <img class="ui image shadow layered top" src="../img/application-screenshot.png">
+                                        <img alt="paint" class="ui image layered bottom below" src="../img/paint1.webp">
+                                        <img alt="application screenshot" class="ui image shadow layered top" src="../img/application-screenshot.webp">
                                     </div>
                                 </div>
                             </div>
@@ -138,22 +134,33 @@
                             <div class="ui left aligned grid" style="padding-left: 10%">
                                 <!-- image -->
                                 <div class="row">
-                                    <img class="ui medium image" src="../img/book.svg">
+                                    <img alt="documentation" class="ui medium image" src="../img/book.svg">
                                 </div>
-                                <!-- description -->
-                                <div class="row" style="padding-top: 15%">
+                                <!-- description computer tablet -->
+                                <div class="computer tablet only row" style="padding-top: 15%">
                                     <!-- header -->
                                     <h2 class="ui huge header">
                                         Documentation
                                     </h2>
-                                    <div class="ui container">
-                                        <p>
-                                            Download documentation for the Polyture Platform for additional guidance and product roadmap.
-                                        </p>
-                                        <p>
-                                            <button class="submit-button greyed">Coming Soon</button>
-                                        </p>
-                                    </div>
+                                    <p>
+                                        Download documentation for the Polyture Platform for additional guidance and product roadmap.
+                                    </p>
+                                    <p>
+                                        <button class="submit-button greyed">Coming Soon</button>
+                                    </p>
+                                </div>
+                                <!-- description mobile -->
+                                <div class="mobile only row border" style="padding-top: 15%">
+                                    <!-- header -->
+                                    <h2 class="ui huge header">
+                                        Documentation
+                                    </h2>
+                                    <p>
+                                        Download documentation for the Polyture Platform for additional guidance and product roadmap.
+                                    </p>
+                                    <p>
+                                        <button class="submit-button greyed">Coming Soon</button>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +172,7 @@
                 <div class="ui left aligned middle aligned stackable grid">
                     <!-- image -->
                     <div class="five wide column" data-aos="fade-up-right" data-aos-duration="500" style="padding-right:5%">
-                        <img class="ui medium image" src="../img/download.svg">
+                        <img alt="download" class="ui medium image" src="../img/download.svg">
                     </div>
                     <!-- mobile spacer -->
                     <div class="mobile only column" style="height: 50px"></div>
@@ -259,16 +266,17 @@
                 </div>
             </div>
         </div>
-
         <!-- footer -->
         <div class="shadow-footer" id="footer">
             <!-- wrapper -->
             <div class="ui container">
                 <div class="ui middle aligned center aligned stackable grid" style="padding-bottom: 5%">
+                    <!-- mobile spacer -->
+                    <br class="mobile tablet only row">
                     <!-- logo -->
-                    <div class="three wide column">
-                        <a href="../index.html">
-                            <img class="ui medium image" src="../img/polyture_logo_white.png">
+                    <div class="three wide column" style="text-align: center">
+                        <a href="index.html">
+                            <img alt="logo" class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.webp">
                         </a>
                     </div>
                     <!-- links -->
@@ -296,16 +304,16 @@
                     <div class="row" id="logos">
                         <div class="ui grid">
                             <div class="eight wide column">
-                                <img class="ui small image" src="../img/UC_Berkeley.png">
+                                <img alt="berkeley logo" class="ui small image" src="../img/UC_Berkeley.webp">
                             </div>
                             <div class="eight wide column">
-                                <img class="ui small image" src="../img/Skydeck.png">
+                                <img alt="skydeck logo" class="ui small image" src="../img/Skydeck.webp">
                             </div>
                         </div>
                     </div>
                     <!-- copyright -->
-                    <div class="row" id="copyright">
-                        <p>© 2020 Polyture</p>
+                    <div class="row">
+                        <p id="copyright">© 2020 Polyture</p>
                     </div>
                 </div>
             </div>
@@ -412,6 +420,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+        MicroModal.init();
+        getYamlData();
     </script>
 </body>
 
