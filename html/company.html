@@ -46,7 +46,10 @@
                         <div class="ui middle aligned grid" style="width: 100%">
                             <div class="three wide column">
                                 <a href="../index.html">
-                                    <img alt="logo" class="logo" src="../img/polyture_logo_black.webp">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                    </picture>
                                 </a>
                             </div>
                             <div class="thirteen wide column">
@@ -64,7 +67,10 @@
                     <div class="mobile only row">
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
-                                <img alt="logo" class="logo" src="../img/polyture_logo_black.webp">
+                                <picture>
+                                    <source srcset="img/polyture_logo_black.webp" type="image/webp">
+                                    <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                </picture>
                             </div>
                             <div class="right floated column">
                                 <div id="sidebar-toggle" onclick="toggleSidebar()">
@@ -93,12 +99,14 @@
                     <div class="mobile only column" style="height: 20px"></div>
                     <!-- flower -->
                     <div class="nine wide column">
-                        <img alt="flowers" class="ui huge image" id="flower" src="../img/flowers.webp">
+                        <picture>
+                            <source srcset="../img/flowers.webp" type="image/webp">
+                            <img alt="flowers" class="ui huge image" id="flower" src="../img/fallback/flowers9.png">
+                        </picture>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- footer -->
         <div class="shadow-footer" id="footer">
             <!-- wrapper -->
@@ -109,7 +117,10 @@
                     <!-- logo -->
                     <div class="three wide column" style="text-align: center">
                         <a href="index.html">
-                            <img alt="logo" class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.webp">
+                            <picture>
+                                <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                <img alt="logo" class="ui medium image" style="display: inline-block" src="../img/fallback/polyture_logo_white.png">
+                            </picture>
                         </a>
                     </div>
                     <!-- links -->
@@ -137,10 +148,16 @@
                     <div class="row" id="logos">
                         <div class="ui grid">
                             <div class="eight wide column">
-                                <img alt="berkeley logo" class="ui small image" src="../img/UC_Berkeley.webp">
+                                <picture>
+                                    <source srcset="../img/UC_Berkeley.webp" type="image/webp">
+                                    <img alt="berkeley logo" class="ui small image" src="../img/fallback/UC_Berkeley.png">
+                                </picture>
                             </div>
                             <div class="eight wide column">
-                                <img alt="skydeck logo" class="ui small image" src="../img/Skydeck.webp">
+                                <picture>
+                                    <source srcset="../img/Skydeck.webp" type="image/webp">
+                                    <img alt="skydeck logo" class="ui small image" src="../img/fallback/Skydeck.png">
+                                </picture>
                             </div>
                         </div>
                     </div>
