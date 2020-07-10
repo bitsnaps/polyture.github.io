@@ -93,7 +93,6 @@ main {
 
 #data-advantage {
     padding-top: 10%;
-    background-color: white;
 }
 
 #data-warehouse {
@@ -383,6 +382,7 @@ main {
 #demo-video {
     width: 100%;
     height: auto;
+    background-color: white;
 }
 
 #contact-form {
