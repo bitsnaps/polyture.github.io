@@ -21,7 +21,7 @@
         <div class="ui center aligned grid">
             <!-- logo -->
             <div class="row">
-                <img class="ui medium image" src="../img/polyture_logo_white2.png">
+                <img alt="logo" class="ui medium image" src="../img/polyture_logo_white2.webp">
             </div>
             <!-- links -->
             <div class="row">
@@ -40,14 +40,14 @@
         <!-- landing page -->
         <div class="blurry-background">
             <!-- header -->
-            <div class="ui fluid container page-header" style="padding-top:3%">
+            <div class="ui fluid container page-header">
                 <!-- menus -->
                 <div class="ui grid">
                     <!-- computer tablet only menu -->
                     <div class="computer tablet only row">
                         <div class="ui middle aligned grid" style="width: 100%">
                             <div class="three wide column">
-                                <img class="logo" src="../img/polyture_logo_white.png">
+                                <img alt="logo" class="logo" src="../img/polyture_logo_white.webp">
                             </div>
                             <div class="thirteen wide column">
                                 <div class="ui secondary inverted pointing right menu" style="float:right">
@@ -64,7 +64,7 @@
                     <div class="mobile only row">
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
-                                <img class="logo" src="../img/polyture_logo_white.png">
+                                <img alt="logo" class="logo" src="../img/polyture_logo_white.webp">
                             </div>
                             <div class="right floated column">
                                 <div id="sidebar-toggle" onclick="toggleSidebar()">
@@ -80,7 +80,7 @@
                     <!-- computer -->
                     <div class="ui computer tablet only center middle aligned grid">
                         <div class="two wide column">
-                            <img class="ui medium image" src="../img/white-arrow.png">
+                            <img alt="polyture arrow" class="ui medium image" src="../img/white-arrow.webp">
                         </div>
                         <div class="fourteen wide column">
                             <h1 class="landing-title">Sign Up</h1>
@@ -130,7 +130,7 @@
                                 </div>
                                 <!-- image -->
                                 <div class="computer tablet only row" style="padding-top:23%">
-                                    <img class="ui medium image" src="../img/sign-up.svg">
+                                    <img alt="sign up" class="ui medium image" src="../img/sign-up.svg">
                                 </div>
                             </div>
                         </div>
@@ -171,7 +171,6 @@
                 </div>
             </div>
         </div>
-
         <!-- footer -->
         <div class="shadow-footer" id="footer">
             <!-- wrapper -->
@@ -181,7 +180,9 @@
                     <br class="mobile tablet only row">
                     <!-- logo -->
                     <div class="three wide column" style="text-align: center">
-                        <img class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.png">
+                        <a href="index.html">
+                            <img alt="logo" class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.webp">
+                        </a>
                     </div>
                     <!-- links -->
                     <div class="ten wide column">
@@ -208,16 +209,16 @@
                     <div class="row" id="logos">
                         <div class="ui grid">
                             <div class="eight wide column">
-                                <img class="ui small image" src="../img/UC_Berkeley.png">
+                                <img alt="berkeley logo" class="ui small image" src="../img/UC_Berkeley.webp">
                             </div>
                             <div class="eight wide column">
-                                <img class="ui small image" src="../img/Skydeck.png">
+                                <img alt="skydeck logo" class="ui small image" src="../img/Skydeck.webp">
                             </div>
                         </div>
                     </div>
                     <!-- copyright -->
-                    <div class="row" id="copyright">
-                        <p>© 2020 Polyture</p>
+                    <div class="row">
+                        <p id="copyright">© 2020 Polyture</p>
                     </div>
                 </div>
             </div>
@@ -259,11 +260,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
-
-    <!-- sign up form -->
-    <script>
         initForm();
+        MicroModal.init();
     </script>
 </body>
 
