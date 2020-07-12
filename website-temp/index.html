@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Polyture Data Science">
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="dist/css/bttn.css" rel="stylesheet">
-    <script src="https://use.fontawesome.com/f5a895d86f.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152613084-1"></script>
@@ -33,7 +32,10 @@
         <div class="ui center aligned grid">
             <!-- logo -->
             <div class="row">
-                <img class="ui medium image" src="img/polyture_logo_white2.png">
+                <picture>
+                    <source srcset="img/polyture_logo_white2.webp" type="image/webp">
+                    <img alt="logo" class="ui medium image" src="img/fallback/polyture_logo_white2.png">
+                </picture>
             </div>
             <!-- links -->
             <div class="row">
@@ -49,9 +51,9 @@
     </div>
     <div id="overlay" onclick="toggleSidebar()"></div>
     <main class="shadow">
-        <video autoplay loop muted src="img/background5.mp4" id="landing-video"></video>
+        <video autoplay loop muted src="img/background.mp4" id="landing-video"></video>
         <!-- landing-page -->
-        <div class="ui fluid container page-header" style="padding-top:3%">
+        <div class="ui fluid container page-header">
             <!-- menus -->
             <div class="ui grid">
                 <!-- computer tablet only menu -->
@@ -59,7 +61,10 @@
                     <div class="ui middle aligned grid" style="width: 100%">
                         <div class="three wide column">
                             <a href="index.html">
-                                <img class="logo" src="img/polyture_logo_white.png">
+                                <picture>
+                                    <source srcset="img/polyture_logo_white.webp" type="image/webp">
+                                    <img class="logo" alt="logo" src="img/fallback/polyture_logo_white.png">
+                                </picture>
                             </a>
                         </div>
                         <div class="thirteen wide column">
@@ -76,9 +81,12 @@
                 <!-- mobile only menu -->
                 <div class="mobile only row">
                     <div class="ui middle aligned grid" style="width:100%">
-                        <div class="three wide column">
+                        <div class="left floated column">
                             <a href="index.html">
-                                <img class="logo" src="img/polyture_logo_white.png">
+                                <picture>
+                                    <source srcset="img/polyture_logo_white.webp" type="image/webp">
+                                    <img class="logo" alt="logo" src="img/fallback/polyture_logo_white.png">
+                                </picture>
                             </a>
                         </div>
                         <div class="right floated column">
@@ -93,25 +101,28 @@
             <!-- title wrapper -->
             <div id="title-wrapper">
                 <!-- landing page title -->
-                <div class="ui center middle aligned grid">
-                    <div class="computer only four wide column" style="padding-right:5%">
-                        <div class="ui container" data-aos="fade-up" data-aos-duration="500">
-                            <img class="ui small image" style="float: right" src="img/white-arrow.png">
-                        </div>
+                <div class="ui middle aligned grid" style="width: 100%" data-aos="fade-up" data-aos-duration="500">
+                    <div class="computer tablet only four wide column" style="padding-right:5%">
+                        <picture>
+                            <source srcset="img/white-arrow.webp" type="image/webp">
+                            <img style="float: right" alt="polyture arrow" src="img/fallback/white-arrow.png">
+                        </picture>
                     </div>
-                    <div class="column" style="width: 73%" data-aos="fade-up" data-aos-duration="500">
-                        <div class="ui left aligned container">
-                            <h1 class="landing-title"> <span>Big Data</span> <br /> at Your Fingertips
-                            </h1>
-                        </div>
+                    <div class="twelve wide column">
+                        <h1 class="landing-title"> <span>Big Data</span> <br /> at Your Fingertips
+                        </h1>
                     </div>
                 </div>
-                <!-- early access button -->
-                <div class="ui grid" style="padding-bottom: 5%" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <div class="computer only four wide column" style="padding-right:3%">
+                <!-- subtitle -->
+                <div class="ui grid" style="width: 100%" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <div class="computer tablet only four wide column" style="padding-right:3%">
                     </div>
-                    <div class="column" style="width: 73%">
+                    <div class="computer tablet only twelve wide column">
                         <h1 class="landing-subtitle" style="padding-bottom: 2%">Enabling anyone to be a data scientist</h1>
+                        <button class="submit-button" onclick="scrollToEarlyAccess()">Get Early Access</button>
+                    </div>
+                    <div class="mobile only sixteen wide column">
+                        <h1 class="landing-subtitle" style="padding-bottom: 9%; padding-top: 7%;">Enabling anyone to be a data scientist</h1>
                         <button class="submit-button" onclick="scrollToEarlyAccess()">Get Early Access</button>
                     </div>
                 </div>
@@ -120,13 +131,16 @@
         <!-- content -->
         <div class="content-wrapper landing">
             <!-- data advantage -->
-            <div class="section wide" style="padding-top: 10">
+            <div class="section wide" id="data-advantage">
                 <div class="ui left middle aligned stackable grid">
                     <!-- image -->
                     <div class="ten wide column" style="padding-right: 5%">
                         <div class="layered container">
-                            <img class="ui image layered bottom" src="img/paint3.png">
-                            <video autoplay loop muted src="img/v0.6.8-alpha.2.mp4" class="shadow layered top" id="demo-video"></video>
+                            <picture>
+                                <source srcset="img/paint3.webp" type="image/webp">
+                                <img alt="paint" class="ui image layered bottom" src="img/fallback/paint3.png">
+                            </picture>
+                            <video autoplay loop muted src="img/v068-alpha2.mp4" class="shadow layered top" id="demo-video"></video>
                         </div>
                     </div>
                     <div class="mobile tablet only column spacer"><br>
@@ -153,12 +167,12 @@
                     <!-- title -->
                     <div class="row">
                         <div class="ui header">
-                            <h1 class="ui header">Use <span>Polyture's scalable server</span> or <br> deploy in your own <span>self-hosted environment</span></h1>
+                            <h1 class="ui header">Use <span>Polyture's scalable server</span> or deploy in your own <span>self-hosted environment</span></h1>
                         </div>
                     </div>
                     <div class="row">
                         <p>
-                            Get started on Polyture Cloud or manage and deploy your custom instance.
+                            Get started on Polyture Cloud or manage and deploy your own custom instance.
                         </p>
                     </div>
                     <!-- logos -->
@@ -166,27 +180,45 @@
                         <div class="ui equal width middle aligned grid">
                             <!-- docker -->
                             <div class="column">
-                                <img class="ui small image" src="img/server logos/docker.png">
+                                <picture>
+                                    <source srcset="img/server_logos/docker.webp" type="image/webp">
+                                    <img alt="docker logo" class="ui small image" src="img/fallback/docker.png">
+                                </picture>
                             </div>
                             <!-- kubernetes -->
                             <div class="column">
-                                <img class="ui small image" src="img/server logos/kubernetes.png">
+                                <picture>
+                                    <source srcset="img/server_logos/kubernetes.webp" type="image/webp">
+                                    <img alt="kubernetes logo" class="ui small image" src="img/fallback/kubernetes.png">
+                                </picture>
                             </div>
                             <!-- aws -->
                             <div class="column">
-                                <img class="ui small image" src="img/server logos/aws.png">
+                                <picture>
+                                    <source srcset="img/server_logos/aws.webp" type="image/webp">
+                                    <img alt="aws logo" class="ui small image" src="img/fallback/aws.png">
+                                </picture>
                             </div>
                             <!-- google cloud -->
                             <div class="column">
-                                <img class="ui small image" src="img/server logos/googlecloud.png">
+                                <picture>
+                                    <source srcset="img/server_logos/googlecloud.webp" type="image/webp">
+                                    <img alt="googlecloud logo" class="ui small image" src="img/fallback/googlecloud.png">
+                                </picture>
                             </div>
                             <!-- azure -->
                             <div class="column">
-                                <img class="ui small image" src="img/server logos/azure.png">
+                                <picture>
+                                    <source srcset="img/server_logos/azure.webp" type="image/webp">
+                                    <img alt="azure logo" class="ui small image" src="img/fallback/azure.png">
+                                </picture>
                             </div>
                             <!-- digital ocean -->
                             <div class="column">
-                                <img class="ui small image" src="img/server logos/digitalocean.png">
+                                <picture>
+                                    <source srcset="img/server_logos/digitalocean.webp" type="image/webp">
+                                    <img alt="digitalocean logo" class="ui small image" src="img/fallback/digitalocean.png">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -195,29 +227,47 @@
                             <div class="row">
                                 <!-- docker -->
                                 <div class="column">
-                                    <img class="ui small image" src="img/server logos/docker.png">
+                                    <picture>
+                                        <source srcset="img/server_logos/docker.webp" type="image/webp">
+                                        <img alt="docker logo" class="ui small image" src="img/fallback/docker.png">
+                                    </picture>
                                 </div>
                                 <!-- kubernetes -->
                                 <div class="column">
-                                    <img class="ui small image" src="img/server logos/kubernetes.png">
+                                    <picture>
+                                        <source srcset="img/server_logos/kubernetes.webp" type="image/webp">
+                                        <img alt="kubernetes logo" class="ui small image" src="img/fallback/kubernetes.png">
+                                    </picture>
                                 </div>
                                 <!-- aws -->
                                 <div class="column">
-                                    <img class="ui small image" src="img/server logos/aws.png">
+                                    <picture>
+                                        <source srcset="img/server_logos/aws.webp" type="image/webp">
+                                        <img alt="aws logo" class="ui small image" src="img/fallback/aws.png">
+                                    </picture>
                                 </div>
                             </div>
                             <div class="row">
                                 <!-- google cloud -->
                                 <div class="column">
-                                    <img class="ui small image" src="img/server logos/googlecloud.png">
+                                    <picture>
+                                        <source srcset="img/server_logos/googlecloud.webp" type="image/webp">
+                                        <img alt="googlecloud logo" class="ui small image" src="img/fallback/googlecloud.png">
+                                    </picture>
                                 </div>
                                 <!-- azure -->
                                 <div class="column">
-                                    <img class="ui small image" src="img/server logos/azure.png">
+                                    <picture>
+                                        <source srcset="img/server_logos/azure.webp" type="image/webp">
+                                        <img alt="azure logo" class="ui small image" src="img/fallback/azure.png">
+                                    </picture>
                                 </div>
                                 <!-- digital ocean -->
                                 <div class="column">
-                                    <img class="ui small image" src="img/server logos/digitalocean.png">
+                                    <picture>
+                                        <source srcset="img/server_logos/digitalocean.webp" type="image/webp">
+                                        <img alt="digitalocean logo" class="ui small image" src="img/fallback/digitalocean.png">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -229,37 +279,46 @@
                 <div class="ui very relaxed stackable middle aligned grid">
                     <div class="ten wide column" style="padding-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
                         <div class="layered container">
-                            <img class="ui image layered bottom" src="img/paint2.png">
-                            <img class="ui shadow image layered top" src="img/data_warehouse.png">
+                            <picture>
+                                <source srcset="img/paint1.webp" type="image/webp">
+                                <img alt="paint" class="ui image layered bottom" src="img/fallback/paint1.png">
+                            </picture>
+                            <picture>
+                                <source srcset="img/data_warehouse.webp" type="image/webp">
+                                <img alt="data warehouse" class="ui shadow image layered top" src="img/fallback/data_warehouse.png">
+                            </picture>
                         </div>
                     </div>
                     <div class="mobile tablet only column spacer"><br>
                     </div>
                     <div class="six wide column" style="padding-left:5%" data-aos="fade-down-left" data-aos-duration="500">
                         <!-- header -->
-                        <h2 class="ui huge header">
+                        <h2 class="ui header">
                             Data Warehouse
                         </h2>
                         <!-- description -->
                         <div class="row">
                             <p>
-                                The toughest questions are answered with unified data. Import and manage all of your data in a central warehouse.
+                                Import and manage all of your data in a central warehouse. The toughest questions can only be answered with unified data.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- functional analysis -->
-            <div class="section" id="data-flow">
+            <div class="section" id="functional-analysis">
                 <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
                     <div class="ten wide mobile tablet only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
-                        <img class="ui shadow image" src="img/data_flow.png">
+                        <picture>
+                            <source srcset="img/functional-analysis.webp" type="image/webp">
+                            <img alt="functional analysis" class="ui shadow image" src="img/fallback/data_flow.png">
+                        </picture>
                     </div>
                     <div class="mobile tablet only column spacer"><br>
                     </div>
                     <div class="six wide column" style="padding-right:5%">
                         <!-- header -->
-                        <h2 class="ui huge header">
+                        <h2 class="ui header">
                             Functional Analysis
                         </h2>
                         <!-- description -->
@@ -271,8 +330,14 @@
                     </div>
                     <div class="ten wide computer only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
                         <div class="layered container">
-                            <img class="ui image layered bottom right" src="img/paint3.png">
-                            <img class="ui shadow image layered top" src="img/data_flow.png">
+                            <picture>
+                                <source srcset="img/paint3.webp" type="image/webp">
+                                <img alt="paint" class="ui image layered bottom right" src="img/fallback/paint3.png">
+                            </picture>
+                            <picture>
+                                <source srcset="img/functional-analysis.webp" type="image/webp">
+                                <img alt="functional analysis" class="ui shadow image layered top" src="img/fallback/data_flow.png">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -282,15 +347,21 @@
                 <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
                     <div class="ten wide column" style="padding-right: 5%">
                         <div class="layered container">
-                            <img class="ui image layered bottom" src="img/paint4.png">
-                            <img class="ui shadow image layered top" src="img/automl.png">
+                            <picture>
+                                <source srcset="img/paint4.webp" type="image/webp">
+                                <img alt="paint" class="ui image layered bottom" src="img/fallback/paint4.png">
+                            </picture>
+                            <picture>
+                                <source srcset="img/automl.webp" type="image/webp">
+                                <img alt="auto ml" class="ui shadow image layered top" src="img/fallback/automl.png">
+                            </picture>
                         </div>
                     </div>
                     <div class="mobile tablet only column spacer">
                     </div>
                     <div class="six wide column" style="padding-left:5%" data-aos="fade-down-left" data-aos-duration="500">
                         <!-- header -->
-                        <h2 class="ui huge header">
+                        <h2 class="ui header">
                             AutoML Co-Pilot
                         </h2>
                         <!-- description -->
@@ -306,13 +377,16 @@
             <div class="section" id="code-extensible">
                 <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right" data-aos-duration="500">
                     <div class="ten wide mobile tablet only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
-                        <img class="ui shadow image" src="img/data_flow.png">
+                        <picture>
+                            <source srcset="img/code-extensible.webp" type="image/webp">
+                            <img alt="code extensible" class="ui shadow image" src="img/fallback/code-extensible.png">
+                        </picture>
                     </div>
                     <div class="mobile tablet only column spacer"><br>
                     </div>
                     <div class="six wide column" style="padding-right:5%">
                         <!-- header -->
-                        <h2 class="ui huge header">
+                        <h2 class="ui header">
                             Code-extensible
                         </h2>
                         <!-- description -->
@@ -324,8 +398,14 @@
                     </div>
                     <div class="ten wide computer only column" style="padding-left: 5%" data-aos="fade-down-left" data-aos-duration="500">
                         <div class="layered container">
-                            <img class="ui image layered bottom right" src="img/paint1.png">
-                            <img class="ui shadow image layered top" src="img/code-extensible.png">
+                            <picture>
+                                <source srcset="img/paint1.webp" type="image/webp">
+                                <img alt="paint" class="ui image layered bottom right" src="img/fallback/paint1.webp">
+                            </picture>
+                            <picture>
+                                <source srcset="img/code-extensible.webp" type="image/webp">
+                                <img alt="code extensible" class="ui shadow image" src="img/fallback/code-extensible.png">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -336,16 +416,16 @@
                 <div class="ui container">
                     <div class="ui center aligned grid">
                         <!-- title -->
-                        <div class="row" style="padding-bottom: 3%;">
+                        <div class="row" style="padding-bottom: 2%;">
                             <div class="ui header">
                                 <h1 class="ui centered header"><span>Why use Polyture Platform?</span></h1>
                             </div>
                         </div>
                         <div class="ui divider"></div>
-                        <div class="row" style="padding-top: 3%;">
-                            <!-- bullet points -->
+                        <div class="row">
+                            <!-- computer tablet only -->
                             <div class="ui equal width middle aligned grid description">
-                                <div class="column">
+                                <div class="computer tablet only column">
                                     <div class="row">
                                         <h2 class="ui header">
                                             <i class="hand point up icon"></i>
@@ -353,7 +433,7 @@
                                                 Interactive & Intuitive
                                             </div>
                                         </h2>
-                                        <p>Polyture enables visibility into your dataset. All too often, data scientists work in blindness. Instead, Polyture enables human-interpretable depth-of-understanding at each step of the way.</p>
+                                        <p>Polyture adds visibility into your dataset by enabling human-interpretable depth of understanding at each step.</p>
                                     </div>
                                     <div class="row">
                                         <h2 class="ui header">
@@ -362,22 +442,22 @@
                                                 Interpretable
                                             </div>
                                         </h2>
-                                        <p>Polyture intelligently provides feedback and guidance while you focus on the more important domain-specific questions. Polyture enables clarity in your mental model.</p>
+                                        <p>Polyture intelligently provides feedback and guidance while you focus on the more important domain-specific questions.</p>
                                     </div>
                                 </div>
                                 <div class="computer tablet only column">
                                     <div class="row">
-                                        <img class="ui large image" src="img/visual-data.svg">
+                                        <img alt="visual data" class="ui large image" src="img/visual-data.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="ui equal width middle aligned grid description">
                                 <div class="computer tablet only column">
                                     <div class="row">
-                                        <img class="ui large image" src="img/house.svg">
+                                        <img alt="house" class="ui large image" src="img/house.svg">
                                     </div>
                                 </div>
-                                <div class="column">
+                                <div class="computer tablet only column">
                                     <div class="row">
                                         <h2 class="ui header">
                                             <i class="rocket icon"></i>
@@ -385,7 +465,7 @@
                                                 Massive Scale
                                             </div>
                                         </h2>
-                                        <p>Polyture is a distributed data platform that runs at Cloud-Scale. Transparently scale out from your laptop to a cluster of thousands of machines in the cloud or in your institutional data center.</p>
+                                        <p>Polyture is a distributed data platform, letting you scale out from your laptop to thousands of machines in the cloud or in your institutional data center.</p>
                                     </div>
                                     <div class="row">
                                         <h2 class="ui header">
@@ -396,6 +476,45 @@
                                         </h2>
                                         <p>Deploy Polyture in your own environment, subject to the specific security needs of your organization. You own the full Polyture stack.</p>
                                     </div>
+                                </div>
+                            </div>
+                            <!-- mobile only -->
+                            <div class="ui grid description mobile">
+                                <div class="mobile only centered row">
+                                    <h2 class="ui header">
+                                        <i class="hand point up icon"></i>
+                                        <div class="content">
+                                            Interactive & Intuitive
+                                        </div>
+                                    </h2>
+                                    <p>Polyture adds visibility into your dataset by enabling human-interpretable depth of understanding at each step.</p>
+                                </div>
+                                <div class="mobile only centered row">
+                                    <h2 class="ui header">
+                                        <i class="chart line icon"></i>
+                                        <div class="content">
+                                            Interpretable
+                                        </div>
+                                    </h2>
+                                    <p>Polyture intelligently provides feedback and guidance while you focus on the more important domain-specific questions.</p>
+                                </div>
+                                <div class="mobile only centered row">
+                                    <h2 class="ui header">
+                                        <i class="rocket icon"></i>
+                                        <div class="content">
+                                            Massive Scale
+                                        </div>
+                                    </h2>
+                                    <p>Polyture is a distributed data platform, letting you scale out from your laptop to thousands of machines in the cloud or in your institutional data center.</p>
+                                </div>
+                                <div class="mobile only centered row">
+                                    <h2 class="ui header">
+                                        <i class="lock icon"></i>
+                                        <div class="content">
+                                            Secure
+                                        </div>
+                                    </h2>
+                                    <p>Deploy Polyture in your own environment, subject to the specific security needs of your organization. You own the full Polyture stack.</p>
                                 </div>
                             </div>
                         </div>
@@ -412,7 +531,7 @@
                             <!-- header and description -->
                             <div class="ui center aligned grid">
                                 <div class="row">
-                                    <img class="ui medium image" src="img/early-access.svg">
+                                    <img alt="early access" class="ui medium image" src="img/early-access.svg">
                                 </div>
                                 <!-- header -->
                                 <h2 class="ui huge header">
@@ -448,16 +567,19 @@
                         <!-- logo -->
                         <div class="three wide column" style="text-align: center">
                             <a href="index.html">
-                                <img class="ui medium image" style="display: inline-block" src="./img/polyture_logo_white.png">
+                                <picture>
+                                    <source srcset="img/polyture_logo_white.webp" type="image/webp">
+                                    <img alt="logo" class="ui medium image" style="display: inline-block" src="./img/fallback/polyture_logo_white.png">
+                                </picture>
                             </a>
                         </div>
                         <!-- links -->
                         <div class="ten wide column">
                             <div class="footer-links">
-                                <a href="./index.html">About</a>
-                                <a href="./html/company.html">Company</a>
-                                <a href="./html/downloads.html">Downloads</a>
-                                <a href="./html/contact.html">Contact</a>
+                                <a href="./index.html">About</a> <br>
+                                <a href="./html/company.html">Company</a> <br>
+                                <a href="./html/downloads.html">Downloads</a> <br>
+                                <a href="./html/contact.html">Contact</a> <br>
                                 <a href="./html/sign-up.html">Sign Up</a>
                             </div>
                         </div>
@@ -476,16 +598,22 @@
                         <div class="row" id="logos">
                             <div class="ui grid">
                                 <div class="eight wide column">
-                                    <img class="ui small image" src="./img/UC_Berkeley.png">
+                                    <picture>
+                                        <source srcset="img/UC_Berkeley.webp" type="image/webp">
+                                        <img alt="berkeley logo" class="ui small image" src="./img/fallback/UC_Berkeley.png">
+                                    </picture>
                                 </div>
                                 <div class="eight wide column">
-                                    <img class="ui small image" src="./img/Skydeck.png">
+                                    <picture>
+                                        <source srcset="img/Skydeck.webp" type="image/webp">
+                                        <img alt="skydeck logo" class="ui small image" src="./img/fallback/Skydeck.png">
+                                    </picture>
                                 </div>
                             </div>
                         </div>
                         <!-- copyright -->
-                        <div class="row" id="copyright">
-                            <p>© 2020 Polyture</p>
+                        <div class="row">
+                            <p id="copyright">© 2020 Polyture</p>
                         </div>
                     </div>
                 </div>
@@ -501,7 +629,6 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-<script src="dist/js/anime.js"></script>
 <script src="dist/js/main.js"></script>
 
 </html>

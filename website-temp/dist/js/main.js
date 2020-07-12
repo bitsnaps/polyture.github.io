@@ -90,23 +90,25 @@ function validateSignupForm() {
 
 //submit sign up form 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
-const form = document.forms['signup-form'];
+function initForm() {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
+    const form = document.forms['signup-form'];
 
-form.addEventListener('submit', e => {
-    if (validateSignupForm()) {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(MicroModal.show('signup-success'))
-            .catch(error => console.error('Error!', error.message))
+    form.addEventListener('submit', e => {
+        if (validateSignupForm()) {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(MicroModal.show('signup-success'))
+                .catch(error => console.error('Error!', error.message))
 
-        //clear form 
-        $('#signup-email').val('');
-        $('#signup-firstname').val('');
-        $('#signup-lastname').val('');
-        $('#signup-organization').val('');
-    }
-})
+            //clear form 
+            $('#signup-email').val('');
+            $('#signup-firstname').val('');
+            $('#signup-lastname').val('');
+            $('#signup-organization').val('');
+        }
+    })
+}
 
 //sidebar toggle
 function toggleSidebar() {
@@ -115,36 +117,33 @@ function toggleSidebar() {
     $('#overlay').toggleClass('shown');
 }
 
-//modal
-MicroModal.init();
-
-
 //get yaml data
+function getYamlData() {
+    //windows
+    var yamlFile_windows = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest.yml');
+    var yamlData_windows = new Array();
+    $.each(yamlFile_windows, function(key, value) {
+        yamlData_windows.push(value);
+    });
+    var PolytureVersion_windows = yamlData_windows[0];
+    var DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
+    var UploadDate_windows = yamlData_windows[4].substring(0, 10);
 
-//windows
-var yamlFile_windows = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest.yml');
-var yamlData_windows = new Array();
-$.each(yamlFile_windows, function(key, value) {
-    yamlData_windows.push(value);
-});
-var PolytureVersion_windows = yamlData_windows[0];
-var DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
-var UploadDate_windows = yamlData_windows[4].substring(0, 10);
+    //update windows download text
+    $("#PolytureVersion_windows").text(PolytureVersion_windows);
+    $("#UploadDate_windows").text(UploadDate_windows);
 
-//update windows download text
-$("#PolytureVersion_windows").text(PolytureVersion_windows);
-$("#UploadDate_windows").text(UploadDate_windows);
+    //mac
+    var yamlFile_mac = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest-mac.yml');
+    var yamlData_mac = new Array();
+    $.each(yamlFile_mac, function(key, value) {
+        yamlData_mac.push(value);
+    });
+    var PolytureVersion_mac = yamlData_mac[0];
+    var DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
+    var UploadDate_mac = yamlData_mac[4].substring(0, 10);
 
-//mac
-var yamlFile_mac = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest-mac.yml');
-var yamlData_mac = new Array();
-$.each(yamlFile_mac, function(key, value) {
-    yamlData_mac.push(value);
-});
-var PolytureVersion_mac = yamlData_mac[0];
-var DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
-var UploadDate_mac = yamlData_mac[4].substring(0, 10);
-
-//update mac download text
-$("#PolytureVersion_mac").text(PolytureVersion_mac);
-$("#UploadDate_mac").text(UploadDate_mac);
+    //update mac download text
+    $("#PolytureVersion_mac").text(PolytureVersion_mac);
+    $("#UploadDate_mac").text(UploadDate_mac);
+}
