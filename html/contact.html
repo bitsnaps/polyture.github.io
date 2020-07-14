@@ -22,7 +22,10 @@
         <div class="ui center aligned grid">
             <!-- logo -->
             <div class="row">
-                <img alt="logo" class="ui medium image" src="../img/polyture_logo_white2.webp">
+                <picture>
+                    <source srcset="../img/polyture_logo_white2.webp" type="image/webp">
+                    <img alt="logo" class="ui medium image" src="../img/fallback/polyture_logo_white2.png">
+                </picture>
             </div>
             <!-- links -->
             <div class="row">
@@ -49,7 +52,10 @@
                         <div class="ui middle aligned grid" style="width: 100%">
                             <div class="three wide column">
                                 <a href="../index.html">
-                                    <img alt="logo" class="logo" src="../img/polyture_logo_white.webp">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
+                                    </picture>
                                 </a>
                             </div>
                             <div class="thirteen wide column">
@@ -68,7 +74,10 @@
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
                                 <a href="../index.html">
-                                    <img alt="logo" class="logo" src="../img/polyture_logo_white.webp">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/polyture_logo_white.png">
+                                    </picture>
                                 </a>
                             </div>
                             <div class="right floated column">
@@ -85,14 +94,17 @@
                     <!-- computer -->
                     <div class="ui computer tablet only center middle aligned grid">
                         <div class="two wide column">
-                            <img alt="polyture arrow" class="ui medium image" src="../img/white-arrow.webp">
+                            <picture>
+                                <source srcset="../img/white-arrow.webp" type="image/webp">
+                                <img alt="polyture arrow" class="ui medium image" src="../img/fallback/white-arrow.png">
+                            </picture>
                         </div>
                         <div class="fourteen wide column">
                             <h1 class="landing-title">Contact</h1>
                         </div>
                     </div>
                     <!-- mobile -->
-                    <div class="ui mobile only center middle aligned grid">
+                    <div class="ui mobile only center aligned grid">
                         <div class="row">
                             <h1 class="landing-title">Contact</h1>
                         </div>
@@ -104,58 +116,74 @@
         <!-- content -->
         <div class="content-wrapper">
             <!-- contact by email -->
-            <div class="section">
+            <div class="section" id="media-relations">
                 <!-- wrapper -->
                 <div class="ui container">
-                    <!-- contact us by email -->
-                    <div id="contact-container">
-                        <div class="ui left aligned middle aligned stackable grid">
-                            <div class="seven wide column" id="media-relations" style="margin-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
-                                <!-- header and description -->
-                                <div class="ui left aligned grid">
-                                    <!-- description -->
-                                    <div class="row">
-                                        <h2 class="ui huge header">
-                                            Contact Us
-                                        </h2>
-                                        <p>
-                                            We’d love to hear from you. Let us know how we can be of help
-                                        </p>
-                                    </div>
-                                    <!-- image -->
-                                    <div class="center aligned row">
-                                        <img alt="contact us" class="ui medium image" src="../img/contact-us.svg">
-                                    </div>
+                    <div class="ui left aligned middle aligned stackable equal width grid">
+                        <div class="column" data-aos="fade-down-right" data-aos-duration="500">
+                            <!-- header and description -->
+                            <div class="ui left aligned grid">
+                                <!-- computer tablet only description -->
+                                <div class="computer tablet only row">
+                                    <h2 class="ui huge header">
+                                        Contact Us
+                                    </h2>
+                                    <p>
+                                        We’d love to hear from you. Plase let us know how we can be of help.
+                                    </p>
+                                </div>
+                                <!-- computer tablet only image -->
+                                <div class="computer tablet only row" style="padding-top: 20%">
+                                    <picture>
+                                        <source srcset="../img/contact-us.webp" type="image/webp">
+                                        <img alt="contact us" class="ui medium image" src="../img/fallback/contact-us.png">
+                                    </picture>
+                                </div>
+                                <!-- mobile only description -->
+                                <div class="mobile only centered row">
+                                    <h2 class="ui huge header">
+                                        Contact Us
+                                    </h2>
+                                    <p>
+                                        We’d love to hear from you. Please let us know how we can be of help.
+                                    </p>
+                                </div>
+                                <!-- mobile only image -->
+                                <div class="mobile only centered row" style="padding-top: 20%">
+                                    <picture>
+                                        <source srcset="../img/contact-us.webp" type="image/webp">
+                                        <img alt="contact us" class="ui medium image" src="../img/fallback/contact-us.png">
+                                    </picture>
                                 </div>
                             </div>
-                            <div class="eight wide column" data-aos="fade-down-left" data-aos-duration="500">
-                                <div class="form-container">
-                                    <div class="ui form">
-                                        <div class="one field">
-                                            <div class="field">
-                                                <label>Email Address:</label>
-                                                <input class="error" type="email" id="contact-email" name="Email Address" placeholder="Email Address">
-                                            </div>
+                        </div>
+                        <div class="column" data-aos="fade-down-left" data-aos-duration="500">
+                            <div class="form-container">
+                                <div class="ui form">
+                                    <div class="one field">
+                                        <div class="field">
+                                            <label>Email Address:</label>
+                                            <input class="error" type="email" id="contact-email" name="Email Address" placeholder="Email Address">
                                         </div>
-                                        <div class="two fields">
-                                            <div class="field">
-                                                <label>First Name:</label>
-                                                <input type="text" id="contact-firstname" name="First Name" placeholder="First Name">
-                                            </div>
-                                            <div class="field">
-                                                <label>Last Name:</label>
-                                                <input type="text" id="contact-lastname" name="Last Name" placeholder="Last Name">
-                                            </div>
+                                    </div>
+                                    <div class="two fields">
+                                        <div class="field">
+                                            <label>First Name:</label>
+                                            <input type="text" id="contact-firstname" name="First Name" placeholder="First Name">
                                         </div>
                                         <div class="field">
-                                            <label>Message:</label>
-                                            <textarea rows="3" id="contact-message" name="Message" placeholder="How can we help you?"></textarea>
+                                            <label>Last Name:</label>
+                                            <input type="text" id="contact-lastname" name="Last Name" placeholder="Last Name">
                                         </div>
                                     </div>
-                                    <!-- submit button -->
-                                    <div class="form-button-container">
-                                        <button class="submit-button" onclick="sendEmail_contact()">Submit</button>
+                                    <div class="field">
+                                        <label>Message:</label>
+                                        <textarea rows="3" id="contact-message" name="Message" placeholder="How can we help you?"></textarea>
                                     </div>
+                                </div>
+                                <!-- submit button -->
+                                <div class="form-button-container">
+                                    <button class="submit-button" onclick="sendEmail_contact()">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -170,12 +198,17 @@
                         Locations
                     </div>
                 </h2>
+                <!-- mobile only spacer -->
+                <div class="mobile only column huge spacer"></div>
                 <!-- maps -->
                 <div class="ui center aligned equal width stackable grid" style="padding-top: 6%">
                     <!-- brea -->
                     <div class="column">
                         <div class="row">
-                            <img alt="brea map" src="../img/brea-map.webp" class="ui large image shadow map">
+                            <picture>
+                                <source srcset="../img/brea-map.webp" type="image/webp">
+                                <img alt="brea map" src="../img/fallback/brea-map2.png" class="ui large image shadow map">
+                            </picture>
                         </div>
                         <div class="row">
                             <h3 class="ui header">Brea, CA</h3>
@@ -185,10 +218,15 @@
                                 <br>Brea, CA 92821</p>
                         </div>
                     </div>
+                    <!-- mobile only spacer -->
+                    <div class="mobile only column huge spacer"></div>
                     <!-- berkeley -->
                     <div class="column">
                         <div class="row">
-                            <img alt="berkeley map" src="../img/berkeley-map.webp" class="ui large image shadow map">
+                            <picture>
+                                <source srcset="../img/berkeley-map.webp" type="image/webp">
+                                <img alt="berkeley map" src="../img/fallback/berkeley-map2.png" class="ui large image shadow map">
+                            </picture>
                         </div>
                         <div class="row">
                             <h3 class="ui header">Berkeley, CA</h3>
@@ -204,27 +242,42 @@
             <div class="section">
                 <!-- wrapper -->
                 <div class="ui container" data-aos="fade-down-left" data-aos-duration="500">
-                    <!-- no experience? -->
-                    <div class="ui left middle aligned stackable grid">
-                        <div class="ten wide column">
-                            <!-- header and description -->
-                            <div class="ui left aligned grid">
-                                <!-- description -->
-                                <div class="row">
-                                    <!-- header -->
-                                    <h2 class="ui huge header">
-                                        Connect
-                                    </h2>
-                                    <div class="ui container" style="padding-right: 5%">
-                                        <p>
-                                            Follow our Twitter <a href="https://twitter.com/PolytureData">@PolytureData</a> to learn more and be the first to hear about our latest news and updates.
-                                        </p>
-                                    </div>
-                                </div>
+                    <!-- computer tablet only -->
+                    <div class="ui middle aligned stackable grid">
+                        <div class="eleven wide computer tablet only column">
+                            <!-- header -->
+                            <h2 class="ui huge header">
+                                Connect
+                            </h2>
+                            <div class="row">
+                                <p>
+                                    Follow our Twitter <a href="https://twitter.com/PolytureData">@PolytureData</a> to learn more and be the first to hear about our latest news and updates.
+                                </p>
                             </div>
                         </div>
                         <!-- image -->
-                        <div class="five wide column" style="padding-left: 5%">
+                        <div class="five wide computer tablet only column">
+                            <picture>
+                                <source srcset="../img/tweet-storm.webp" type="image/webp">
+                                <img alt="tweet storm" class="ui medium image" src="../img/fallback/tweet-storm.png">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- mobile only -->
+                    <div class="ui center aligned stackable grid">
+                        <div class="eleven wide mobile only column">
+                            <!-- header -->
+                            <h2 class="ui huge header">
+                                Connect
+                            </h2>
+                            <div class="row">
+                                <p>
+                                    Follow our Twitter <a href="https://twitter.com/PolytureData">@PolytureData</a> to learn more and be the first to hear about our latest news and updates.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- image -->
+                        <div class="five wide mobile only column">
                             <img alt="tweet storm" class="ui medium image" src="../img/tweet-storm.svg">
                         </div>
                     </div>
@@ -246,7 +299,10 @@
                     <!-- logo -->
                     <div class="three wide column" style="text-align: center">
                         <a href="index.html">
-                            <img alt="logo" class="ui medium image" style="display: inline-block" src="../img/polyture_logo_white.webp">
+                            <picture>
+                                <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                <img alt="logo" class="ui medium image" style="display: inline-block" src="../img/fallback/polyture_logo_white.png">
+                            </picture>
                         </a>
                     </div>
                     <!-- links -->
@@ -274,10 +330,16 @@
                     <div class="row" id="logos">
                         <div class="ui grid">
                             <div class="eight wide column">
-                                <img alt="berkeley logo" class="ui small image" src="../img/UC_Berkeley.webp">
+                                <picture>
+                                    <source srcset="../img/UC_Berkeley.webp" type="image/webp">
+                                    <img alt="berkeley logo" class="ui small image" src="../img/fallback/UC_Berkeley.png">
+                                </picture>
                             </div>
                             <div class="eight wide column">
-                                <img alt="skydeck logo" class="ui small image" src="../img/Skydeck.webp">
+                                <picture>
+                                    <source srcset="../img/Skydeck.webp" type="image/webp">
+                                    <img alt="skydeck logo" class="ui small image" src="../img/fallback/Skydeck.png">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -323,6 +385,8 @@
 
     <!-- animate on scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- micromodal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script>
         AOS.init();
         MicroModal.init();
@@ -333,7 +397,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script src="../dist/js/main.js"></script>
 
 </html>

@@ -93,7 +93,6 @@ main {
 
 #data-advantage {
     padding-top: 10%;
-    background-color: white;
 }
 
 #data-warehouse {
@@ -255,6 +254,10 @@ main {
     height: 20px;
 }
 
+.huge.spacer {
+    height: 50px;
+}
+
 .page-header {
     padding-top: 3%;
     padding-right: 5%;
@@ -279,23 +282,28 @@ main {
 }
 
 #contact-container {
-    margin: auto;
+    margin: 0;
 }
 
-#media-relations .row {
-    padding-top: 5%;
+#media-relations {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#media-relations p {
+    padding-right: 20%;
+}
+
+@media screen and (max-width: 600px) {
+    #media-relations p {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
 }
 
 #sign-up-form {
     padding-left: 4%;
     padding-right: 4%;
-}
-
-@media (min-aspect-ratio: 16/9) {
-    #sign-up-form {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
 }
 
 .border {
@@ -383,6 +391,7 @@ main {
 #demo-video {
     width: 100%;
     height: auto;
+    background-color: white;
 }
 
 #contact-form {
@@ -391,7 +400,7 @@ main {
 }
 
 .blurry-background {
-    background-image: url('../../img/blurry-background.webp');
+    background-image: url('../../img/fallback/blurry-background4.jpg');
     background-size: cover;
     padding-bottom: 3%;
 }
@@ -415,6 +424,13 @@ main {
 
 .map {
     margin-bottom: 10%
+}
+
+@media screen and (max-width: 600px) {
+    #locations {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
 }
 
 
@@ -1011,6 +1027,12 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+    #user-manual img {
+        padding-right: 10%;
+    }
+}
+
 #user-manual .submit-button {
     width: 220px;
 }
@@ -1169,8 +1191,9 @@ body::-webkit-scrollbar {
         padding-bottom: 27%;
     }
     .banner {
+        margin: 0 auto;
         padding-right: 10%;
-        padding-left: 10%;
+        padding-left: 0%;
         padding-top: 2%;
         padding-bottom: 5%;
     }
