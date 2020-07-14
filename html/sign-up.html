@@ -21,7 +21,10 @@
         <div class="ui center aligned grid">
             <!-- logo -->
             <div class="row">
-                <img alt="logo" class="ui medium image" src="../img/polyture_logo_white2.webp">
+                <picture>
+                    <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                    <img alt="logo" class="ui medium image" src="../img/fallback/polyture_logo_white2.png">
+                </picture>
             </div>
             <!-- links -->
             <div class="row">
@@ -102,12 +105,12 @@
                         </div>
                     </div>
                     <!-- mobile -->
-                    <div class="ui mobile only center middle aligned grid">
+                    <div class="ui mobile only center aligned grid">
                         <div class="row">
                             <h1 class="landing-title">Sign Up</h1>
                         </div>
                         <div class="row">
-                            <h1 class="landing-subtitle">Get early access to Polyture</h1>
+                            <h1 class="landing-subtitle">Get Early Access</h1>
                         </div>
                     </div>
                 </div>
@@ -117,16 +120,16 @@
         <!-- content -->
         <div class="content-wrapper">
             <!-- sign up form -->
-            <div class="section" id="sign-up-form" data-aos="fade-down" data-aos-duration="500">
+            <div class="section" id="sign-up-form">
                 <!-- wrapper -->
                 <div class="ui container">
                     <!-- contact us by email -->
-                    <div class="ui left aligned equal width stackable grid">
-                        <div class="column" style="margin-right: 5%" data-aos="fade-down-right" data-aos-duration="500">
+                    <div class="ui left aligned middle aligned equal width stackable grid">
+                        <div class="column" data-aos="fade-down-right" data-aos-duration="500">
                             <!-- header and description -->
-                            <div class="ui left aligned grid" style="padding-left: 5%">
-                                <!-- description -->
-                                <div class="row">
+                            <div class="ui left aligned grid">
+                                <!-- computer tablet only description -->
+                                <div class="computer tablet only row">
                                     <!-- header -->
                                     <h2 class="ui huge header">
                                         Get Early Access
@@ -137,8 +140,24 @@
                                         </p>
                                     </div>
                                 </div>
-                                <!-- image -->
-                                <div class="computer tablet only row" style="padding-top:23%">
+                                <!-- computer tablet only image -->
+                                <div class="computer tablet only row" style="padding-top: 20%">
+                                    <img alt="sign up" class="ui medium image" src="../img/sign-up.svg">
+                                </div>
+                                <!-- mobile only description -->
+                                <div class="mobile only centered row">
+                                    <!-- header -->
+                                    <h2 class="ui huge header">
+                                        Get Early Access
+                                    </h2>
+                                    <div class="ui container">
+                                        <p>
+                                            Sign up to join others in the early access of Polyture.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- mobile only image -->
+                                <div class="mobile only centered row" style="padding-top: 20%">
                                     <img alt="sign up" class="ui medium image" src="../img/sign-up.svg">
                                 </div>
                             </div>
@@ -276,9 +295,10 @@
 
     <!-- animate on scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- micromodal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script>
         AOS.init();
-        initForm();
         MicroModal.init();
     </script>
 </body>
@@ -288,7 +308,10 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script src="../dist/js/main.js"></script>
+
+<script>
+    initForm();
+</script>
 
 </html>
