@@ -51,7 +51,9 @@
     </div>
     <div id="overlay" onclick="toggleSidebar()"></div>
     <main class="shadow">
-        <video autoplay loop muted src="img/background.mp4" id="landing-video"></video>
+        <video autoplay loop muted playsinline id="landing-video">
+            <source src="img/background.mp4" type="video/mp4">
+        </video>
         <!-- landing-page -->
         <div class="ui fluid container page-header">
             <!-- menus -->
@@ -140,7 +142,9 @@
                                 <source srcset="img/paint3.webp" type="image/webp">
                                 <img alt="paint" class="ui image layered bottom" src="img/fallback/paint3.png">
                             </picture>
-                            <video autoplay loop muted src="img/v068-alpha2.mp4" class="shadow layered top" id="demo-video"></video>
+                            <video autoplay loop muted playsinline class="shadow layered top" id="demo-video">
+                                <source src="img/v068-alpha2.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                     <div class="mobile tablet only column spacer"><br>
