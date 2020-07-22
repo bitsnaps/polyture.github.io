@@ -38,13 +38,6 @@ function hideAllTabs() {
 
 //email send
 
-function validEmail(email) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        return (true)
-    }
-    return (false)
-}
-
 function validateContactForm() {
     return (
         validEmail($('#contact-email').val()) &&
@@ -83,7 +76,7 @@ function sendEmail_contact() {
 
 function validateSignupForm() {
     return (
-        validEmail($('#signup-email').val()) &&
+        $('#signup-email').val() != '' &&
         $('#signup-firstname').val() != '' &&
         $('#signup-lastname').val() != '')
 }
