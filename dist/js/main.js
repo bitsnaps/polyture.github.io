@@ -122,7 +122,8 @@ function getYamlData() {
     var DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
     var UploadDate_windows = yamlData_windows[4].substring(0, 10);
 
-    //update windows download text
+    //update windows download text & link
+    $("#DownloadLink_windows").text(DownloadLink_windows);
     $("#PolytureVersion_windows").text(PolytureVersion_windows);
     $("#UploadDate_windows").text(UploadDate_windows);
 
@@ -136,7 +137,8 @@ function getYamlData() {
     var DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
     var UploadDate_mac = yamlData_mac[4].substring(0, 10);
 
-    //update mac download text
+    //update mac download text & link
+    $("#DownloadLink_mac").text(DownloadLink_mac);
     $("#PolytureVersion_mac").text(PolytureVersion_mac);
     $("#UploadDate_mac").text(UploadDate_mac);
 }
