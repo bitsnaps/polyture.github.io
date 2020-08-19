@@ -110,6 +110,9 @@ function toggleSidebar() {
     $('#overlay').toggleClass('shown');
 }
 
+var DownloadLink_mac = "";
+var DownloadLink_windows = "";
+
 //get yaml data
 function getYamlData() {
     //windows
@@ -119,11 +122,10 @@ function getYamlData() {
         yamlData_windows.push(value);
     });
     var PolytureVersion_windows = yamlData_windows[0];
-    var DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
+    DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
     var UploadDate_windows = yamlData_windows[4].substring(0, 10);
 
     //update windows download text & link
-    $("#DownloadLink_windows").text(DownloadLink_windows);
     $("#PolytureVersion_windows").text(PolytureVersion_windows);
     $("#UploadDate_windows").text(UploadDate_windows);
 
@@ -134,11 +136,10 @@ function getYamlData() {
         yamlData_mac.push(value);
     });
     var PolytureVersion_mac = yamlData_mac[0];
-    var DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
+    DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
     var UploadDate_mac = yamlData_mac[4].substring(0, 10);
 
     //update mac download text & link
-    $("#DownloadLink_mac").text(DownloadLink_mac);
     $("#PolytureVersion_mac").text(PolytureVersion_mac);
     $("#UploadDate_mac").text(UploadDate_mac);
 }
