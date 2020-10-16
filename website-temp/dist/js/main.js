@@ -94,7 +94,7 @@ function initForm() {
                 }).then(res => {
                     console.log(res);
                 });
-            
+            alert();
             window.location.href = "https://polyture.com/website-temp/html/sign-up-success.html";
         }
         else {
@@ -109,6 +109,7 @@ function validateSignUpForm() {
         (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test($('#signup-email').val()))&&
         $('#signup-firstname').val() != '' &&
         $('#signup-lastname').val() != '' &&
+        $('#signup-password').val() != '' &&
         ($('#signup-password').val() == $('#signup-password-confirm').val()))
     }
 
