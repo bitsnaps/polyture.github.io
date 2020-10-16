@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Polyture Sign Up Success Download">
+    <title>Polyture</title>
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="collapsed sidebar">
+        <div class="ui center aligned grid">
+            <!-- logo -->
+            <div class="row">
+                <picture>
+                    <source srcset="../img/polyture_logo_white2.webp" type="image/webp">
+                    <img alt="logo" class="ui medium image" src="../img/fallback/polyture_logo_white2.png">
+                </picture>
+            </div>
+            <!-- links -->
+            <div class="row">
+                <div class="ui secondary inverted pointing vertical menu">
+                    <a href="../index.html" class="item">About</a>
+                    <a href="./company.html" class="item">Company</a>
+                    <a href="./downloads.html" class="item">Downloads</a>
+                    <a href="./contact.html" class="item">Contact</a>
+                    <a href="./sign-up.html" class="item">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" onclick="toggleSidebar()"></div>
+    <main class="shadow">
+        <div id="sign-up-success-page">
+            <!-- header -->
+            <div class="ui fluid container page-header">
+                <!-- menus -->
+                <div class="ui grid">
+                    <!-- computer tablet only menu -->
+                    <div class="computer tablet only row">
+                        <div class="ui middle aligned grid" style="width: 100%">
+                            <div class="three wide column">
+                                <a href="../index.html">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="thirteen wide column">
+                                <div class="ui secondary pointing right menu" style="float:right">
+                                    <a href="../index.html" class="item">About</a>
+                                    <a href="./company.html" class="item">Company</a>
+                                    <a href="./downloads.html" class="item">Downloads</a>
+                                    <a href="./contact.html" class="item">Contact</a>
+                                    <a href="./sign-up.html" class="cta-button-nav">Sign Up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mobile only menu -->
+                    <div class="mobile only row">
+                        <div class="ui middle aligned grid" style="width:100%">
+                            <div class="three wide column">
+                                <picture>
+                                    <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                    <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                </picture>
+                            </div>
+                            <div class="right floated column">
+                                <div id="sidebar-toggle" onclick="toggleSidebar()">
+                                    <i class="bars icon"></i>
+                                    <i class="close icon hidden"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- success section -->
+            <div class="success section">
+                <div class="ui middle aligned left aligned stackable grid">
+                    <!-- success tablet desktop -->
+                    <div class="seven wide computer tablet only column">
+                        <div data-aos="fade-up" data-aos-duration="500">
+                            <!-- header -->
+                            <h1 class="ui medium header">
+                                Success!
+                            </h1>
+                            <!-- body -->
+                            <p style="padding-top: 10%">
+                                Thanks for choosing Polyture.
+                            </p>
+                            <p>
+                                Please check your email to confirm your registration.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- success mobile -->
+                    <div class="seven wide mobile only column">
+                        <div data-aos="fade-up" data-aos-duration="500">
+                            <!-- header -->
+                            <h2 class="ui huge header">
+                                Success!
+                            </h2>
+                            <!-- body -->
+                            <p>
+                                Thanks for choosing Polyture.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- spacer -->
+                    <div class="mobile only column" style="height: 20px"></div>
+                    <!-- flower -->
+                    <div class="nine wide column">
+                        <picture>
+                            <source srcset="../img/flowers.webp" type="image/webp">
+                            <img alt="flowers" class="ui huge image" id="flower" src="../img/fallback/flowers9.png">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <!-- download links -->
+            <div class="section" id="download-links">
+                <div class="ui left aligned middle aligned stackable grid">
+                    <!-- image -->
+                    <div class="five wide column" data-aos="fade-up-right" data-aos-duration="500"
+                        style="padding-right:5%">
+                        <picture>
+                            <source srcset="../img/download.webp" type="image/webp">
+                            <img alt="download" class="ui medium image" src="../img/fallback/download.png">
+                        </picture>
+                    </div>
+                    <!-- mobile spacer -->
+                    <div class="mobile only column" style="height: 50px"></div>
+                    <!-- content -->
+                    <div class="ten wide column" style="padding-left: 5%">
+                        <!-- header -->
+                        <h2 class="ui huge header">
+                            Download Polyture
+                        </h2>
+                        <!-- selection -->
+                        <div class="row">
+                            <div class="ui tabular secondary pointing blue menu">
+                                <a id="windows" class="downloads item active">Windows</a>
+                                <a id="mac" class="downloads item">Mac</a>
+                                <a id="linux" class="downloads item">Linux</a>
+                            </div>
+                        </div>
+                        <!-- windows download -->
+                        <div class="windows row active">
+                            <div class="ui stackable middle aligned very relaxed grid">
+                                <!-- mobile spacer -->
+                                <div class="mobile only column" style="height: 20px"></div>
+                                <div class="nine wide column">
+                                    <h1 class="subtitle">Direct Download</h1>
+                                    <p>
+                                        Big data analysis, machine learning capabilities, and much more.
+                                    </p>
+                                    <button class="submit-button" onclick="window.open(DownloadLink_windows)"><i
+                                            class="windows icon"></i> Download</button>
+                                </div>
+                                <div class="seven wide column">
+                                    <p class="modal-links">
+                                        <a data-micromodal-trigger="installation-windows-sign-up">Installation
+                                            Instructions</a>
+                                        <br>
+                                        <a data-micromodal-trigger="requirements-windows-sign-up">System
+                                            Requirements</a> <br>
+                                        <a href="./contact.html">Report an Issue</a>
+                                    </p>
+                                    <p class="meta">
+                                        Version: <span id="PolytureVersion_windows"></span> <br> Last Updated: <span
+                                            id="UploadDate_windows"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mac download -->
+                        <div class="mac row hidden">
+                            <div class="ui stackable middle aligned very relaxed grid">
+                                <!-- mobile spacer -->
+                                <div class="mobile only column" style="height: 20px"></div>
+                                <div class="nine wide column">
+                                    <h1 class="subtitle">Direct Download</h1>
+                                    <p>
+                                        Big data analysis, machine learning capabilities, and much more.
+                                    </p>
+                                    <button class="submit-button" onclick="window.open(DownloadLink_mac)"><i
+                                            class="apple icon"></i> Download</button>
+                                </div>
+                                <div class="seven wide column">
+                                    <p class="modal-links">
+                                        <a data-micromodal-trigger="installation-mac-sign-up">Installation
+                                            Instructions</a> <br>
+                                        <a data-micromodal-trigger="requirements-mac-sign-up">System Requirements</a>
+                                        <br>
+                                        <a href="./contact.html">Report an Issue</a>
+                                    </p>
+                                    <p class="meta">
+                                        Version: <span id="PolytureVersion_mac"></span> <br> Last Updated: <span
+                                            id="UploadDate_mac"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- linux download -->
+                        <div class="linux row hidden">
+                            <div class="ui stackable middle aligned very relaxed grid">
+                                <!-- mobile spacer -->
+                                <div class="mobile only column" style="height: 20px"></div>
+                                <div class="nine wide column">
+                                    <h1 class="subtitle">Direct Download</h1>
+                                    <p>
+                                        Big data analysis, machine learning capabilities, and much more.
+                                    </p>
+                                    <button class="submit-button greyed">Coming Soon</button>
+                                </div>
+                                <div class="seven wide column">
+                                    <p class="modal-links">
+                                        <a class="greyed">Installation Instructions</a> <br>
+                                        <a class="greyed">System Requirements</a> <br>
+                                        <a class="greyed">Report an Issue</a>
+                                    </p>
+                                    <p class="meta">
+                                        Version: - <br> Last Updated: -
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile only spacer -->
+            <div class="mobile only column spacer"></div>
+        </div>
+        <!-- footer -->
+        <div class="shadow-footer" id="footer">
+            <!-- wrapper -->
+            <div class="ui container">
+                <div class="ui middle aligned center aligned stackable grid" style="padding-bottom: 5%">
+                    <!-- mobile spacer -->
+                    <br class="mobile tablet only row">
+                    <!-- logo -->
+                    <div class="three wide column" style="text-align: center">
+                        <a href="index.html">
+                            <picture>
+                                <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                <img alt="logo" class="ui medium image" style="display: inline-block"
+                                    src="../img/fallback/polyture_logo_white.png">
+                            </picture>
+                        </a>
+                    </div>
+                    <!-- links -->
+                    <div class="ten wide column">
+                        <div class="footer-links">
+                            <a href="../index.html">About</a> <br>
+                            <a href="./company.html">Company</a> <br>
+                            <a href="./downloads.html">Downloads</a> <br>
+                            <a href="./contact.html">Contact</a> <br>
+                            <a href="./sign-up.html">Sign Up</a>
+                        </div>
+                    </div>
+                    <!-- social media -->
+                    <div class="three wide column">
+                        <div class="icon-container">
+                            <a href="https://twitter.com/polyturedata"><i class="twitter icon"></i></a>
+                            <a><i class="medium m icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- divider -->
+                <div class="ui divider"></div>
+                <div class="ui center aligned grid">
+                    <!-- logos -->
+                    <div class="row" id="logos">
+                        <div class="ui grid">
+                            <div class="eight wide column">
+                                <picture>
+                                    <source srcset="../img/UC_Berkeley.webp" type="image/webp">
+                                    <img alt="berkeley logo" class="ui small image"
+                                        src="../img/fallback/UC_Berkeley.png">
+                                </picture>
+                            </div>
+                            <div class="eight wide column">
+                                <picture>
+                                    <source srcset="../img/Skydeck.webp" type="image/webp">
+                                    <img alt="skydeck logo" class="ui small image" src="../img/fallback/Skydeck.png">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- copyright -->
+                    <div class="row">
+                        <p id="copyright">© 2020 Polyture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- installation instructions modal - windows -->
+    <div class="modal micromodal-slide" id="installation-windows-sign-up" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="ui header" id="modal-1-title">
+                        Installation Instructions
+                    </h2>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <p>
+                        1. Download and run <code>Setup.exe</code>.
+                    </p>
+                    <p>
+                        2. Continue through the installation wizard.
+                    </p>
+                    <p>
+                        3. Run Polyture by inputting your domain and password.
+                    </p>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- system requirements modal - windows -->
+    <div class="modal micromodal-slide" id="requirements-windows-sign-up" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="ui header" id="modal-1-title">
+                        System Requirements
+                    </h2>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <p>
+                        - 64-bit versions of Microsoft Windows 10, 8
+                    </p>
+                    <p>
+                        - 2 GB RAM minimum, 8 GB RAM recommended
+                    </p>
+                    <p>
+                        - 2 GB storage space
+                    </p>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- installation instructions modal - mac -->
+    <div class="modal micromodal-slide" id="installation-mac-sign-up" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="ui header" id="modal-1-title">
+                        Installation Instructions
+                    </h2>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <p>
+                        1. Download and run <code>Setup.dmg</code>.
+                    </p>
+                    <p>
+                        2. Continue through the installation wizard.
+                    </p>
+                    <p>
+                        3. Run Polyture by inputting your domain and password.
+                    </p>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- system requirements modal - mac -->
+    <div class="modal micromodal-slide" id="requirements-mac-sign-up" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="ui header" id="modal-1-title">
+                        System Requirements
+                    </h2>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <p>
+                        - macOS 10.13 or newer
+                    </p>
+                    <p>
+                        - 2 GB RAM minimum, 8 GB RAM recommended
+                    </p>
+                    <p>
+                        - 2 GB storage space
+                    </p>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- micromodal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script>
+        AOS.init();
+        MicroModal.init();
+    </script>
+</body>
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+<script src="../dist/js/yaml.js"></script>
+<script src="../dist/js/main.js"></script>
+
+<script>
+    getYamlData();
+</script>
+
+</html>
