@@ -40,7 +40,7 @@ function hideAllTabs() {
 
 function validateContactForm() {
     return (
-        validEmail($('#contact-email').val()) &&
+        (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test($('#contact-email').val()))&&
         $('#contact-firstname').val() != '' &&
         $('#contact-lastname').val() != '' &&
         $('#contact-message').val() != '')
@@ -74,16 +74,9 @@ function sendEmail_contact() {
     }
 }
 
-function validateSignupForm() {
-    return (
-        $('#signup-email').val() != '' &&
-        $('#signup-firstname').val() != '' &&
-        $('#signup-lastname').val() != '')
-}
-
 //submit sign up form 
 
-function initForm() {
+function initForm2() {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
     const form = document.forms['signup-form'];
 
@@ -102,6 +95,42 @@ function initForm() {
         }
     })
 }
+
+function initForm() {
+    const form = document.forms['signup-form'];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        if(validateSignUpForm()) {
+            let data = {
+                email: $('#signup-email').val(),
+                password: $('#signup-password').val()
+            };
+    
+            fetch("https://stable.do.polyture.com/v1/accounts/new", {
+                method: "POST", 
+                body: JSON.stringify(data)
+                }).then(res => {
+                    console.log(res);
+                });
+            
+            window.location.href = "https://polyture.com/website-temp/html/sign-up-success.html";
+        }
+        else {
+            MicroModal.show('signup-failure');
+        }    
+    })
+}
+
+//validate sign up form
+function validateSignUpForm() {
+    return (
+        (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test($('#signup-email').val()))&&
+        $('#signup-firstname').val() != '' &&
+        $('#signup-lastname').val() != '' &&
+        ($('#signup-password').val() == $('#signup-password-confirm').val()))
+    }
 
 //sidebar toggle
 function toggleSidebar() {
