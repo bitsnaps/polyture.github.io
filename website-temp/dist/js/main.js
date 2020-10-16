@@ -76,26 +76,6 @@ function sendEmail_contact() {
 
 //submit sign up form 
 
-function initForm2() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
-    const form = document.forms['signup-form'];
-
-    form.addEventListener('submit', e => {
-        if (validateSignupForm()) {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(MicroModal.show('signup-success'))
-                .catch(error => console.error('Error!', error.message))
-
-            //clear form 
-            $('#signup-email').val('');
-            $('#signup-firstname').val('');
-            $('#signup-lastname').val('');
-            $('#signup-organization').val('');
-        }
-    })
-}
-
 function initForm() {
     const form = document.forms['signup-form'];
 
