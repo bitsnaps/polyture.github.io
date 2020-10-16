@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Polyture Downloads User Manual Documentation">
+    <meta name="description" content="Polyture Company Mission Statement">
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="../dist/css/style.css">
-    <link rel="stylesheet" href="../dist/css/modal.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                 <div class="ui secondary inverted pointing vertical menu">
                     <a href="../index.html" class="item">About</a>
                     <a href="./company.html" class="item">Company</a>
-                    <a href="./downloads.html" class="active item">Downloads</a>
+                    <a href="./downloads.html" class="item">Downloads</a>
                     <a href="./contact.html" class="item">Contact</a>
                     <a href="./sign-up.html" class="item">Sign Up</a>
                 </div>
@@ -39,8 +39,7 @@
     </div>
     <div id="overlay" onclick="toggleSidebar()"></div>
     <main class="shadow">
-        <!-- landing page -->
-        <div class="blurry-background">
+        <div id="sign-up-success-page">
             <!-- header -->
             <div class="ui fluid container page-header">
                 <!-- menus -->
@@ -51,16 +50,16 @@
                             <div class="three wide column">
                                 <a href="../index.html">
                                     <picture>
-                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
+                                        <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
                                     </picture>
                                 </a>
                             </div>
                             <div class="thirteen wide column">
-                                <div class="ui secondary inverted pointing right menu" style="float:right">
+                                <div class="ui secondary pointing right menu" style="float:right">
                                     <a href="../index.html" class="item">About</a>
                                     <a href="./company.html" class="item">Company</a>
-                                    <a href="./downloads.html" class="active item">Downloads</a>
+                                    <a href="./downloads.html" class="item">Downloads</a>
                                     <a href="./contact.html" class="item">Contact</a>
                                     <a href="./sign-up.html" class="cta-button-nav">Sign Up</a>
                                 </div>
@@ -71,12 +70,10 @@
                     <div class="mobile only row">
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
-                                <a href="../index.html">
-                                    <picture>
-                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
-                                    </picture>
-                                </a>
+                                <picture>
+                                    <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                    <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                </picture>
                             </div>
                             <div class="right floated column">
                                 <div id="sidebar-toggle" onclick="toggleSidebar()">
@@ -87,112 +84,56 @@
                         </div>
                     </div>
                 </div>
-                <!-- banner -->
-                <div class="banner" data-aos="fade-up" data-aos-duration="500">
-                    <!-- computer -->
-                    <div class="ui computer tablet only center middle aligned grid">
-                        <div class="two wide column">
-                            <picture>
-                                <source srcset="../img/white-arrow.webp" type="image/webp">
-                                <img alt="polyture arrow" class="ui medium image" src="../img/fallback/white-arrow.png">
-                            </picture>
-                        </div>
-                        <div class="fourteen wide column">
-                            <h1 class="landing-title">Downloads</h1>
+            </div>
+            <div class="success section">
+                <div class="ui middle aligned left aligned stackable grid">
+                    <!-- success tablet desktop -->
+                    <div class="seven wide computer tablet only column">
+                        <div data-aos="fade-up" data-aos-duration="500">
+                            <!-- header -->
+                            <h1 class="ui medium header">
+                                Success!
+                            </h1>
+                            <!-- body -->
+                            <p style="padding-top: 10%">
+                                Thanks for choosing Polyture.
+                            </p>
+                            <p>
+                                Please check your email to confirm your registration.
+                            </p>
                         </div>
                     </div>
-                    <div class="ui computer tablet only center middle aligned grid">
-                        <div class="two wide column"></div>
-                        <div class="fourteen wide column">
-                            <h1 class="landing-subtitle">Get Polyture</h1>
+                    <!-- success mobile -->
+                    <div class="seven wide mobile only column">
+                        <div data-aos="fade-up" data-aos-duration="500">
+                            <!-- header -->
+                            <h2 class="ui huge header">
+                                Success!
+                            </h2>
+                            <!-- body -->
+                            <p>
+                                Thanks for choosing Polyture.
+                            </p>
                         </div>
                     </div>
-                    <!-- mobile -->
-                    <div class="ui mobile only center aligned grid">
-                        <div class="row">
-                            <h1 class="landing-title">Downloads</h1>
-                        </div>
-                        <div class="row">
-                            <h1 class="landing-subtitle">Get Polyture</h1>
-                        </div>
+                    <!-- spacer -->
+                    <div class="mobile only column" style="height: 20px"></div>
+                    <!-- flower -->
+                    <div class="nine wide column">
+                        <picture>
+                            <source srcset="../img/flowers.webp" type="image/webp">
+                            <img alt="flowers" class="ui huge image" id="flower" src="../img/fallback/flowers9.png">
+                        </picture>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- content -->
-        <div class="content-wrapper">
-            <!-- get polyture -->
-            <div class="section">
-                <!-- wrapper -->
-                <div class="ui container">
-                    <div class="ui middle aligned left aligned stackable very relaxed grid">
-                        <!-- image -->
-                        <div class="ten wide computer tablet only column" style="padding-right:10%">
-                            <div class="ui left aligned grid">
-                                <!-- image wrapper -->
-                                <div class="row" style="padding-top: 6%">
-                                    <div class="layered container">
-                                        <picture>
-                                            <source srcset="../img/paint3.webp" type="image/webp">
-                                            <img alt="paint" class="ui image layered bottom below" src="../img/fallback/paint3.png">
-                                        </picture>
-                                        <picture>
-                                            <source srcset="../img/application-screenshot.webp" type="image/webp">
-                                            <img alt="application screenshot" class="ui image shadow layered top" src="../img/fallback/application-screenshot.png">
-                                        </picture>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- mobile only spacer -->
-                        <div class="mobile only column spacer"></div>
-                        <!-- User Manual -->
-                        <div class="six wide column" id="user-manual">
-                            <div class="ui left aligned grid" style="padding-left: 10%">
-                                <!-- image -->
-                                <div class="row">
-                                    <picture>
-                                        <source srcset="../img/book.webp" type="image/webp">
-                                        <img alt="documentation" class="ui medium image" src="../img/fallback/book.png">
-                                    </picture>
-                                </div>
-                                <!-- description computer tablet -->
-                                <div class="computer tablet only row" style="padding-top: 15%">
-                                    <!-- header -->
-                                    <h2 class="ui huge header">
-                                        Documentation
-                                    </h2>
-                                    <p>
-                                        Download documentation for the Polyture Platform for additional guidance and product roadmap.
-                                    </p>
-                                    <p>
-                                        <button class="submit-button greyed">Coming Soon</button>
-                                    </p>
-                                </div>
-                                <!-- description mobile -->
-                                <div class="mobile only row" style="padding-top: 15%">
-                                    <!-- header -->
-                                    <h2 class="ui huge header">
-                                        Documentation
-                                    </h2>
-                                    <p>
-                                        Download documentation for the Polyture Platform for additional guidance and product roadmap.
-                                    </p>
-                                    <p>
-                                        <button class="submit-button greyed">Coming Soon</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- download links -->
             <div class="section" id="download-links">
                 <div class="ui left aligned middle aligned stackable grid">
                     <!-- image -->
-                    <div class="five wide column" data-aos="fade-up-right" data-aos-duration="500" style="padding-right:5%">
+                    <div class="five wide column" data-aos="fade-up-right" data-aos-duration="500"
+                        style="padding-right:5%">
                         <picture>
                             <source srcset="../img/download.webp" type="image/webp">
                             <img alt="download" class="ui medium image" src="../img/fallback/download.png">
@@ -201,7 +142,8 @@
                     <!-- mobile spacer -->
                     <div class="mobile only column" style="height: 50px"></div>
                     <!-- content -->
-                    <div class="ten wide column" data-aos="fade-up-left" data-aos-duration="500" style="padding-left: 5%">
+                    <div class="ten wide column" data-aos="fade-up-left" data-aos-duration="500"
+                        style="padding-left: 5%">
                         <!-- header -->
                         <h2 class="ui huge header">
                             Download Polyture
@@ -224,16 +166,19 @@
                                     <p>
                                         Big data analysis, machine learning capabilities, and much more.
                                     </p>
-                                    <button class="submit-button" onclick="window.open(DownloadLink_windows)"><i class="windows icon"></i> Download</button>
+                                    <button class="submit-button" onclick="window.open(DownloadLink_windows)"><i
+                                            class="windows icon"></i> Download</button>
                                 </div>
                                 <div class="seven wide column">
                                     <p class="modal-links">
-                                        <a data-micromodal-trigger="installation-windows">Installation Instructions</a> <br>
+                                        <a data-micromodal-trigger="installation-windows">Installation Instructions</a>
+                                        <br>
                                         <a data-micromodal-trigger="requirements-windows">System Requirements</a> <br>
                                         <a href="./contact.html">Report an Issue</a>
                                     </p>
                                     <p class="meta">
-                                        Version: <span id="PolytureVersion_windows"></span> <br> Last Updated: <span id="UploadDate_windows"></span>
+                                        Version: <span id="PolytureVersion_windows"></span> <br> Last Updated: <span
+                                            id="UploadDate_windows"></span>
                                     </p>
                                 </div>
                             </div>
@@ -248,7 +193,8 @@
                                     <p>
                                         Big data analysis, machine learning capabilities, and much more.
                                     </p>
-                                    <button class="submit-button" onclick="window.open(DownloadLink_mac)"><i class="apple icon"></i> Download</button>
+                                    <button class="submit-button" onclick="window.open(DownloadLink_mac)"><i
+                                            class="apple icon"></i> Download</button>
                                 </div>
                                 <div class="seven wide column">
                                     <p class="modal-links">
@@ -257,7 +203,8 @@
                                         <a href="./contact.html">Report an Issue</a>
                                     </p>
                                     <p class="meta">
-                                        Version: <span id="PolytureVersion_mac"></span> <br> Last Updated: <span id="UploadDate_mac"></span>
+                                        Version: <span id="PolytureVersion_mac"></span> <br> Last Updated: <span
+                                            id="UploadDate_mac"></span>
                                     </p>
                                 </div>
                             </div>
@@ -289,8 +236,6 @@
                     </div>
                 </div>
             </div>
-            <!-- mobile only spacer -->
-            <div class="mobile only column spacer"></div>
         </div>
         <!-- footer -->
         <div class="shadow-footer" id="footer">
@@ -304,7 +249,8 @@
                         <a href="index.html">
                             <picture>
                                 <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                                <img alt="logo" class="ui medium image" style="display: inline-block" src="../img/fallback/polyture_logo_white.png">
+                                <img alt="logo" class="ui medium image" style="display: inline-block"
+                                    src="../img/fallback/polyture_logo_white.png">
                             </picture>
                         </a>
                     </div>
@@ -335,7 +281,8 @@
                             <div class="eight wide column">
                                 <picture>
                                     <source srcset="../img/UC_Berkeley.webp" type="image/webp">
-                                    <img alt="berkeley logo" class="ui small image" src="../img/fallback/UC_Berkeley.png">
+                                    <img alt="berkeley logo" class="ui small image"
+                                        src="../img/fallback/UC_Berkeley.png">
                                 </picture>
                             </div>
                             <div class="eight wide column">
