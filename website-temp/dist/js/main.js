@@ -94,7 +94,6 @@ function initForm() {
                 }).then(res => {
                     console.log(res);
                 });
-            alert();
             window.location.href = "https://polyture.com/website-temp/html/sign-up-success.html";
         }
         else {
