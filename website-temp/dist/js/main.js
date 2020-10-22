@@ -81,7 +81,6 @@ $('#signup-form').submit(function (evt) {
 
 //sign up xhr request
 function signUp() {
-    var ready;
     if(validateSignUpForm()) {
         var url = "https://stable.do.polyture.com/v1/accounts/new";
         var xhr = new XMLHttpRequest();
