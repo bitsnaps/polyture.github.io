@@ -74,15 +74,16 @@ function sendEmail_contact() {
     }
 }
 
-//submit sign up form 
+//submit sign up form prevent default
 $('#signup-form').submit(function (evt) {
     evt.preventDefault();
 });
 
+//sign up xhr request
 function signUp() {
     var ready;
     if(validateSignUpForm()) {
-        var url = "https://cors-anywhere.herokuapp.com/https://stable.do.polyture.com/v1/accounts/new";
+        var url = "https://stable.do.polyture.com/v1/accounts/new";
         var xhr = new XMLHttpRequest();
         var data = {
             "email": $('#signup-email').val(),
@@ -104,9 +105,6 @@ function signUp() {
     }
     else
         MicroModal.show('signup-failure');
-}
-function sendPost(xhr, url, data) {
-    
 }
 
 //validate sign up form
