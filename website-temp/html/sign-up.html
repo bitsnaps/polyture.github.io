@@ -170,7 +170,7 @@
                         </div>
                         <div class="column" data-aos="fade-down-left" data-aos-duration="500">
                             <!-- form -->
-                            <form class="form-container" id="signup-form" method="GET" onsubmit="submitSignup()">
+                            <form class="form-container" id="signup-form">
                                 <div class="ui form">
                                     <div class="two fields">
                                         <div class="field">
@@ -215,8 +215,7 @@
                                 </div>
                                 <!-- submit button -->
                                 <div class="form-button-container">
-                                    <button class="submit-button" type="submit">Sign
-                                        Up</button>
+                                    <button class="submit-button" onclick="signUp()">Sign Up</button>
                                 </div>
                             </form>
                         </div>
@@ -295,7 +294,8 @@
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
                     <p>
-                        Please fill out all required fields with a valid email and matching passwords.
+                        Please fill out all required fields with a valid email and matching passwords. Passwords must be
+                        at least 10 characters.
                     </p>
                 </header>
             </div>
@@ -318,9 +318,5 @@
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="../dist/js/main.js"></script>
-
-<script>
-    initForm();
-</script>
 
 </html>

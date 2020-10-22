@@ -75,31 +75,38 @@ function sendEmail_contact() {
 }
 
 //submit sign up form 
+$('#signup-form').submit(function (evt) {
+    evt.preventDefault();
+});
 
-function initForm() {
-    const form = document.forms['signup-form'];
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-
-        if(validateSignUpForm()) {
-            let data = {
-                email: $('#signup-email').val(),
-                password: $('#signup-password').val()
-            };
+function signUp() {
+    var ready;
+    if(validateSignUpForm()) {
+        var url = "https://cors-anywhere.herokuapp.com/https://stable.do.polyture.com/v1/accounts/new";
+        var xhr = new XMLHttpRequest();
+        var data = {
+            "email": $('#signup-email').val(),
+            "password": $('#signup-password').val()
+        };
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(data));
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if(xhr.responseText == '{"success":true,"error":null}') {
+                    window.location.href = "https://polyture.com/website-temp/html/sign-up-success.html"
+                }
+                else
+                    MicroModal.show('signup-failure');
+            }
+        };
+    }
+    else
+        MicroModal.show('signup-failure');
+}
+function sendPost(xhr, url, data) {
     
-            fetch("https://stable.do.polyture.com/v1/accounts/new", {
-                method: "POST", 
-                body: JSON.stringify(data)
-                }).then(res => {
-                    console.log(res);
-                });
-            window.location.href = "https://polyture.com/website-temp/html/sign-up-success.html";
-        }
-        else {
-            MicroModal.show('signup-failure');
-        }    
-    })
 }
 
 //validate sign up form
@@ -109,8 +116,18 @@ function validateSignUpForm() {
         $('#signup-firstname').val() != '' &&
         $('#signup-lastname').val() != '' &&
         $('#signup-password').val() != '' &&
+        passwordValidate() &&
         ($('#signup-password').val() == $('#signup-password-confirm').val()))
     }
+
+//password > 10 characters
+function passwordValidate() {
+    if($('#signup-password').val().length >= 10)
+        return true;
+    else {
+        return false;
+    }
+}
 
 //sidebar toggle
 function toggleSidebar() {
