@@ -40,7 +40,7 @@
             <!-- links -->
             <div class="row">
                 <div class="ui secondary inverted pointing vertical menu">
-                    <a class="active item">About</a>
+                    <a href="./html/about.html" class="item">About</a>
                     <a href="./html/downloads.html" class="item">Downloads</a>
                     <a href="./html/contact.html" class="item">Contact</a>
                     <a href="https://blog.polyture.com" class="item">Blog</a>
@@ -71,7 +71,7 @@
                         </div>
                         <div class="thirteen wide column">
                             <div class="ui secondary inverted pointing right menu" style="float:right">
-                                <a class="active item">About</a>
+                                <a href="./html/about.html" class="item">About</a>
                                 <a href="./html/downloads.html" class="item">Downloads</a>
                                 <a href="./html/contact.html" class="item">Contact</a>
                                 <a href="https://blog.polyture.com" class="item">Blog</a>
@@ -585,21 +585,72 @@
                                 </div>
                                 <!-- header -->
                                 <h2 class="ui huge header">
-                                    Get Access to Beta
+                                    Hear From Us
                                 </h2>
                                 <!-- description -->
                                 <div class="row">
                                     <div class="ui container">
                                         <p>
-                                            Sign up to join the Polyture Early Access Beta.
+                                            Sign up to receive updates from the Polyture team.
                                         </p>
+
+                                        <!-- mautic newsletter -->
+                                        <div id="mauticform_wrapper_newsletter" class="mauticform_wrapper">
+                                            <form autocomplete="false" role="form" method="post"
+                                                action="https://mkg.polyture.com/form/submit?formId=1"
+                                                id="mauticform_newsletter" data-mautic-form="newsletter"
+                                                enctype="multipart/form-data">
+                                                <div class="mauticform-error" id="mauticform_newsletter_error"></div>
+                                                <div class="mauticform-message" id="mauticform_newsletter_message">
+                                                </div>
+                                                <div class="mauticform-innerform">
+
+
+                                                    <div class="mauticform-page-wrapper mauticform-page-1"
+                                                        data-mautic-form-page="1">
+
+                                                        <div id="mauticform_newsletter_email_address"
+                                                            data-validate="email_address" data-validation-type="email"
+                                                            class="mauticform-row mauticform-email mauticform-field-1 mauticform-required">
+                                                            <input id="mauticform_input_newsletter_email_address"
+                                                                name="mauticform[email_address]" value=""
+                                                                class="mauticform-input" type="email">
+                                                            <span class="mauticform-errormsg"
+                                                                style="display: none;">This is required.</span>
+                                                        </div>
+
+                                                        <div id="mauticform_newsletter_submit"
+                                                            class="mauticform-row mauticform-button-wrapper mauticform-field-2">
+                                                            <button type="submit" name="mauticform[submit]"
+                                                                id="mauticform_input_newsletter_submit" value=""
+                                                                class="mauticform-button submit-button newsletter">
+                                                                Join the Newsletter</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <input type="hidden" name="mauticform[formId]"
+                                                    id="mauticform_newsletter_id" value="1">
+                                                <input type="hidden" name="mauticform[return]"
+                                                    id="mauticform_newsletter_return" value="">
+                                                <input type="hidden" name="mauticform[formName]"
+                                                    id="mauticform_newsletter_name" value="newsletter">
+
+                                            </form>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="ui divider" style="margin-right: 35%; margin-left: 35%"></div>
                                 <!-- submit email -->
                                 <div class="row">
+                                    <p>
+                                        Join the private beta.
+                                    </p>
+                                </div>
+                                <div class="row">
                                     <a href="./html/sign-up.html">
-                                        <button class="submit-button">Sign Up</button>
+                                        <button class="submit-button">Try the Beta</button>
                                     </a>
                                 </div>
                             </div>
@@ -628,7 +679,6 @@
                         <div class="ten wide column">
                             <div class="footer-links">
                                 <a href="./index.html">About</a> <br>
-                                <a href="./html/company.html">Company</a> <br>
                                 <a href="./html/downloads.html">Downloads</a> <br>
                                 <a href="./html/contact.html">Contact</a> <br>
                                 <a href="https://blog.polyture.com">Blog</a> <br>
