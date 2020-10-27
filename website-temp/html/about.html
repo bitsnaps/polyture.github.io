@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Polyture About Information">
+    <meta name="description" content="Polyture About Company Information Mission Statement">
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
     <link rel="stylesheet" href="../dist/css/style.css">
-    <link rel="stylesheet" href="../dist/css/modal.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -29,7 +28,7 @@
             <!-- links -->
             <div class="row">
                 <div class="ui secondary inverted pointing vertical menu">
-                    <a href="./about.html" class="active item">About</a>
+                    <a href="../index.html" class="active item">About</a>
                     <a href="./downloads.html" class="item">Downloads</a>
                     <a href="./contact.html" class="item">Contact</a>
                     <a href="https://blog.polyture.com" class="item">Blog</a>
@@ -40,8 +39,7 @@
     </div>
     <div id="overlay" onclick="toggleSidebar()"></div>
     <main class="shadow">
-        <!-- landing page -->
-        <div class="blurry-background">
+        <div id="about-page">
             <!-- header -->
             <div class="ui fluid container page-header">
                 <!-- menus -->
@@ -52,14 +50,14 @@
                             <div class="three wide column">
                                 <a href="../index.html">
                                     <picture>
-                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
+                                        <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
                                     </picture>
                                 </a>
                             </div>
                             <div class="thirteen wide column">
-                                <div class="ui secondary inverted pointing right menu" style="float:right">
-                                    <a href="./about.html" class="active item">About</a>
+                                <div class="ui secondary pointing right menu" style="float:right">
+                                    <a href="../index.html" class="active item">About</a>
                                     <a href="./downloads.html" class="item">Downloads</a>
                                     <a href="./contact.html" class="item">Contact</a>
                                     <a href="https://blog.polyture.com" class="item">Blog</a>
@@ -72,12 +70,10 @@
                     <div class="mobile only row">
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
-                                <a href="../index.html">
-                                    <picture>
-                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
-                                    </picture>
-                                </a>
+                                <picture>
+                                    <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                    <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                </picture>
                             </div>
                             <div class="right floated column">
                                 <div id="sidebar-toggle" onclick="toggleSidebar()">
@@ -88,189 +84,117 @@
                         </div>
                     </div>
                 </div>
-                <!-- banner -->
-                <div class="banner" data-aos="fade-up" data-aos-duration="500">
+            </div>
+            <!-- server info -->
+            <div class="about section greyed">
+                <div class="ui center aligned grid">
                     <!-- computer -->
-                    <div class="ui computer tablet only center middle aligned grid">
-                        <div class="two wide column">
+                    <div class="ui computer only center middle aligned grid">
+                        <div class="three wide column" data-aos="fade-right" data-aos-duration="500">
                             <picture>
-                                <source srcset="../img/white-arrow.webp" type="image/webp">
-                                <img alt="polyture arrow" class="ui medium image" src="../img/fallback/white-arrow.png">
+                                <source srcset="../img/blue-arrow-light.webp" type="image/webp">
+                                <img alt="polyture arrow" class="ui medium image"
+                                    src="../img/fallback/blue-arrow-light.png">
                             </picture>
                         </div>
-                        <div class="fourteen wide column">
-                            <h1 class="landing-title">About</h1>
+                        <div class="twelve wide column" style="padding-left: 5%" data-aos="fade-up"
+                            data-aos-duration="500">
+                            <!-- title -->
+                            <div class="row">
+                                <div class="ui header">
+                                    <div class="ui header">
+                                        <h1 class="ui header">
+                                            <span class="polyture">Polyture</span>
+                                        </h1>
+                                    </div>
+                                    <div class="ui header" id="subtitle">
+                                        <h1 class="ui header"><span>accelerates</span>,
+                                            <span>unifies</span>, & <span>simplifies</span>
+                                        </h1>
+                                        <h1 class="ui header">the creation of data pipelines.</h1>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- mobile -->
-                    <div class="ui mobile only center aligned grid">
+                    <div class="ui mobile tablet only center aligned grid">
+                        <!-- title -->
                         <div class="row">
-                            <h1 class="landing-title">About</h1>
+                            <div class="ui header">
+                                <div class="ui header">
+                                    <h1 class="ui header">
+                                        <span class="polyture">Polyture</span>
+                                    </h1>
+                                </div>
+                                <div class="ui header">
+                                    <h1 class="ui header subtitle"><span>accelerates</span>,
+                                        <span>unifies</span>, & <span>simplifies</span>
+                                    </h1>
+                                    <h1 class="ui header">the creation of data pipelines.</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- content -->
-        <div class="content-wrapper">
-            <!-- contact by email -->
-            <div class="section" id="media-relations">
-                <!-- wrapper -->
-                <div class="ui container">
-                    <div class="ui left aligned middle aligned stackable equal width grid">
-                        <div class="column" data-aos="fade-down-right" data-aos-duration="500">
-                            <!-- header and description -->
-                            <div class="ui left aligned grid">
-                                <!-- computer tablet only description -->
-                                <div class="computer tablet only row">
-                                    <h2 class="ui huge header">
-                                        Contact Us
-                                    </h2>
-                                    <p>
-                                        We’d love to hear from you. Please let us know how we can be of help.
-                                    </p>
-                                </div>
-                                <!-- computer tablet only image -->
-                                <div class="computer tablet only row" style="padding-top: 20%">
-                                    <picture>
-                                        <source srcset="../img/contact-us.webp" type="image/webp">
-                                        <img alt="contact us" class="ui medium image"
-                                            src="../img/fallback/contact-us.png">
-                                    </picture>
-                                </div>
-                                <!-- mobile only description -->
-                                <div class="mobile only centered row">
-                                    <h2 class="ui huge header">
-                                        Contact Us
-                                    </h2>
-                                    <p>
-                                        We’d love to hear from you. Please let us know how we can be of help.
-                                    </p>
-                                </div>
-                                <!-- mobile only image -->
-                                <div class="mobile only centered row" style="padding-top: 20%">
-                                    <picture>
-                                        <source srcset="../img/contact-us.webp" type="image/webp">
-                                        <img alt="contact us" class="ui medium image"
-                                            src="../img/fallback/contact-us.png">
-                                    </picture>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column" data-aos="fade-down-left" data-aos-duration="500">
-                            <div class="form-container">
-                                <div class="ui form">
-                                    <div class="one field">
-                                        <div class="field">
-                                            <label>Email Address:</label>
-                                            <input class="error" type="email" id="contact-email" name="Email Address"
-                                                placeholder="Email Address">
-                                        </div>
-                                    </div>
-                                    <div class="two fields">
-                                        <div class="field">
-                                            <label>First Name:</label>
-                                            <input type="text" id="contact-firstname" name="First Name"
-                                                placeholder="First Name">
-                                        </div>
-                                        <div class="field">
-                                            <label>Last Name:</label>
-                                            <input type="text" id="contact-lastname" name="Last Name"
-                                                placeholder="Last Name">
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <label>Message:</label>
-                                        <textarea rows="3" id="contact-message" name="Message"
-                                            placeholder="How can we help you?"></textarea>
-                                    </div>
-                                </div>
-                                <!-- submit button -->
-                                <div class="form-button-container">
-                                    <button class="submit-button" onclick="sendEmail_contact()">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- locations -->
-            <div class="section greyed" id="locations">
-                <!-- header -->
-                <h2 class="ui huge centered header">
-                    <div class="content">
-                        Locations
-                    </div>
-                </h2>
-                <!-- mobile only spacer -->
-                <div class="mobile only column huge spacer"></div>
-                <!-- maps -->
-                <div class="ui center aligned equal width stackable grid" style="padding-top: 6%">
-                    <!-- brea -->
-                    <div class="column">
-                        <div class="row">
-                            <picture>
-                                <source srcset="../img/brea-map.webp" type="image/webp">
-                                <img alt="brea map" src="../img/fallback/brea-map2.png"
-                                    class="ui large image shadow map">
-                            </picture>
-                        </div>
-                        <div class="row">
-                            <h3 class="ui header">Brea, CA</h3>
-                        </div>
-                        <div class="row">
-                            <p>2900 Saturn Street, Suite B
-                                <br>Brea, CA 92821</p>
-                        </div>
-                    </div>
-                    <!-- mobile only spacer -->
-                    <div class="mobile only column huge spacer"></div>
-                    <!-- berkeley -->
-                    <div class="column">
-                        <div class="row">
-                            <picture>
-                                <source srcset="../img/berkeley-map.webp" type="image/webp">
-                                <img alt="berkeley map" src="../img/fallback/berkeley-map2.png"
-                                    class="ui large image shadow map">
-                            </picture>
-                        </div>
-                        <div class="row">
-                            <h3 class="ui header">Berkeley, CA</h3>
-                        </div>
-                        <div class="row">
-                            <p>2150 Shattuck Avenue, Penthouse
-                                <br>Berkeley, CA 94704</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- twitter section -->
+            <!-- informational section -->
             <div class="section">
-                <!-- wrapper -->
+                <!-- title -->
                 <div class="ui container">
+                    <div class="ui center aligned stackable grid">
+                        <h2 class="ui huge header">
+                            Making Data Science Approachable
+                        </h2>
+                    </div>
+                </div>
+                <div class="ui divider" style="margin-right: 35%; margin-left: 35%; margin-top: 8%; margin-bottom: 4%">
+                </div>
+                <!-- wrapper -->
+                <div class="ui container paragraph-style">
                     <!-- computer tablet only -->
-                    <div class="ui middle aligned stackable grid">
-                        <div class="eleven wide computer tablet only column" data-aos="fade-down-right"
-                            data-aos-duration="500">
-                            <!-- header -->
-                            <h2 class="ui huge header">
-                                Connect
-                            </h2>
-                            <div class="row">
-                                <p>
-                                    Follow our Twitter <a href="https://twitter.com/PolytureData">@PolytureData</a> to
-                                    learn more and be the first to hear about our latest news and updates.
-                                </p>
+                    <div class="ui left middle aligned stackable grid">
+                        <div class="row">
+                            <!-- image -->
+                            <div class="eight wide computer tablet only column">
+                                <picture>
+                                    <source srcset="../img/predictive-data.webp" type="image/webp">
+                                    <img alt="predictive data" class="ui image"
+                                        src="../img/fallback/predictive-data.png">
+                                </picture>
+                            </div>
+                            <div class="eight wide computer tablet only column">
+                                <div class="row">
+                                    <p>
+                                        Polyture’s stated goal is to make data-science more approachable. In the current
+                                        job
+                                        market, there is a massive data science talent gap. Large organizations are
+                                        aggressively hiring and the university system is not graduating enough trained
+                                        individuals. The result is that most SMBs are left out of the equation.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        Polyture closes that skill gap by introducing the first code-optional
+                                        data-pipeline
+                                        design tool. Our application includes the traditional data stack tools of Data
+                                        Warehousing, Dataflow, Data Transforms/Cleaning, AutoML and Visualizations all
+                                        within a single easy to use application.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <!-- image -->
-                        <div class="five wide computer tablet only column" data-aos="fade-down-left"
-                            data-aos-duration="500">
-                            <picture>
-                                <source srcset="../img/tweet-storm.webp" type="image/webp">
-                                <img alt="tweet storm" class="ui medium image" src="../img/fallback/tweet-storm.png">
-                            </picture>
+                        <div class="row">
+                            <p>
+                                If a company has someone who is basically proficient in Excel, then they can use
+                                Polyture to
+                                start leveraging the power of a traditional data science stack. Alternatively, if an
+                                organization has data scientists, they can build new data pipelines with unrivaled
+                                speed.
+                                For some applications, a Polyture pipeline can be designed in 10 minutes, compared to an
+                                entire day's worth of work with a traditional data science stack.
+                            </p>
                         </div>
                     </div>
                     <!-- mobile only -->
@@ -297,12 +221,6 @@
                     </div>
                 </div>
             </div>
-            <!-- embed twitter feed -->
-            <div class="section twitter" style="display: none" data-aos="fade-up" data-aos-duration="500">
-                <a style="padding-top:5%" class="twitter-timeline"
-                    href="https://twitter.com/PolytureData?ref_src=twsrc%5Etfw">Tweets by PolytureData</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
         </div>
         <!-- footer -->
         <div class="shadow-footer" id="footer">
@@ -325,10 +243,10 @@
                     <div class="ten wide column">
                         <div class="footer-links">
                             <a href="../index.html">About</a> <br>
+                            <a href="./company.html">Company</a> <br>
                             <a href="./downloads.html">Downloads</a> <br>
                             <a href="./contact.html">Contact</a> <br>
-                            <a href="https://blog.polyture.com">Blog</a> <br>
-                            <a href="./sign-up.html">Try Now</a>
+                            <a href="./sign-up.html">Sign Up</a>
                         </div>
                     </div>
                     <!-- social media -->
@@ -369,51 +287,17 @@
         </div>
     </main>
 
-    <!-- contact form success modal -->
-    <div class="modal micromodal-slide" id="contact-success" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="ui header" id="modal-1-title">
-                        Message Successfully Sent
-                    </h2>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        Thanks for contacting us. We'll get back to you as soon as we can.
-                    </p>
-                </main>
-            </div>
-        </div>
-    </div>
-
-    <!-- contact form failed modal -->
-    <div class="modal micromodal-slide" id="contact-failure" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <p>
-                        Please fill out all fields or enter a valid email address.
-                    </p>
-                </header>
-            </div>
-        </div>
-    </div>
-
     <!-- animate on scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- micromodal -->
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script>
         AOS.init();
-        MicroModal.init();
     </script>
 </body>
+
 
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="../dist/js/main.js"></script>
 
 </html>
