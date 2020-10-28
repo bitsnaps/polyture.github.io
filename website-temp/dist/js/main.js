@@ -167,3 +167,6 @@ function getYamlData() {
     $("#PolytureVersion_mac").text(PolytureVersion_mac);
     $("#UploadDate_mac").text(UploadDate_mac);
 }
+
+//prevent default mautic form
+document.getElementById("mauticform_input_newsletter_email_address").placeholder = "Email Address";

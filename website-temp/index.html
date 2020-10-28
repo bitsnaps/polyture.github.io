@@ -9,6 +9,7 @@
     <title>Polyture</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.css">
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/modal.css">
     <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -593,69 +594,18 @@
                                 </h2>
                                 <!-- description -->
                                 <div class="row">
-                                    <div class="ui container">
+                                    <div class="ui centered container">
                                         <p>
                                             Sign up to receive updates from the Polyture team.
                                         </p>
 
                                         <!-- mautic newsletter -->
-                                        <div id="mauticform_wrapper_newsletter" class="mauticform_wrapper">
-                                            <form autocomplete="false" role="form" method="post"
-                                                action="https://mkg.polyture.com/form/submit?formId=1"
-                                                id="mauticform_newsletter" data-mautic-form="newsletter"
-                                                enctype="multipart/form-data">
-                                                <div class="mauticform-error" id="mauticform_newsletter_error"></div>
-                                                <div class="mauticform-message" id="mauticform_newsletter_message">
-                                                </div>
-                                                <div class="mauticform-innerform">
-
-
-                                                    <div class="mauticform-page-wrapper mauticform-page-1"
-                                                        data-mautic-form-page="1">
-
-                                                        <div id="mauticform_newsletter_email_address"
-                                                            data-validate="email_address" data-validation-type="email"
-                                                            class="mauticform-row mauticform-email mauticform-field-1 mauticform-required">
-                                                            <input id="mauticform_input_newsletter_email_address"
-                                                                name="mauticform[email_address]" value=""
-                                                                class="mauticform-input" type="email">
-                                                            <span class="mauticform-errormsg"
-                                                                style="display: none;">This is required.</span>
-                                                        </div>
-
-                                                        <div id="mauticform_newsletter_submit"
-                                                            class="mauticform-row mauticform-button-wrapper mauticform-field-2">
-                                                            <button type="submit" name="mauticform[submit]"
-                                                                id="mauticform_input_newsletter_submit" value=""
-                                                                class="mauticform-button submit-button newsletter">
-                                                                Join the Newsletter</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <input type="hidden" name="mauticform[formId]"
-                                                    id="mauticform_newsletter_id" value="1">
-                                                <input type="hidden" name="mauticform[return]"
-                                                    id="mauticform_newsletter_return" value="">
-                                                <input type="hidden" name="mauticform[formName]"
-                                                    id="mauticform_newsletter_name" value="newsletter">
-
-                                            </form>
+                                        <div class="ui centered container newsletter">
+                                            <script type="text/javascript"
+                                                src="//mkg.polyture.com/form/generate.js?id=1"></script>
                                         </div>
 
                                     </div>
-                                </div>
-                                <div class="ui divider" style="margin-right: 35%; margin-left: 35%"></div>
-                                <!-- submit email -->
-                                <div class="row">
-                                    <p>
-                                        Join the private beta.
-                                    </p>
-                                </div>
-                                <div class="row">
-                                    <a href="./html/sign-up.html">
-                                        <button class="submit-button">Try the Beta</button>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -728,10 +678,33 @@
             </div>
     </main>
 
+    <!-- newsletter form success modal -->
+    <div class="modal micromodal-slide" id="newsletter-success" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="ui header" id="modal-1-title">
+                        You are signed up.
+                    </h2>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <p>
+                        Thanks for joining the newsletter. You will now receive news and updates from Polyture.
+                    </p>
+                </main>
+            </div>
+        </div>
+    </div>
+
     <!-- animate on scroll-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- micromodal -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- mautic override -->
+    <link rel="stylesheet" href="dist/css/mautic-override.css">
     <script>
         AOS.init();
+        MicroModal.init();
     </script>
 </body>
 

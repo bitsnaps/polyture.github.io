@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@800&family=Roboto+Condensed:wght@400&family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
 
 /*  polyture logo blue 6FABFF 
@@ -69,6 +68,13 @@ main {
 .pricing-box:hover {
 	transform: translate(0, -10px);
 	transition: 0.2s;
+}
+
+/* Newsletter */
+
+.newsletter {
+	padding-top: 3%;
+	width: 400px !important;
 }
 
 /* Section Structure */
@@ -745,10 +751,6 @@ body::-webkit-scrollbar {
 	-webkit-transition-duration: 0.2s;
 	/* Safari */
 	transition-duration: 0.2s;
-}
-
-.submit-button .newsletter {
-	width: 500px;
 }
 
 .submit-button:hover {
