@@ -94,30 +94,6 @@ main {
 	padding-top: 2%;
 }
 
-#data-advantage {
-	padding-top: 10%;
-}
-
-#data-warehouse {
-	padding-top: 12%;
-	padding-bottom: 6%;
-}
-
-#functional-analysis {
-	padding-top: 6%;
-	padding-bottom: 6%;
-}
-
-#automl {
-	padding-top: 6%;
-	padding-bottom: 6%;
-}
-
-#code-extensible {
-	padding-top: 6%;
-	padding-bottom: 8%;
-}
-
 @media screen and (max-width: 600px) {
 	#data-advantage {
 		padding-top: 20%;
@@ -491,6 +467,35 @@ main {
 
 #about-page p {
 	line-height: 32px;
+}
+
+.features.section {
+	padding-right: 4%;
+	padding-left: 4%;
+}
+
+#data-advantage {
+	padding-top: 10%;
+}
+
+#data-warehouse {
+	padding-top: 6%;
+	padding-bottom: 6%;
+}
+
+#functional-analysis {
+	padding-top: 12%;
+	padding-bottom: 6%;
+}
+
+#automl {
+	padding-top: 12%;
+	padding-bottom: 6%;
+}
+
+#code-extensible {
+	padding-top: 12%;
+	padding-bottom: 8%;
 }
 
 /* Sign Up Success Page */
