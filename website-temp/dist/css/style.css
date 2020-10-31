@@ -474,18 +474,19 @@ main {
 }
 
 #about-page .paragraph-style {
-	padding-right: 5%;
-	padding-left: 5%;
+	padding-right: 7%;
+	padding-left: 7%;
+}
+
+#about-page .paragraph-style .row {
+	padding-right: 1.5%;
+	padding-left: 1.5%;
+	padding-bottom: 0;
 }
 
 #about-page .paragraph-style p {
 	padding-top: 4%;
 	padding-bottom: 2%;
-}
-
-#about-page .paragraph-style .column {
-	padding-left: 3%;
-	padding-right: 3%;
 }
 
 #about-page p {
