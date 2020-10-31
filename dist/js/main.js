@@ -40,7 +40,7 @@ function hideAllTabs() {
 
 function validateContactForm() {
     return (
-        validEmail($('#contact-email').val()) &&
+        (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test($('#contact-email').val()))&&
         $('#contact-firstname').val() != '' &&
         $('#contact-lastname').val() != '' &&
         $('#contact-message').val() != '')
@@ -74,33 +74,57 @@ function sendEmail_contact() {
     }
 }
 
-function validateSignupForm() {
-    return (
-        $('#signup-email').val() != '' &&
-        $('#signup-firstname').val() != '' &&
-        $('#signup-lastname').val() != '')
+//submit sign up form prevent default
+$('#signup-form').submit(function (evt) {
+    evt.preventDefault();
+});
+
+//sign up xhr request
+function signUp() {
+    if(validateSignUpForm()) {
+        var url = "https://stable.do.polyture.com/v1/accounts/new";
+        //https://stable.do.polyture.com/v1/accounts/new
+        var xhr = new XMLHttpRequest();
+        var data = {
+            "email": $('#signup-email').val(),
+            "password": $('#signup-password').val()
+        };
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(data));
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if(xhr.responseText == '{"success":true,"error":null}') {
+                    window.location.href = "https://polyture.com/website-temp/html/sign-up/sign-up-success.html"
+                }
+                else
+                    MicroModal.show('signup-failure');
+            }
+        };
+    }
+    else
+        MicroModal.show('signup-failure');
 }
 
-//submit sign up form 
+//validate sign up form
+function validateSignUpForm() {
+    return (
+        (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test($('#signup-email').val()))&&
+        $('#signup-firstname').val() != '' &&
+        $('#signup-lastname').val() != '' &&
+        $('#signup-password').val() != '' &&
+        passwordValidate() &&
+        ($('#signup-password').val() == $('#signup-password-confirm').val()))
+    }
 
-function initForm() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwFdn55v3rVHrRpRy54CuyjsSsnagVTUwGGL8leMFx0RFOIEqjA/exec';
-    const form = document.forms['signup-form'];
-
-    form.addEventListener('submit', e => {
-        if (validateSignupForm()) {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(MicroModal.show('signup-success'))
-                .catch(error => console.error('Error!', error.message))
-
-            //clear form 
-            $('#signup-email').val('');
-            $('#signup-firstname').val('');
-            $('#signup-lastname').val('');
-            $('#signup-organization').val('');
-        }
-    })
+//password > 10 characters
+function passwordValidate() {
+    if($('#signup-password').val().length >= 10)
+        return true;
+    else {
+        return false;
+    }
 }
 
 //sidebar toggle
@@ -116,13 +140,13 @@ var DownloadLink_windows = "";
 //get yaml data
 function getYamlData() {
     //windows
-    var yamlFile_windows = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest.yml');
+    var yamlFile_windows = YAML.load('https://polyture-releases-signed.sfo2.digitaloceanspaces.com/latest.yml');
     var yamlData_windows = new Array();
     $.each(yamlFile_windows, function(key, value) {
         yamlData_windows.push(value);
     });
     var PolytureVersion_windows = yamlData_windows[0];
-    DownloadLink_windows = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
+    DownloadLink_windows = 'https://polyture-releases-signed.sfo2.digitaloceanspaces.com/' + yamlData_windows[1][0].url;
     var UploadDate_windows = yamlData_windows[4].substring(0, 10);
 
     //update windows download text & link
@@ -130,16 +154,19 @@ function getYamlData() {
     $("#UploadDate_windows").text(UploadDate_windows);
 
     //mac
-    var yamlFile_mac = YAML.load('https://polyture-releases.sfo2.digitaloceanspaces.com/latest-mac.yml');
+    var yamlFile_mac = YAML.load('https://polyture-releases-signed.sfo2.digitaloceanspaces.com/latest-mac.yml');
     var yamlData_mac = new Array();
     $.each(yamlFile_mac, function(key, value) {
         yamlData_mac.push(value);
     });
     var PolytureVersion_mac = yamlData_mac[0];
-    DownloadLink_mac = 'https://polyture-releases.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
+    DownloadLink_mac = 'https://polyture-releases-signed.sfo2.digitaloceanspaces.com/' + yamlData_mac[1][1].url;
     var UploadDate_mac = yamlData_mac[4].substring(0, 10);
 
     //update mac download text & link
     $("#PolytureVersion_mac").text(PolytureVersion_mac);
     $("#UploadDate_mac").text(UploadDate_mac);
 }
+
+//prevent default mautic form
+document.getElementById("mauticform_input_newsletter_email_address").placeholder = "Email Address";

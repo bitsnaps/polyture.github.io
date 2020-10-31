@@ -21,19 +21,22 @@
         <div class="ui center aligned grid">
             <!-- logo -->
             <div class="row">
-                <picture>
-                    <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                    <img alt="logo" class="ui medium image" src="../img/fallback/polyture_logo_white2.png">
-                </picture>
+                <a href="../index.html">
+                    <picture>
+                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                        <img alt="logo" class="ui medium image" src="../img/fallback/polyture_logo_white2.png">
+                    </picture>
+                </a>
             </div>
             <!-- links -->
             <div class="row">
                 <div class="ui secondary inverted pointing vertical menu">
-                    <a href="../index.html" class="item">About</a>
-                    <a href="./company.html" class="item">Company</a>
+                    <a href="../index.html" class="item">Home</a>
+                    <a href="./about.html" class="item">About</a>
                     <a href="./downloads.html" class="item">Downloads</a>
                     <a href="./contact.html" class="item">Contact</a>
-                    <a href="./sign-up.html" class="active item">Sign Up</a>
+                    <a href="https://blog.polyture.com" class="item">Blog</a>
+                    <a href="./sign-up.html" class="active item">Try Now</a>
                 </div>
             </div>
         </div>
@@ -50,18 +53,21 @@
                     <div class="computer tablet only row">
                         <div class="ui middle aligned grid" style="width: 100%">
                             <div class="three wide column">
-                                <picture>
-                                    <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                                    <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
-                                </picture>
+                                <a href="../index.html">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
+                                    </picture>
+                                </a>
                             </div>
                             <div class="thirteen wide column">
                                 <div class="ui secondary inverted pointing right menu" style="float:right">
-                                    <a href="../index.html" class="item">About</a>
-                                    <a href="./company.html" class="item">Company</a>
+                                    <a href="../index.html" class="item">Home</a>
+                                    <a href="./about.html" class="item">About</a>
                                     <a href="./downloads.html" class="item">Downloads</a>
                                     <a href="./contact.html" class="item">Contact</a>
-                                    <a class="cta-button-nav">Sign Up</a>
+                                    <a href="https://blog.polyture.com" class="item">Blog</a>
+                                    <a class="cta-button-nav">Try Now</a>
                                 </div>
                             </div>
                         </div>
@@ -70,10 +76,12 @@
                     <div class="mobile only row">
                         <div class="ui middle aligned grid" style="width:100%">
                             <div class="three wide column">
-                                <picture>
-                                    <source srcset="../img/polyture_logo_white.webp" type="image/webp">
-                                    <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
-                                </picture>
+                                <a href="../index.html">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_white.png">
+                                    </picture>
+                                </a>
                             </div>
                             <div class="right floated column">
                                 <div id="sidebar-toggle" onclick="toggleSidebar()">
@@ -95,7 +103,7 @@
                             </picture>
                         </div>
                         <div class="fourteen wide column">
-                            <h1 class="landing-title">Sign Up</h1>
+                            <h1 class="landing-title">Try Now</h1>
                         </div>
                     </div>
                     <div class="ui computer tablet only center middle aligned grid">
@@ -107,7 +115,7 @@
                     <!-- mobile -->
                     <div class="ui mobile only center aligned grid">
                         <div class="row">
-                            <h1 class="landing-title">Sign Up</h1>
+                            <h1 class="landing-title">Try Now</h1>
                         </div>
                         <div class="row">
                             <h1 class="landing-subtitle">Get Early Access</h1>
@@ -125,7 +133,7 @@
                 <div class="ui container">
                     <!-- contact us by email -->
                     <div class="ui left aligned middle aligned equal width stackable grid">
-                        <div class="column" data-aos="fade-down-right" data-aos-duration="500">
+                        <div class="nine wide column" data-aos="fade-down-right" data-aos-duration="500">
                             <!-- header and description -->
                             <div class="ui left aligned grid">
                                 <!-- computer tablet only description -->
@@ -170,7 +178,7 @@
                         </div>
                         <div class="column" data-aos="fade-down-left" data-aos-duration="500">
                             <!-- form -->
-                            <form class="form-container" id="signup-form" method="GET" onsubmit="submitSignup()">
+                            <form class="form-container" id="signup-form">
                                 <div class="ui form">
                                     <div class="two fields">
                                         <div class="field">
@@ -198,10 +206,24 @@
                                                 placeholder="Email Address">
                                         </div>
                                     </div>
+                                    <div class="one field">
+                                        <div class="field">
+                                            <label>Password:</label>
+                                            <input type="password" name="Password" id="signup-password"
+                                                placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="one field">
+                                        <div class="field">
+                                            <label>Confirm Password:</label>
+                                            <input type="password" name="Password-Confirm" id="signup-password-confirm"
+                                                placeholder="Confirm Password">
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- submit button -->
                                 <div class="form-button-container">
-                                    <button class="submit-button" type="submit">Join Waitlist</button>
+                                    <button class="submit-button" onclick="signUp()">Sign Up</button>
                                 </div>
                             </form>
                         </div>
@@ -218,7 +240,7 @@
                     <br class="mobile tablet only row">
                     <!-- logo -->
                     <div class="three wide column" style="text-align: center">
-                        <a href="index.html">
+                        <a href="../index.html">
                             <picture>
                                 <source srcset="../img/polyture_logo_white.webp" type="image/webp">
                                 <img alt="logo" class="ui medium image" style="display: inline-block"
@@ -229,11 +251,12 @@
                     <!-- links -->
                     <div class="ten wide column">
                         <div class="footer-links">
-                            <a href="../index.html">About</a> <br>
-                            <a href="./company.html">Company</a> <br>
+                            <a href="../index.html">Home</a> <br>
+                            <a href="./about.html">About</a> <br>
                             <a href="./downloads.html">Downloads</a> <br>
                             <a href="./contact.html">Contact</a> <br>
-                            <a href="./sign-up.html">Sign Up</a>
+                            <a href="https://blog.polyture.com">Blog</a> <br>
+                            <a href="./sign-up.html">Try Now</a>
                         </div>
                     </div>
                     <!-- social media -->
@@ -274,31 +297,14 @@
         </div>
     </main>
 
-    <!-- sign up form success modal -->
-    <div class="modal micromodal-slide" id="signup-success" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="ui header" id="modal-1-title">
-                        Request Successfully Submitted
-                    </h2>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                    <p>
-                        You're on the waitlist!
-                    </p>
-                </main>
-            </div>
-        </div>
-    </div>
-
     <!-- sign up form failed modal -->
     <div class="modal micromodal-slide" id="signup-failure" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
                     <p>
-                        Please fill out all fields or enter a valid email address.
+                        Please fill out all required fields with a valid email and matching passwords. Passwords must be
+                        at least 10 characters.
                     </p>
                 </header>
             </div>
@@ -321,9 +327,5 @@
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="../dist/js/main.js"></script>
-
-<script>
-    initForm();
-</script>
 
 </html>

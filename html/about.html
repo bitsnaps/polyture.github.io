@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Polyture About Company Information Mission Statement">
+    <title>Polyture</title>
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/mautic-override.css">
+    <link rel="icon" href="https://www.polyture.com/favicon.ico?v=2">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="collapsed sidebar">
+        <div class="ui center aligned grid">
+            <!-- logo -->
+            <div class="row">
+                <a href="../index.html">
+                    <picture>
+                        <source srcset="../img/polyture_logo_white2.webp" type="image/webp">
+                        <img alt="logo" class="ui medium image" src="../img/fallback/polyture_logo_white2.png">
+                    </picture>
+                </a>
+            </div>
+            <!-- links -->
+            <div class="row">
+                <div class="ui secondary inverted pointing vertical menu">
+                    <a href="../index.html" class="item">Home</a>
+                    <a href="./about.html" class="active item">About</a>
+                    <a href="./downloads.html" class="item">Downloads</a>
+                    <a href="./contact.html" class="item">Contact</a>
+                    <a href="https://blog.polyture.com" class="item">Blog</a>
+                    <a href="./sign-up.html" class="item">Try Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" onclick="toggleSidebar()"></div>
+    <main class="shadow">
+        <div id="about-page">
+            <!-- header -->
+            <div class="ui fluid container page-header">
+                <!-- menus -->
+                <div class="ui grid">
+                    <!-- computer tablet only menu -->
+                    <div class="computer tablet only row">
+                        <div class="ui middle aligned grid" style="width: 100%">
+                            <div class="three wide column">
+                                <a href="../index.html">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="thirteen wide column">
+                                <div class="ui secondary pointing right menu" style="float:right">
+                                    <a href="../index.html" class="item">Home</a>
+                                    <a href="./about.html" class="active item">About</a>
+                                    <a href="./downloads.html" class="item">Downloads</a>
+                                    <a href="./contact.html" class="item">Contact</a>
+                                    <a href="https://blog.polyture.com" class="item">Blog</a>
+                                    <a href="./sign-up.html" class="cta-button-nav">Try Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mobile only menu -->
+                    <div class="mobile only row">
+                        <div class="ui middle aligned grid" style="width:100%">
+                            <div class="three wide column">
+                                <a href="../index.html">
+                                    <picture>
+                                        <source srcset="../img/polyture_logo_black.webp" type="image/webp">
+                                        <img alt="logo" class="logo" src="../img/fallback/polyture_logo_black.png">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="right floated column">
+                                <div id="sidebar-toggle" onclick="toggleSidebar()">
+                                    <i class="bars icon"></i>
+                                    <i class="close icon hidden"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- title -->
+            <div class="about section greyed">
+                <div class="ui center aligned grid">
+                    <!-- computer -->
+                    <div class="ui computer only center middle aligned grid">
+                        <div class="three wide column" data-aos="fade-right" data-aos-duration="500">
+                            <picture>
+                                <source srcset="../img/blue-arrow-light.webp" type="image/webp">
+                                <img alt="polyture arrow" class="ui medium image"
+                                    src="../img/fallback/blue-arrow-light.png">
+                            </picture>
+                        </div>
+                        <div class="twelve wide column" style="padding-left: 5%" data-aos="fade-up"
+                            data-aos-duration="500">
+                            <!-- title -->
+                            <div class="row">
+                                <div class="ui header">
+                                    <div class="ui header">
+                                        <h1 class="ui header">
+                                            <span class="polyture">Polyture</span>
+                                        </h1>
+                                    </div>
+                                    <div class="ui header" id="subtitle">
+                                        <h1 class="ui header"><span>accelerates</span>,
+                                            <span>unifies</span>, & <span>simplifies</span>
+                                        </h1>
+                                        <h1 class="ui header">the creation of data pipelines.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mobile -->
+                    <div class="ui mobile tablet only center aligned grid">
+                        <!-- title -->
+                        <div class="row">
+                            <div class="ui header">
+                                <div class="ui header">
+                                    <h1 class="ui header">
+                                        <span class="polyture">Polyture</span>
+                                    </h1>
+                                </div>
+                                <div class="ui header">
+                                    <h1 class="ui header subtitle"><span>accelerates</span>,
+                                        <span>unifies</span>, & <span>simplifies</span>
+                                    </h1>
+                                    <h1 class="ui header">the creation of data pipelines.</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- informational section -->
+            <div class="section">
+                <!-- title -->
+                <div class="ui computer tablet only center aligned container">
+                    <h2 class="ui huge header">
+                        Making Data Science Approachable
+                    </h2>
+                </div>
+                <div class="ui divider" style="margin-right: 35%; margin-left: 35%; margin-top: 6%; margin-bottom: 4%">
+                </div>
+                <!-- wrapper -->
+                <div class="ui container paragraph-style">
+                    <!-- computer tablet only -->
+                    <div class="ui left aligned stackable grid">
+                        <div class="row">
+                            <p>
+                                Polyture’s stated goal is to make data-science more approachable. In the current
+                                job market, there is a massive data science talent gap. Large organizations are
+                                aggressively hiring and the university system is not graduating enough trained
+                                individuals. The result is that most SMBs are left out of the equation.
+                                <br><br>
+                                Polyture closes that skill gap by introducing the first code-optional
+                                data-pipeline design tool. Our application includes the traditional data stack
+                                tools of Data Warehousing, Dataflow, Data Transforms/Cleaning, AutoML and
+                                Visualizations all within a single easy to use application.
+                            </p>
+                        </div>
+                        <div class="eight wide column" style="padding-top: 0">
+                            <p>
+                                If a company has someone who is proficient in Excel, they can use
+                                Polyture to leverage the power of a traditional data science stack.
+                                Alternatively, if an organization has data scientists, they can build new data pipelines
+                                with unrivaled speed. For some applications, a Polyture pipeline can be designed in
+                                minutes, compared to an entire day's worth of work with a traditional data science
+                                stack.
+                            </p>
+                        </div>
+                        <div class="eight wide column">
+                            <picture style="padding-top: 5%">
+                                <source srcset="../img/predictive-data.webp" type="image/webp">
+                                <img alt="predictive data" class="ui image" src="../img/fallback/predictive-data.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- features -->
+            <div class="features section greyed">
+                <!-- data warehouse -->
+                <div class="section" id="data-warehouse">
+                    <div class="ui relaxed stackable middle aligned grid">
+                        <div class="nine wide column" style="padding-right: 2%" data-aos="fade-down-right"
+                            data-aos-duration="500">
+                            <div class="layered container">
+                                <picture>
+                                    <source srcset="../img/paint1.webp" type="image/webp">
+                                    <img alt="paint" class="ui image layered bottom" src="../img/fallback/paint1.png">
+                                </picture>
+                                <picture>
+                                    <source srcset="../img/data_warehouse.webp" type="image/webp">
+                                    <img alt="data warehouse" class="ui shadow image layered top"
+                                        src="../img/fallback/data_warehouse.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="mobile tablet only column spacer"><br>
+                        </div>
+                        <div class="seven wide column" style="padding-left:5%" data-aos="fade-down-left"
+                            data-aos-duration="500">
+                            <!-- header -->
+                            <h2 class="ui header">
+                                Data Warehouse
+                            </h2>
+                            <!-- description -->
+                            <div class="row">
+                                <p>
+                                    Polyture currently integrates with a wide array of existing file formats, big data
+                                    applications, relational databases, cloud platforms and applications. This means
+                                    that your company can bulk upload the data from all of
+                                    your existing applications, and combine it to find meaningful insights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- data flow -->
+                <div class="section" id="functional-analysis">
+                    <div class="ui relaxed stackable middle aligned grid" data-aos="fade-down-right"
+                        data-aos-duration="500">
+                        <div class="ten wide mobile tablet only column" style="padding-left: 5%"
+                            data-aos="fade-down-left" data-aos-duration="500">
+                            <picture>
+                                <source srcset="../img/functional-analysis.webp" type="image/webp">
+                                <img alt="functional analysis" class="ui shadow image"
+                                    src="../img/fallback/data_flow.png">
+                            </picture>
+                        </div>
+                        <div class="mobile tablet only column spacer"><br>
+                        </div>
+                        <div class="seven wide column" style="padding-right:4%">
+                            <!-- header -->
+                            <h2 class="ui header">
+                                Dataflow
+                            </h2>
+                            <!-- description -->
+                            <div class="row">
+                                <p>
+                                    At the core of Polyture is the dataflow module. In this panel, you can use the node
+                                    editor to rapidly design a data pipeline. The drag and drop interface allows you to
+                                    quickly perform filters, append, joins and duplications. There are also drag and
+                                    drop bricks for AutoML and Visualization.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="nine wide computer only column" style="padding-left: 2%" data-aos="fade-down-left"
+                            data-aos-duration="500">
+                            <div class="layered container">
+                                <picture>
+                                    <source srcset="../img/paint3.webp" type="image/webp">
+                                    <img alt="paint" class="ui image layered bottom right"
+                                        src="../img/fallback/paint3.png">
+                                </picture>
+                                <picture>
+                                    <source srcset="../img/functional-analysis.webp" type="image/webp">
+                                    <img alt="functional analysis" class="ui shadow image layered top"
+                                        src="../img/fallback/data_flow.png">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- automl co-pilot -->
+                <div class="section" id="automl">
+                    <div class="ui relaxed stackable middle aligned grid" data-aos="fade-down-right"
+                        data-aos-duration="500">
+                        <div class="nine wide column" style="padding-right: 2%">
+                            <div class="layered container">
+                                <picture>
+                                    <source srcset="../img/paint4.webp" type="image/webp">
+                                    <img alt="paint" class="ui image layered bottom" src="../img/fallback/paint4.png">
+                                </picture>
+                                <picture>
+                                    <source srcset="../img/automl.webp" type="image/webp">
+                                    <img alt="auto ml" class="ui shadow image layered top"
+                                        src="../img/fallback/automl.png">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="mobile tablet only column spacer">
+                        </div>
+                        <div class="seven wide column" style="padding-left:5%" data-aos="fade-down-left"
+                            data-aos-duration="500">
+                            <!-- header -->
+                            <h2 class="ui header">
+                                AutoML
+                            </h2>
+                            <!-- description -->
+                            <div class="row">
+                                <p>
+                                    Polyture’s powerful AutoML one click solution brings the power of machine learning
+                                    within grasp of the average user. Complex, time consuming tasks such as data
+                                    preparation and cleaning, algorithm selection, model training and tuning, and model
+                                    deployment are all completely automated.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- visualization-->
+                <div class="section" id="code-extensible">
+                    <div class="ui very relaxed stackable middle aligned grid" data-aos="fade-down-right"
+                        data-aos-duration="500">
+                        <div class="ten wide mobile tablet only column" style="padding-left: 5%"
+                            data-aos="fade-down-left" data-aos-duration="500">
+                            <picture>
+                                <source srcset="../img/code-extensible.webp" type="image/webp">
+                                <img alt="code extensible" class="ui shadow image"
+                                    src="../img/fallback/code-extensible.png">
+                            </picture>
+                        </div>
+                        <div class="mobile tablet only column spacer"><br>
+                        </div>
+                        <div class="seven wide column" style="padding-right:5%">
+                            <!-- header -->
+                            <h2 class="ui header">
+                                Visualization
+                            </h2>
+                            <!-- description -->
+                            <div class="row">
+                                <p>
+                                    Your data will only reach its full potential when it is easily understood by the
+                                    decision makers. Polyture contains a deep library of visualizations that are
+                                    directly integrated into the dataflow editor. That means you can go from ingestion
+                                    to visualization export entirely within one view.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="nine wide computer only column" style="padding-left: 2%" data-aos="fade-down-left"
+                            data-aos-duration="500">
+                            <div class="layered container">
+                                <picture>
+                                    <source srcset="../img/paint1.webp" type="image/webp">
+                                    <img alt="paint" class="ui image layered bottom right"
+                                        src="../img/fallback/paint1.webp">
+                                </picture>
+                                <picture>
+                                    <source srcset="../img/code-extensible.webp" type="image/webp">
+                                    <img alt="code extensible" class="ui shadow image"
+                                        src="../img/fallback/code-extensible.png">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- informational section 2 -->
+            <div class="section">
+                <!-- title -->
+                <div class="ui computer tablet only center aligned container">
+                    <h2 class="ui huge header">
+                        The Dataflow Node Editor Stream of Consciousness
+                    </h2>
+                </div>
+                <div class="ui divider" style="margin-right: 35%; margin-left: 35%; margin-top: 6%; margin-bottom: 6%">
+                </div>
+                <!-- wrapper -->
+                <div class="ui container paragraph-style">
+                    <div class="ui left aligned stackable grid">
+                        <div class="ui middle aligned stackable grid">
+                            <div class="eight wide column" style="padding-top: 0%; padding-right: 5%;">
+                                <picture>
+                                    <source srcset="../img/functional-analysis.webp" type="image/webp">
+                                    <img alt="predictive data" class="ui image shadow"
+                                        src="../img/fallback/functional-analysis.png">
+                                </picture>
+                            </div>
+                            <div class="computer tablet only eight wide column" style="padding-top: 0%">
+                                <p style="padding-top: 0">
+                                    At the core of Polyture sits our Dataflow node editor.
+
+                                    Right now, if an organization wants to utilize the full power of data-science, they
+                                    have
+                                    to purchase subscriptions to a multitude of data tools and learn how to use them.
+                                    There
+                                    are massive costs associated with these subscriptions, including both the high
+                                    monthly
+                                    fees and the cost to train an employee to proficiency.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mobile only row" style="padding-top: 10%">
+                            <p style="padding-top: 0">
+                                At the core of Polyture sits our Dataflow node editor.
+
+                                Right now, if an organization wants to utilize the full power of data-science, they
+                                have
+                                to purchase subscriptions to a multitude of data tools and learn how to use them.
+                                There
+                                are massive costs associated with these subscriptions, including both the high
+                                monthly
+                                fees and the cost to train an employee to proficiency.
+                            </p>
+                        </div>
+                        <div class="row" style="padding-top: 0">
+                            <p>
+                                Polyture is different in that it unifies the data-pipeline, by including within a single
+                                application the Data Warehousing, Dataflow Pipeline Designer, AutoML and Visualizations.
+                                <br><br>
+                                Polyture closes that skill gap by introducing the first code-optional
+                                data-pipeline design tool. Our application includes the traditional data stack
+                                tools of Data Warehousing, Dataflow, Data Transforms/Cleaning, AutoML and
+                                Visualizations all within a single easy to use application.
+                                <br><br>
+                                With Polyture, Data Warehousing, Dataflow, AutoML and Visualizations are all unified
+                                into one single high performance application. Our Dataflow node editor makes it so that
+                                any SMB can instantly put their data to work without having to know SQL, R or Python.
+                                Simply drag data bricks onto your canvas and connect them to design your pipeline.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- early access section -->
+            <div class="section greyed" id="early-access">
+                <!-- wrapper -->
+                <div class="ui container">
+                    <!-- what is polyture-->
+                    <div class="ui left center aligned stackable grid">
+                        <div class="ten wide column">
+                            <!-- header and description -->
+                            <div class="ui center aligned grid">
+                                <div class="row">
+                                    <picture>
+                                        <source srcset="../img/early-access.webp" type="image/webp">
+                                        <img alt="early access" class="ui medium image"
+                                            src="img/fallback/early-access.png">
+                                    </picture>
+                                </div>
+                                <!-- header -->
+                                <h2 class="ui huge header">
+                                    Hear From Us
+                                </h2>
+                                <!-- description -->
+                                <div class="row">
+                                    <div class="ui centered container">
+                                        <p>
+                                            Sign up to receive updates from the Polyture team.
+                                        </p>
+
+                                        <!-- mautic newsletter -->
+                                        <div class="ui centered container newsletter">
+                                            <script type="text/javascript"
+                                                src="//mkg.polyture.com/form/generate.js?id=1"></script>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="shadow-footer" id="footer">
+            <!-- wrapper -->
+            <div class="ui container">
+                <div class="ui middle aligned center aligned stackable grid" style="padding-bottom: 5%">
+                    <!-- mobile spacer -->
+                    <br class="mobile tablet only row">
+                    <!-- logo -->
+                    <div class="three wide column" style="text-align: center">
+                        <a href="index.html">
+                            <picture>
+                                <source srcset="../img/polyture_logo_white.webp" type="image/webp">
+                                <img alt="logo" class="ui medium image" style="display: inline-block"
+                                    src="../img/fallback/polyture_logo_white.png">
+                            </picture>
+                        </a>
+                    </div>
+                    <!-- links -->
+                    <div class="ten wide column">
+                        <div class="footer-links">
+                            <a href="../index.html">Home</a> <br>
+                            <a href="./about.html">About</a> <br>
+                            <a href="./company.html">Company</a> <br>
+                            <a href="./downloads.html">Downloads</a> <br>
+                            <a href="./contact.html">Contact</a> <br>
+                            <a href="./sign-up.html">Sign Up</a>
+                        </div>
+                    </div>
+                    <!-- social media -->
+                    <div class="three wide column">
+                        <div class="icon-container">
+                            <a href="https://twitter.com/polyturedata"><i class="twitter icon"></i></a>
+                            <a><i class="medium m icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- divider -->
+                <div class="ui divider"></div>
+                <div class="ui center aligned grid">
+                    <!-- logos -->
+                    <div class="row" id="logos">
+                        <div class="ui grid">
+                            <div class="eight wide column">
+                                <picture>
+                                    <source srcset="../img/UC_Berkeley.webp" type="image/webp">
+                                    <img alt="berkeley logo" class="ui small image"
+                                        src="../img/fallback/UC_Berkeley.png">
+                                </picture>
+                            </div>
+                            <div class="eight wide column">
+                                <picture>
+                                    <source srcset="../img/Skydeck.webp" type="image/webp">
+                                    <img alt="skydeck logo" class="ui small image" src="../img/fallback/Skydeck.png">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- copyright -->
+                    <div class="row">
+                        <p id="copyright">© 2020 Polyture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+<script src="../dist/js/main.js"></script>
+
+</html>
