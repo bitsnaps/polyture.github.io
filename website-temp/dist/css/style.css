@@ -907,6 +907,15 @@ body::-webkit-scrollbar {
 	padding-left: 10.5%;
 }
 
+#why-polyture .description p {
+	margin-left: 13px;
+	padding-top: 3%;
+}
+
+#why-polyture .description .content {
+	padding-left: 20px;
+}
+
 #why-polyture span {
 	font-weight: 800;
 }
