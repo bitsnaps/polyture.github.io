@@ -921,7 +921,7 @@ body::-webkit-scrollbar {
 }
 
 #why-polyture .description .row {
-	padding-top: 15%;
+	padding-top: 10%;
 	padding-right: 5%;
 }
 
@@ -933,6 +933,10 @@ body::-webkit-scrollbar {
 #why-polyture .description {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+#why-polyture .mobile .ui.header {
+	padding-bottom: 5%;
 }
 
 @media screen and (max-width: 600px) {

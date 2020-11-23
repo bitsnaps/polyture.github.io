@@ -82,8 +82,7 @@ $('#signup-form').submit(function (evt) {
 //sign up xhr request
 function signUp() {
     if(validateSignUpForm()) {
-        var url = "https://stable.do.polyture.com/v1/accounts/new";
-        //https://stable.do.polyture.com/v1/accounts/new
+        var url = "https://stable.aws.polyture.com/v1/accounts/new";
         var xhr = new XMLHttpRequest();
         var data = {
             "email": $('#signup-email').val(),
@@ -96,7 +95,7 @@ function signUp() {
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if(xhr.responseText == '{"success":true,"error":null}') {
-                    window.location.href = "https://polyture.com/website-temp/html/sign-up/sign-up-success.html"
+                    window.location.href = "https://polyture.com/html/sign-up/sign-up-success.html"
                 }
                 else
                     MicroModal.show('signup-failure');
