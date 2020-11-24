@@ -82,7 +82,9 @@ $('#signup-form').submit(function (evt) {
 //sign up xhr request
 function signUp() {
     if(validateSignUpForm()) {
+        //sign up - new users link
         var url = "https://stable.aws.polyture.com/v1/accounts/new";
+
         var xhr = new XMLHttpRequest();
         var data = {
             "email": $('#signup-email').val(),
@@ -95,6 +97,8 @@ function signUp() {
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if(xhr.responseText == '{"success":true,"error":null}') {
+
+                    //sign up - sign up success html
                     window.location.href = "https://polyture.com/html/sign-up/sign-up-success.html"
                 }
                 else
@@ -138,7 +142,7 @@ var DownloadLink_windows = "";
 
 //get yaml data
 function getYamlData() {
-    //windows
+    //windows yaml location
     var yamlFile_windows = YAML.load('https://polyture-releases-signed.sfo2.digitaloceanspaces.com/latest.yml');
     var yamlData_windows = new Array();
     $.each(yamlFile_windows, function(key, value) {
@@ -152,7 +156,7 @@ function getYamlData() {
     $("#PolytureVersion_windows").text(PolytureVersion_windows);
     $("#UploadDate_windows").text(UploadDate_windows);
 
-    //mac
+    //mac yaml location
     var yamlFile_mac = YAML.load('https://polyture-releases-signed.sfo2.digitaloceanspaces.com/latest-mac.yml');
     var yamlData_mac = new Array();
     $.each(yamlFile_mac, function(key, value) {
