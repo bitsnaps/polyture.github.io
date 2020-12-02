@@ -355,6 +355,7 @@ main {
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	padding-bottom: 2%;
 }
 
 .landing-subtitle span {
