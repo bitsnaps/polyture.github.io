@@ -357,6 +357,11 @@ main {
 	-ms-user-select: none;
 }
 
+.landing-subtitle span {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
 .banner {
 	padding-top: 7%;
 	padding-bottom: 2%;
@@ -1120,8 +1125,8 @@ body::-webkit-scrollbar {
 		width: 100%;
 		margin: 0 0;
 	}
-	.landing-subtitle {
-		padding-left: 5%;
+	.landing-title {
+		font-size: 35px;
 	}
 }
 
@@ -1153,14 +1158,15 @@ body::-webkit-scrollbar {
 	.cta-button-nav {
 		line-height: 0em;
 	}
-	.landing-title {
-		font-size: 2.3em;
-	}
-	.landing-title span {
-		font-size: 1.7em;
-	}
 	.landing-subtitle {
 		font-size: 1.3em;
+	}
+	.landing-title {
+		font-size: 20px;
+	}
+	#data-platform {
+		font-size: 35px;
+		line-height: 45px;
 	}
 	.page-header {
 		padding-right: 0%;
@@ -1175,6 +1181,7 @@ body::-webkit-scrollbar {
 		margin: 0 auto;
 		padding-top: 25%;
 		padding-bottom: 27%;
+		margin-left: -5%;
 	}
 	.banner {
 		margin: 0 auto;
