@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 ports:
-- port: 8080
+- port: 8000
   onOpen: open-preview
 
 tasks:
@@ -10,6 +10,7 @@ tasks:
       curl -o docker-compose.tgz https://registry.polyture.com/docker/docker-compose.tgz
       tar xz -f docker-compose.tgz -C .
     command: |
+      sed -i 's/localhost/${GITPOD_WORKSPACE_URL}/g' .env
       docker compose up -d
       docker logs polyture-server --follow
-  - command: gp await-port 8080 && sleep 3 && gp preview $(gp url 8080)
+  - command: gp await-port 8000 && sleep 3 && gp preview $(gp url 8000)
