@@ -1,0 +1,15 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+- port: 8080
+  onOpen: open-preview
+
+tasks:
+  - init: |
+      curl -o docker-compose.tgz https://registry.polyture.com/docker/docker-compose.tgz
+      tar xz -f docker-compose.tgz -C .
+    command: |
+      docker compose up -d
+      docker logs polyture-server --follow
+  - command: gp await-port 8080 && sleep 3 && gp preview $(gp url 8080)
