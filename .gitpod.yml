@@ -4,13 +4,19 @@ image:
 ports:
 - port: 8000
   onOpen: open-preview
+- port: 8001
+  onOpen: ignore
+- port: 9000
+  onOpen: ignore
+- port: 7233
+  onOpen: ignore
 
 tasks:
   - init: |
       curl -o docker-compose.tgz https://registry.polyture.com/docker/docker-compose.tgz
       tar xz -f docker-compose.tgz -C .
     command: |
-      sed -i 's/localhost/${GITPOD_WORKSPACE_URL}/g' .env
+      sed -i 's/localhost/0.0.0.0/g' .env
       docker compose up -d
       docker logs polyture-server --follow
   - command: gp await-port 8000 && sleep 3 && gp preview $(gp url 8000)
